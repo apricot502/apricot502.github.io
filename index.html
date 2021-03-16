@@ -1,290 +1,2165 @@
-
 <!DOCTYPE html>
-<html lang="en" class="loading">
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hexo</title>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="google" content="notranslate" />
-    <meta name="keywords" content="apricot502,"> 
-    
-    <meta name="author" content="John Doe"> 
-    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
-    <link rel="icon" href="/img/favicon.png"> 
-    
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
-    
-<link rel="stylesheet" href="/css/diaspora.css">
 
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "ca-pub-8691406134231910",
-              enable_page_level_ads: true
-         });
-    </script>
-    <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-    </script>
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="aprioct502" type="application/atom+xml" />
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="aprioct502">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="aprioct502">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="apricot502">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/"/>
+
+
+
+
+
+  <title>aprioct502</title>
+  
+
+
+
+
+
+
+
+
 <meta name="generator" content="Hexo 5.4.0"></head>
 
-<body class="loading">
-    <span id="config-title" style="display:none">Hexo</span>
-    <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">aprioct502</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
         
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="//" title="首页" target="_blank" rel="noopener">首页</a>
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            首页
+          </a>
         </li>
+      
         
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/categories/" title="分类" target="_blank" rel="noopener">分类</a>
+        <li class="menu-item menu-item-分类">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            分类
+          </a>
         </li>
+      
         
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/tags/" title="标签" target="_blank" rel="noopener">标签</a>
+        <li class="menu-item menu-item-标签">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
         </li>
+      
         
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/archives/" title="归档" target="_blank" rel="noopener">归档</a>
+        <li class="menu-item menu-item-归档">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            归档
+          </a>
         </li>
+      
         
+        <li class="menu-item menu-item-关于">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
     </ul>
-	<span class="target"></span>
-	<center>
-	<div class="hitokoto">
-		<span class="typed" id="hitokoto" data-st="true"></span>
-	</div>
-	</center>
-	
-	<p class="footerlinks">
-		<a href="#" class="iconfont icon-null"></a>
-		
-            <a href="/" title="facebook" class="iconfont icon-facebook" target="_blank" rel="noopener"> </a>
-        
-            <a href="/" title="twitter" class="iconfont icon-twitter" target="_blank" rel="noopener"> </a>
-        
-            <a href="/" title="github" class="iconfont icon-github" target="_blank" rel="noopener"> </a>
-        
-            <a href="/img/logo.png" title="wechat" class="iconfont icon-wechat" target="_blank" rel="noopener"> </a>
-        
-            <a href="mailto:xxxx@gmail.com" title="email" class="iconfont icon-email" target="_blank" rel="noopener"> </a>
-        
-		<a href="#" class="iconfont icon-null"></a>
-	</p>
-	
-    <p id="copyright">
-        &copy; 2021 John Doe.
-        <span> | </span>Powered by <a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-        <span> | </span>Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a> by Fechin
-		
-		<span> | </span><a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">冀ICP备xxxxxxx号</a>
-		
-    </p>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
 </div>
 
-<div id="container">
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
     
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="/img/welcome-cover.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/14/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%8F%8A%E5%8F%98%E6%8D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/cat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aprioct502">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/03/14/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%8F%8A%E5%8F%98%E6%8D%A2/" itemprop="url">傅里叶级数及变换</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-14T14:29:10+08:00">
+                2021-03-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/math/" itemprop="url" rel="index">
+                    <span itemprop="name">math</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-    </div>
-    <div id="vibrant">
-        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
-    <div id="header">
-        <div>
-            <a class="image-logo" href="/"></a>
-			
-            <div class="iconfont icon-menu switchmenu"></div>
-        </div>
-    </div>
+      </header>
     
-    <div id="post0">
-        <p>三月 14, 2021</p>
-        <h2><a href="/2021/03/14/pandas-2/" title="pandas-2" class="posttitle">pandas-2</a></h2>
-        <p class="summary">
 
-玩转Pandas索引（jupyter）​        第一篇潘大师（初识 Pandas）教程考虑到篇幅问题只...</p>
-    </div>
     
-</div>
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-    <div id="primary">
+      
+      
+
+      
         
-<div class="post">
-    <a href="/2021/03/13/hello-world/" title="Hello World">
-        <img src="/img/cartoon2.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>三月 13, 2021</p>
-        <h3><a href="/2021/03/13/hello-world/" title="Hello World" class="posttitle">Hello World</a></h3>
-        <p>Welcome to Hexo! This is your very first post. Check documentation for more i...</p>
-    </div>
-</div>
+          
+            <span id="more"></span>
 
+<h2 id="三角函数的正交性"><a href="#三角函数的正交性" class="headerlink" title="三角函数的正交性"></a>三角函数的正交性</h2><h3 id="三角函数系"><a href="#三角函数系" class="headerlink" title="三角函数系"></a>三角函数系</h3><p>三角函数系本身是一个集合:</p>
+<p>{$0(sin0x),1(cos0x),sinx,cosx,sin2x,cos2x,…,sinnx,cosnx$}</p>
+<h3 id="正交性：从三角函数系中任取两个不同的项相乘均等于0"><a href="#正交性：从三角函数系中任取两个不同的项相乘均等于0" class="headerlink" title="正交性：从三角函数系中任取两个不同的项相乘均等于0"></a>正交性：从三角函数系中任取两个不同的项相乘均等于0</h3><p>示例：</p>
+<p>$\displaystyle \int^{\pi}_{-\pi}{cosnxsinnxdx}=0$,{$n\in N$}</p>
+<p>$\displaystyle \int^{\pi}_{-\pi}{cosnxcosmxdx}=0$,{$n\neq m$}</p>
+<p>$\displaystyle \int^{\pi}_{-\pi}{sinnxsinmxdx}=0$,{$n\neq m$}</p>
+<h2 id="周期为-2-pi-的函数展开为傅里叶级数"><a href="#周期为-2-pi-的函数展开为傅里叶级数" class="headerlink" title="周期为$2\pi$的函数展开为傅里叶级数"></a>周期为$2\pi$的函数展开为傅里叶级数</h2><p>设有函数$f(x)$,周期T=$2\pi$,即$f(x)=f(x+2\pi)$</p>
+<p>则傅里叶级数展开公式为：</p>
+<p>$f(x)=$$\displaystyle \sum^{n \to \infty}<em>{n=0}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=0}b</em>{n}sinnx$                                      （1）</p>
+<p>=$a_{0}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx  $                                        （2）           </p>
+<p>,注意此式子中$a_{0}$跟下面$\frac{a_{0}}{2}$中的$a_{0}$不是同一个$a_{0}$</p>
+<p>大多数书籍傅里叶级数展开式为</p>
+<p>$f(x)=$$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$                              （3）</p>
+<p>这两个式子的不同之处在与$\frac{a_{0}}{2}$和n从1开始累加，</p>
+<ol>
+<li>求$a_{0}$，对(2)式两边进行$-\pi到\pi$的积分，则：</li>
+</ol>
+<p>$\displaystyle \int^{\pi}<em>{-\pi}{f(x)dx}$=$\displaystyle \int^{\pi}</em>{-\pi}{a_{0}dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnx dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnx dx}$</p>
+<p>其中根据三角函数的正交性：$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnx dx}$=0，$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnx dx}$=0</p>
+<p>求得$a_{0}$=$\frac{1}{2\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
+<p>则令$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
+<p>得到（3）式</p>
+<ol start="2">
+<li>求$a_{n}$,对（3）式两边同时乘$cosmx$，并对等式两边进行$-\pi到\pi$的积分，则：</li>
+</ol>
+<p>$\displaystyle \int^{\pi}<em>{-\pi}{f(x)cosmxdx}$=$\displaystyle \int^{\pi}</em>{-\pi}{\frac{a_{0}}{2}cosmxdxdx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnxcosmxdx dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnxcosmxdx dx}$</p>
+<p>其中根据三角函数的正交性：$\displaystyle \int^{\pi}<em>{-\pi}{\frac{a</em>{0}}{2}cosmxdxdx}$=0,$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnxcosmxdx dx}$=0</p>
+<p>而$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnxcosmxdx dx}$中当n=m时$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle a</em>{n}cosnxcosmxdx$=$a_{n}\pi$</p>
+<p>所以$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
+<ol start="3">
+<li>求$b_{n}$,对（3）式两边同时乘$sinmx$，并对等式两边进行$-\pi到\pi$的积分，得：</li>
+</ol>
+<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
+<p>故周期为$2\pi$傅里叶展开式为：</p>
+<p>$f(x)=$$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$            </p>
+<p>$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
+<p>$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
+<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
+<h2 id="周期为-2L-的函数展开为傅里叶级数"><a href="#周期为-2L-的函数展开为傅里叶级数" class="headerlink" title="周期为$2L$的函数展开为傅里叶级数"></a>周期为$2L$的函数展开为傅里叶级数</h2><p>函数：$f(t)=f(t+2L)$</p>
+<p>换元：x=$\frac{\pi}{L}t$,即t=$\frac{L}{\pi}$</p>
+<table>
+<thead>
+<tr>
+<th>t</th>
+<th>x</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2L</td>
+<td>2$\pi$</td>
+</tr>
+<tr>
+<td>4L</td>
+<td>4$\pi$</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>则$f(t)=f(\frac{L}{\pi})$，令$g(x)=f(\frac{L}{\pi})$</p>
+<p>则$g(x)$周期为$2\pi$这样就化成了周期为2$\pi$的傅里叶级数展开</p>
+<p>把x=$\frac{\pi}{L}t$代入得</p>
+<p>$cosnx=cos\frac{n\pi}{L}t$</p>
+<p>$sinnx=sin\frac{n\pi}{L}t$</p>
+<p>$g(x)=f(t)$</p>
+<p>$\displaystyle \int^{\pi}<em>{-\pi}{xdx}$=$\displaystyle \int^{-L}</em>{L}{xdt}$(看下图)</p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>t</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-$\pi$</td>
+<td>-L</td>
+</tr>
+<tr>
+<td>$\pi$</td>
+<td>L</td>
+</tr>
+</tbody></table>
+<p>故：</p>
+<p>$g(x)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$    </p>
+<p>==$ f(t)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cos\frac{n\pi}{L}t+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sin\frac{n\pi}{L}t$==</p>
+<p>$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
+<p>==$a_{0}$=$\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)dx}$==</p>
+<p>$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
+<p>==$a_{n}=\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)cos\frac{n\pi}{L}tdt}$==</p>
+<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
+<p>==$b_{n}$=$\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)sin\frac{n\pi}{L}tdt}$==</p>
+<p>在工程当中：t从0开始·，周期T=2L,$\omega=\frac{2\pi}{T}$</p>
+<p>$\displaystyle \int^{L}<em>{-L}{dt}\Rightarrow\displaystyle \int^{2L}</em>{0}{dt}\Rightarrow\displaystyle \int^{T}_{0}{dt}$</p>
+<p>所以：</p>
+<p>==$ f(t)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosn\omega t+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sin\omega t$==</p>
+<p>==$a_{0}$=$\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)dx}$==</p>
+<p>==$a_{n}=\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)cosn\omega tdt}$==</p>
+<p>==$b_{n}$=$\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)sinn\omega tdt}$==</p>
 
-<div class="post">
-    <a href="/2021/03/11/pandas-1/" title="pandas-1">
-        <img src="/img/cartoon2.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>三月 11, 2021</p>
-        <h3><a href="/2021/03/11/pandas-1/" title="pandas-1" class="posttitle">pandas-1</a></h3>
-        <p>
-
-pandas基础(jupyter)一.创建、读取和存储1.创建在 Pandas 中我们想要构造下面这一张表应该如何操作呢？
-
-
-
-
-数学
-英语
-语文
-...</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2021/03/11/markdown-2/" title="markdown-2">
-        <img src="/img/cartoon2.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>三月 11, 2021</p>
-        <h3><a href="/2021/03/11/markdown-2/" title="markdown-2" class="posttitle">markdown-2</a></h3>
-        <p>1.引用在markdown中，引用由&gt;+引用内容来标记，如下所示。
-1&gt; 引用内容
-
-示例：
-
-引用内容
-
-语法说明如下：
-1）多行引用也可以...</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2021/03/11/English/" title="English">
-        <img src="/img/cartoon3.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>三月 11, 2021</p>
-        <h3><a href="/2021/03/11/English/" title="English" class="posttitle">English</a></h3>
-        <p>
-例句：
-
-
-“None of these programes do that”,says another expert.
-“而这些程序都没有做到这一点”...</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2021/03/11/markdown-1/" title="markdown-1.md">
-        <img src="/img/cartoon2.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>三月 11, 2021</p>
-        <h3><a href="/2021/03/11/markdown-1/" title="markdown-1.md" class="posttitle">markdown-1.md</a></h3>
-        <p>
-
-标题1.使用，-标记一级标题跟二级标题
-展示一级标题使用#表示1-6级标题2.段落格式markdown段落没有特殊格式，直接编写就好，段落的换行是使用...</p>
-    </div>
-</div>
-
-
+          
+        
+      
     </div>
     
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/14/pandas-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/cat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aprioct502">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/03/14/pandas-2/" itemprop="url">pandas-2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-14T09:30:37+08:00">
+                2021-03-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=520 height=86 src="//music.163.com/outchain/player?type=2&id=36229051&auto=0&height=66"></iframe>
+
+<h1 id="玩转Pandas索引（jupyter）"><a href="#玩转Pandas索引（jupyter）" class="headerlink" title="玩转Pandas索引（jupyter）"></a>玩转Pandas索引（jupyter）</h1>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/03/14/pandas-2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/13/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/cat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aprioct502">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/03/13/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-13T23:22:45+08:00">
+                2021-03-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%88%9D%E9%81%87/" itemprop="url" rel="index">
+                    <span itemprop="name">初遇</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/11/pandas-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/cat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aprioct502">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/03/11/pandas-1/" itemprop="url">pandas-1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-11T20:47:19+08:00">
+                2021-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1303019637&auto=0&height=66"></iframe>
+
+<h1 id="pandas基础-jupyter"><a href="#pandas基础-jupyter" class="headerlink" title="pandas基础(jupyter)"></a>pandas基础(jupyter)</h1>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/03/11/pandas-1/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/11/markdown-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/cat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aprioct502">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/03/11/markdown-2/" itemprop="url">markdown-2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-11T20:01:43+08:00">
+                2021-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/markdown/" itemprop="url" rel="index">
+                    <span itemprop="name">markdown</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-引用"><a href="#1-引用" class="headerlink" title="1.引用"></a>1.引用</h1><p>在markdown中，引用由&gt;+引用内容来标记，如下所示。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 引用内容</span></span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<blockquote>
+<p>引用内容</p>
+</blockquote>
+<p>语法说明如下：</p>
+<p>1）多行引用也可以在每行的开头都插入&gt;.</p>
+<p>2)在引用中可以嵌套引用。</p>
+<p>3）在引用中可以使用其他的markdown语法。</p>
+<p>4）段落与换行的格式在引用中也是适用的。</p>
+<h1 id="2-转义"><a href="#2-转义" class="headerlink" title="2. 转义"></a>2. 转义</h1><p>当我们想在markdown文件中插入一些标记符号，但又不想让这些符号被渲染时，可以使用\进行转转义，语法如下》</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\特殊符号</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>可被转义符号如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">\ 反斜线</span><br><span class="line">&#96; 反引号</span><br><span class="line">* 星号</span><br><span class="line">_ 底线</span><br><span class="line">&#123;&#125; 花括号</span><br><span class="line">[] 方括号</span><br><span class="line"># 井字号</span><br><span class="line">+ 加号</span><br><span class="line">- 减号</span><br><span class="line">. 英文句点</span><br><span class="line">！惊叹号</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h1 id="3-扩展语法GFM"><a href="#3-扩展语法GFM" class="headerlink" title="3. 扩展语法GFM"></a>3. 扩展语法GFM</h1><p>在众多markdown扩展语法中，GitHub Flavored Markdown （简称GFM）无疑时目前最流行的，它提供了包括表格，任务列表，删除线，围栏代码，Emoji等在内的标记语法，本书介绍的工具基本都支持GFM。</p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>删除线语法如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~被删除的文字~~</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p><del>被删除的文字</del></p>
+<h2 id="表情符号"><a href="#表情符号" class="headerlink" title="表情符号"></a>表情符号</h2><p>使用：包裹表情代码即可，语法如下》</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br></pre></td><td class="code"><pre><span class="line">:smile:（笑脸）</span><br><span class="line">:bowtie:</span><br><span class="line">:smile:</span><br><span class="line">:simple_smile:</span><br><span class="line">:laughing:</span><br><span class="line">:blush:</span><br><span class="line">:smiley:</span><br><span class="line">:relaxed:</span><br><span class="line">:smirk:</span><br><span class="line">:heart_eyes:</span><br><span class="line">:kissing_heart:</span><br><span class="line">:kissing_closed_eyes:</span><br><span class="line">:flushed:</span><br><span class="line">:relieved:</span><br><span class="line">:satisfied:</span><br><span class="line">:grin:</span><br><span class="line">:wink:</span><br><span class="line">:stuck_out_tongue_winking_eye:</span><br><span class="line">:stuck_out_tongue_closed_eyes:</span><br><span class="line">:grinning:</span><br><span class="line">:kissing:</span><br><span class="line">:kissing_smiling_eyes:</span><br><span class="line">:stuck_out_tongue:</span><br><span class="line">:sleeping:</span><br><span class="line">:worried:</span><br><span class="line">:frowning:</span><br><span class="line">:anguished:</span><br><span class="line">:open_mouth:</span><br><span class="line">:grimacing:</span><br><span class="line">:confused:</span><br><span class="line">:hushed:</span><br><span class="line">:expressionless:</span><br><span class="line">:unamused:</span><br><span class="line">:sweat_smile:</span><br><span class="line">:sweat:</span><br><span class="line">:disappointed_relieved:</span><br><span class="line">:weary:</span><br><span class="line">:pensive:</span><br><span class="line">:disappointed:</span><br><span class="line">:confounded:</span><br><span class="line">:fearful:</span><br><span class="line">:cold_sweat:</span><br><span class="line">:persevere:</span><br><span class="line">:cry:</span><br><span class="line">:sob:</span><br><span class="line">:joy:</span><br><span class="line">:astonished:</span><br><span class="line">:scream:</span><br><span class="line">:neckbeard:</span><br><span class="line">:tired_face:</span><br><span class="line">:angry:</span><br><span class="line">:rage:</span><br><span class="line">:triumph:</span><br><span class="line">:sleepy:</span><br><span class="line">:yum:</span><br><span class="line">:mask:</span><br><span class="line">:sunglasses:</span><br><span class="line">:dizzy_face:</span><br><span class="line">:imp:</span><br><span class="line">:smiling_imp:</span><br><span class="line">:neutral_face:</span><br><span class="line">:no_mouth:</span><br><span class="line">:innocent:</span><br><span class="line">:alien:</span><br><span class="line">:yellow_heart:</span><br><span class="line">:blue_heart:</span><br><span class="line">:purple_heart:</span><br><span class="line">:heart:</span><br><span class="line">:green_heart:</span><br><span class="line">:broken_heart:</span><br><span class="line">:heartbeat:</span><br><span class="line">:heartpulse:</span><br><span class="line">:two_hearts:</span><br><span class="line">:revolving_hearts:</span><br><span class="line">:cupid:</span><br><span class="line">:sparkling_heart:</span><br><span class="line">:sparkles:</span><br><span class="line">:star:</span><br><span class="line">:star2:</span><br><span class="line">:dizzy:</span><br><span class="line">:boom:</span><br><span class="line">:collision:</span><br><span class="line">:anger:</span><br><span class="line">:exclamation:</span><br><span class="line">:question:</span><br><span class="line">:grey_exclamation:</span><br><span class="line">:grey_question:</span><br><span class="line">:zzz:</span><br><span class="line">:dash:</span><br><span class="line">:sweat_drops:</span><br><span class="line">:notes:</span><br><span class="line">:musical_note:</span><br><span class="line">:fire:</span><br><span class="line">:hankey:</span><br><span class="line">:poop:</span><br><span class="line">:shit:</span><br><span class="line">:+1:</span><br><span class="line">:thumbsup:</span><br><span class="line">:-1:</span><br><span class="line">:thumbsdown:</span><br><span class="line">:ok_hand:</span><br><span class="line">:punch:</span><br><span class="line">:facepunch:</span><br><span class="line">:fist:</span><br><span class="line">:v:</span><br><span class="line">:wave:</span><br><span class="line">:hand:</span><br><span class="line">:raised_hand:</span><br><span class="line">:open_hands:</span><br><span class="line">:point_up:</span><br><span class="line">:point_down:</span><br><span class="line">:point_left:</span><br><span class="line">:point_right:</span><br><span class="line">:raised_hands:</span><br><span class="line">:pray:</span><br><span class="line">:point_up_2:</span><br><span class="line">:clap:</span><br><span class="line">:muscle:</span><br><span class="line">:metal:</span><br><span class="line">:fu:</span><br><span class="line">:runner:</span><br><span class="line">:running:</span><br><span class="line">:couple:</span><br><span class="line">:family:</span><br><span class="line">:two_men_holding_hands:</span><br><span class="line">:two_women_holding_hands:</span><br><span class="line">:dancer:</span><br><span class="line">:dancers:</span><br><span class="line">:ok_woman:</span><br><span class="line">:no_good:</span><br><span class="line">:information_desk_person:</span><br><span class="line">:raising_hand:</span><br><span class="line">:bride_with_veil:</span><br><span class="line">:person_with_pouting_face:</span><br><span class="line">:person_frowning:</span><br><span class="line">:bow:</span><br><span class="line">:couplekiss:</span><br><span class="line">:couple_with_heart:</span><br><span class="line">:massage:</span><br><span class="line">:haircut:</span><br><span class="line">:nail_care:</span><br><span class="line">:boy:</span><br><span class="line">:girl:</span><br><span class="line">:woman:</span><br><span class="line">:man:</span><br><span class="line">:baby:</span><br><span class="line">:older_woman:</span><br><span class="line">:older_man:</span><br><span class="line">:person_with_blond_hair:</span><br><span class="line">:man_with_gua_pi_mao:</span><br><span class="line">:man_with_turban:</span><br><span class="line">:construction_worker:</span><br><span class="line">:cop:</span><br><span class="line">:angel:</span><br><span class="line">:princess:</span><br><span class="line">:smiley_cat:</span><br><span class="line">:smile_cat:</span><br><span class="line">:heart_eyes_cat:</span><br><span class="line">:kissing_cat:</span><br><span class="line">:smirk_cat:</span><br><span class="line">:scream_cat:</span><br><span class="line">:crying_cat_face:</span><br><span class="line">:joy_cat:</span><br><span class="line">:pouting_cat:</span><br><span class="line">:japanese_ogre:</span><br><span class="line">:japanese_goblin:</span><br><span class="line">:see_no_evil:</span><br><span class="line">:hear_no_evil:</span><br><span class="line">:speak_no_evil:</span><br><span class="line">:guardsman:</span><br><span class="line">:skull:</span><br><span class="line">:feet:</span><br><span class="line">:lips:</span><br><span class="line">:kiss:</span><br><span class="line">:droplet:</span><br><span class="line">:ear:</span><br><span class="line">:eyes:</span><br><span class="line">:nose:</span><br><span class="line">:tongue:</span><br><span class="line">:love_letter:</span><br><span class="line">:bust_in_silhouette:</span><br><span class="line">:busts_in_silhouette:</span><br><span class="line">:speech_balloon:</span><br><span class="line">:thought_balloon:</span><br><span class="line">:feelsgood:</span><br><span class="line">:finnadie:</span><br><span class="line">:goberserk:</span><br><span class="line">:godmode:</span><br><span class="line">:hurtrealbad:</span><br><span class="line">:rage1:</span><br><span class="line">:rage2:</span><br><span class="line">:rage3:</span><br><span class="line">:rage4:</span><br><span class="line">:suspect:</span><br><span class="line">:trollface:</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>:smile:（笑脸）</p>
+<p>:see_no_evil:</p>
+<p>更多表情符号请参考：[表情符号][<a target="_blank" rel="noopener" href="http://www.webpagefx.com/tools/emoji-cheat-sheet/]">http://www.webpagefx.com/tools/emoji-cheat-sheet/]</a></p>
+<h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>在标准语法中，由&lt;&gt;包裹的URL地址被自动识别并解析为超链接，使用GFM扩展语法则可以不使用&lt;&gt;包裹。语法如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">标准语法中由&lt;&gt;包裹的URL地址被自动识别并解析为超链接。</span><br><span class="line">如:</span><br><span class="line">&lt;www.baidu.com&gt;</span><br><span class="line">使用GFM扩展语法可以不使用&lt;&gt;包裹。如：</span><br><span class="line">www.baidu.com</span><br><span class="line">如果不想自动链接也可以使用&#96;包裹URL地址</span><br><span class="line">&#96;www.baidu.com&#96;</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>标准语法中由&lt;&gt;包裹的URL地址被自动识别并解析为超链接。<br>如:<br>&lt;<a target="_blank" rel="noopener" href="http://www.baidu.com&gt;/">www.baidu.com&gt;</a><br>使用GFM扩展语法可以不使用&lt;&gt;包裹。如：<br><a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></p>
+<p>如果不想自动链接也可以使用包裹<code>URL地址</code></p>
+<p><code>www.baidu.com</code></p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>表格语法如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|表头1|表头2|表头3|</span><br><span class="line">|----|----|----|</span><br><span class="line">|内容1|内容2|内容3|</span><br><span class="line">|内容1|内容2|内容3|</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+<th>表头3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>内容1</td>
+<td>内容2</td>
+<td>内容3</td>
+</tr>
+<tr>
+<td>内容1</td>
+<td>内容2</td>
+<td>内容3</td>
+</tr>
+</tbody></table>
+<p>语法说明如下：</p>
+<p>1）单元格使用|来分隔，为了阅读更清晰，建议最前和最后都使用|。</p>
+<p>2）单元格和|之间的空格会被被移除。</p>
+<p>3）表头与其他行使用-来分隔。</p>
+<p>4）表格对齐格式如下：</p>
+<ul>
+<li>左对齐（默认）：<code>:</code></li>
+<li>右对齐：<code>-:</code></li>
+<li>居中对齐：<code>:-:</code></li>
+</ul>
+<p>5)块级元素（代码区块，引用区块）不能插入表格中。</p>
+<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><p>任务列表的语法如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- [] 未勾选</span><br><span class="line">- [x] 已勾选</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<ul>
+<li><p><input disabled="" type="checkbox">  未勾选</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  已勾选</p>
+</li>
+</ul>
+<p>语法说明如下：</p>
+<p>1）任务列表以-+空格开头，由[+空格/x+]组成。</p>
+<p>2）x可以是小写，也可以是大写，由些编辑器可能不支持大写，所以为了避免解析错误，推荐使用小写的x。</p>
+<h2 id="围栏代码块"><a href="#围栏代码块" class="headerlink" title="围栏代码块"></a>围栏代码块</h2><p>在基础的语法中代码块使用tab键或4格空格开头；在扩展语法中使用连续3个`或3个~~~包裹，还支持语法高亮可读性和可维护性更强一些。</p>
+<p>围栏代码块语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1：</span><br><span class="line">​&#96;&#96;&#96;+回车键</span><br><span class="line">或</span><br><span class="line">2：</span><br><span class="line">​&#96;&#96;&#96;（可加代码名称）</span><br><span class="line">代码</span><br><span class="line">​&#96;&#96;&#96;</span><br><span class="line">或</span><br><span class="line">3：</span><br><span class="line">~~~（可加代码名称）</span><br><span class="line">代码</span><br><span class="line">~~~</span><br><span class="line">或</span><br><span class="line">4：</span><br><span class="line">~~~+回车键</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>示例</p>
+<p>1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码</span><br></pre></td></tr></table></figure>
+
+<p>或<br>3：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码</span><br></pre></td></tr></table></figure>
+
+<p>或<br>4：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h2><p>锚点，也称为书签，用来标记文档的特定位置，使用锚点可以跳转到当前文档或其他文档中指定的标记位置。</p>
+<p>Markdown会被渲染成HTML页面，在HTML页面中可以通过锚点实现跳转；</p>
+<p>GitHub、GitBook项目文档中的目录也是通过锚点实现跳转的。</p>
+<p>· 锚点的语法如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[锚点描述](#锚点名)</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p><a href="#1.%E5%BC%95%E7%94%A8">锚点描述</a></p>
+<p><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">锚点描述</a></p>
+<p>语法说明如下。</p>
+<p>1）锚点名建议使用字母和数字，当然中文也是被支持的，但不排除有些网站支持得不够好。</p>
+<p>2）锚点名是区分英文大小写的。</p>
+<p>3）在锚点名中不能含由空格，也不能含由特殊字符。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/11/English/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/cat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aprioct502">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/03/11/English/" itemprop="url">English</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-11T19:43:51+08:00">
+                2021-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/En-note/" itemprop="url" rel="index">
+                    <span itemprop="name">En-note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <hr>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/03/11/English/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/11/markdown-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/cat.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aprioct502">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/03/11/markdown-1/" itemprop="url">markdown-1.md</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-11T09:56:16+08:00">
+                2021-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/markdown/" itemprop="url" rel="index">
+                    <span itemprop="name">markdown</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          markdown
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/03/11/markdown-1/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/cat.jpg"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/apricot502" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">apricot502</span>
+
+  
 </div>
-<div id="preview"></div>
 
 
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
-
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
-
-<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
-<script src="/js/plugin.js"></script>
-<script src="/js/typed.js"></script>
-<script src="/js/diaspora.js"></script>
-
-
-<link rel="stylesheet" href="/photoswipe/photoswipe.css">
-<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
-
-
-<script src="/photoswipe/photoswipe.min.js"></script>
-<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <!--  Controls are self-explanatory. Order can be changed. -->
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
 </html>

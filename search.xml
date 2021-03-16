@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>English</title>
+    <url>/2021/03/11/English/</url>
+    <content><![CDATA[<hr>
+<span id="more"></span>
+
+<p><strong>例句</strong>：</p>
+<ul>
+<li><blockquote>
+<p>“None of these programes do that”,says another expert.</p>
+<p>“而这些程序都没有做到这一点”另一位专家说。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>there is no doubt that he is innocent.</p>
+<p>毫无疑问，他是无辜的。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>her proposal met with contnual rejectons.</p>
+<p>她的建议一再遭到拒绝。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>The police decided to investgate further.</p>
+<p>警方决定作进一步调查。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>if ambition is to be well regarded, the rewards of ambition must be deemed worthy of the sacrifices made on ambition’s bealf.</p>
+<p>如果雄心想要得到人们的重视，则它带来的回报就必须被认定能低得上为其所做出的牺牲。</p>
+</blockquote>
+</li>
+</ul>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1500569811&auto=0&height=66"></iframe>
+
+
+
+]]></content>
+      <categories>
+        <category>En-note</category>
+      </categories>
+      <tags>
+        <tag>en</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/03/13/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>初遇</category>
+      </categories>
+      <tags>
+        <tag>hello world</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>markdown-1.md</title>
+    <url>/2021/03/11/markdown-1/</url>
+    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=450 src="//music.163.com/outchain/player?type=0&id=5321532436&auto=0&height=430"></iframe>
+
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>1.使用，-标记一级标题跟二级标题</p>
+<h1 id="展示一级标题"><a href="#展示一级标题" class="headerlink" title="展示一级标题"></a>展示一级标题</h1><h2 id="使用-表示1-6级标题"><a href="#使用-表示1-6级标题" class="headerlink" title="使用#表示1-6级标题"></a>使用#表示1-6级标题</h2><h3 id="2-段落格式markdown段落没有特殊格式，直接编写就好，段落的换行是使用两个以上空格加上回车。"><a href="#2-段落格式markdown段落没有特殊格式，直接编写就好，段落的换行是使用两个以上空格加上回车。" class="headerlink" title="2.段落格式markdown段落没有特殊格式，直接编写就好，段落的换行是使用两个以上空格加上回车。"></a>2.段落格式markdown段落没有特殊格式，直接编写就好，段落的换行是使用两个以上空格加上回车。</h3><p>段落 </p>
+<p>markdown可以使用以下几种字体</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一：*斜体文本*</span><br><span class="line">二：_斜体文本_</span><br><span class="line">三：**粗体文本**</span><br><span class="line">四：__粗体文本__</span><br><span class="line">五：***粗斜体文本***</span><br><span class="line">六：___粗斜体文本___</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p>一：<em>斜体文本</em></p>
+<p>二：<em>斜体文本</em></p>
+<p>三：<strong>粗体文本</strong></p>
+<p>四：<strong>粗体文本</strong></p>
+<p>五：<em><strong>粗体斜文本</strong></em></p>
+<p>六：<em><strong>粗体斜文本</strong></em></p>
+<h3 id="3-分隔线"><a href="#3-分隔线" class="headerlink" title="3.分隔线"></a>3.分隔线</h3><p>可以在一行用三个以上的星号，减号，底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">one:***</span><br><span class="line">two: * * *</span><br><span class="line">three:*****</span><br><span class="line">four:- - -</span><br><span class="line">five:-----------</span><br></pre></td></tr></table></figure>
+
+<p>one:</p>
+<hr>
+<p>two:</p>
+<hr>
+<p>three:</p>
+<hr>
+<p>four:</p>
+<hr>
+<p>five:</p>
+<hr>
+<h3 id="4-删除线"><a href="#4-删除线" class="headerlink" title="4.删除线"></a>4.删除线</h3><p>在文字两端加上两个波浪线~~</p>
+<p>示例：</p>
+<p><del>beautiful</del></p>
+<h3 id="5-下划线"><a href="#5-下划线" class="headerlink" title="5.下划线"></a>5.下划线</h3><p>下划线可以通过HTML的<u>标签来实现</p>
+<p>示例：</p>
+<p><u>下划线</u></p>
+<h3 id="6-脚注"><a href="#6-脚注" class="headerlink" title="6.脚注"></a>6.脚注</h3><p>格式：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[^要注明的格式]</span><br><span class="line">[^要注明的格式]:文字解说</span><br></pre></td></tr></table></figure>
+
+
+<p>   示例：啊<a href="%E6%96%87%E5%AD%97%E8%A7%A3%E8%AF%B4">^最帅的人</a></p>
+<h3 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h3><p>无序列表使用*，+，-作为列表标记，这些标记后面添加一个空格，然后填写内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">one:*空格</span><br><span class="line">two:+空格</span><br><span class="line">three:-空格</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>one：</p>
+<ul>
+<li>第一项</li>
+</ul>
+<p>two:</p>
+<ul>
+<li>第二项</li>
+</ul>
+<p>three：</p>
+<ul>
+<li>第三项</li>
+</ul>
+<p>有序列表数字加上[^.]再加上空格</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.&#123;空格&#125;第一项</span><br><span class="line">2.第二项</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+</ol>
+<p>列表嵌套：</p>
+<p>列表嵌套只需要在子列表的选项前面添加四个空格即可。要跳出列表只需按两次回车键</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.&#123;空格&#125;“文字”+&#123;回车&#125;</span><br><span class="line">&#123;四个空格或tab键&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>示例：</p>
+<ol>
+<li>第一项<ol>
+<li>子列表</li>
+</ol>
+</li>
+</ol>
+<h3 id="8-区块"><a href="#8-区块" class="headerlink" title="8.区块"></a>8.区块</h3><p>区块引用是在段开头使用[^&gt;]符号，然后后面紧跟着一个空格符号：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; &#123;空格&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<blockquote>
+<p>区块</p>
+</blockquote>
+<p>另外区块可以嵌套，一个[^&gt;]是最外层，两个[^&gt;]符号是第一层嵌套，以此类推：、</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;第一层</span><br><span class="line">&gt;&gt;第二层</span><br><span class="line">&gt;&gt;&gt;第三层</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<blockquote>
+<p>first</p>
+<blockquote>
+<p>second</p>
+<blockquote>
+<p>third</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>区块中使用列表：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;区块中使用列表</span><br><span class="line">&gt;1.&#123;空格&#125;第一项</span><br><span class="line">&gt;2.&#123;空格&#125;第二项</span><br><span class="line">&gt;+&#123;空格&#125;第三项</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<blockquote>
+<p>区块中使用空格</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+</ol>
+<ul>
+<li>第三项</li>
+<li>第四项</li>
+</ul>
+</blockquote>
+<p>列表中使用区块</p>
+<p>如果要在列表中使用区块，那么就需要在[^&gt;]前添加四个空格的缩进。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*&#123;空格&#125;第一箱</span><br><span class="line">&#123;四个空格或tab键&#125;文字</span><br></pre></td></tr></table></figure>
+
+
+
+<p>示例：</p>
+<ul>
+<li><p>第一项</p>
+</li>
+<li><blockquote>
+<p>文字</p>
+</blockquote>
+</li>
+</ul>
+<p>markdown代码：</p>
+<h3 id="9-代码"><a href="#9-代码" class="headerlink" title="9.代码"></a>9.代码</h3><p>如果段落内上的一个函数或片段的代码可以用反引号包起来，例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#96;print()&#96;函数</span><br></pre></td></tr></table></figure>
+
+<p><code>print（）</code>函数</p>
+<p>代码区块：</p>
+<p>代码区块使用四个空格或者一个tab键(){此方法好像无用}</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;四个空格或tab&#125;代码</span><br></pre></td></tr></table></figure>
+
+<p>示例；<br>可用方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">​&#96;&#96;&#96;&#123;空格&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例：略</p>
+<p>​    markdown链接：</p>
+<p>链接使用方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">one:[链接名称](链接地址)</span><br><span class="line">或者</span><br><span class="line">two:&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>one:<a href="http://www.baidu.com/">百度</a></p>
+<p>two:<a href="http://www.biadu.com/">http://www.biadu.com</a></p>
+<h3 id="10-高级链接："><a href="#10-高级链接：" class="headerlink" title="10.高级链接："></a>10.高级链接：</h3><p>可以通过一个变量来设置一个链接，变量赋值在文档末尾进行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">这个链接用1作为网址变量[Google][1]</span><br><span class="line">这个链接用run作为网址变量[Baidu][run]&#123;首字母大写&#125;</span><br><span class="line">然后在文档结尾处</span><br><span class="line">[1]:http:&#x2F;&#x2F;www.google.com&#x2F;</span><br><span class="line">[run]:http:&#x2F;&#x2F;www.baidu.com&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>这个链接用1作为网址变量<a href="http://www.google.com/">Google</a><br>这个链接用run作为网址变量<a href="http://www.baidu.com/">Baidu</a><br>然后在文档结尾处</p>
+<p>markdown图片</p>
+<p>markdown图片语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">one：![alt 属性文本](图片地址)</span><br><span class="line">two：![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>开头一个感叹号</li>
+<li>接着一个方括号，里面房上图片替代文字</li>
+<li>接着一个普通括号，里面放上图片网址，最后还可以用引号包住并加上选择性的“title”属性文字。</li>
+</ul>
+<p>也可以像网址一样对图片使用变量</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">这个链接用1作为网址变量[图片][2]</span><br><span class="line">然后在文档结尾处</span><br><span class="line">[2]:1600008709385.jpg</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>示例；</p>
+<p>这个链接用1作为网址变量<a href="1600008709385.jpg">图片</a><br>然后在文档结尾处</p>
+<p>markdown没办法指定图片高度，如果需要可以使用普通的<img></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;img src&#x3D;10898738_143746326185_2.jpg width&#x3D;40%&gt;</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<h3 id="11-markdown制作表格使用-来分隔不同的单元格，使用-来表示分隔表头和其他进行。"><a href="#11-markdown制作表格使用-来分隔不同的单元格，使用-来表示分隔表头和其他进行。" class="headerlink" title="11.markdown制作表格使用|来分隔不同的单元格，使用-来表示分隔表头和其他进行。"></a>11.markdown制作表格使用<code>|</code>来分隔不同的单元格，使用<code>-</code>来表示分隔表头和其他进行。</h3><p>语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|表头		|表头		|</span><br><span class="line">|--------|---------|</span><br><span class="line">|单元格   |单元格    |</span><br><span class="line">|单元格   |单元格    |</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody></table>
+<p>对齐方式：</p>
+<ul>
+<li><code>-:</code>设置内容和标题栏右对齐。</li>
+<li><code>:-</code>设置内容和标题栏左对齐。</li>
+<li><code>:-:</code>设置内容和标题栏居中对齐。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|左对齐		|居中对齐	|右对齐		|</span><br><span class="line">|:--------------|:-----------:|-----------:|</span><br><span class="line">|单元格   |单元格    |单元格    |</span><br><span class="line">|单元格   |单元格    |单元格    |</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="center">居中对齐</th>
+<th align="right">右对齐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">单元格</td>
+<td align="center">单元格</td>
+<td align="right">单元格</td>
+</tr>
+<tr>
+<td align="left">单元格</td>
+<td align="center">单元格</td>
+<td align="right">单元格</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>essay</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>markdown-2</title>
+    <url>/2021/03/11/markdown-2/</url>
+    <content><![CDATA[<h1 id="1-引用"><a href="#1-引用" class="headerlink" title="1.引用"></a>1.引用</h1><p>在markdown中，引用由&gt;+引用内容来标记，如下所示。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 引用内容</span></span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<blockquote>
+<p>引用内容</p>
+</blockquote>
+<p>语法说明如下：</p>
+<p>1）多行引用也可以在每行的开头都插入&gt;.</p>
+<p>2)在引用中可以嵌套引用。</p>
+<p>3）在引用中可以使用其他的markdown语法。</p>
+<p>4）段落与换行的格式在引用中也是适用的。</p>
+<h1 id="2-转义"><a href="#2-转义" class="headerlink" title="2. 转义"></a>2. 转义</h1><p>当我们想在markdown文件中插入一些标记符号，但又不想让这些符号被渲染时，可以使用\进行转转义，语法如下》</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\特殊符号</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>可被转义符号如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\ 反斜线</span><br><span class="line">&#96; 反引号</span><br><span class="line">* 星号</span><br><span class="line">_ 底线</span><br><span class="line">&#123;&#125; 花括号</span><br><span class="line">[] 方括号</span><br><span class="line"># 井字号</span><br><span class="line">+ 加号</span><br><span class="line">- 减号</span><br><span class="line">. 英文句点</span><br><span class="line">！惊叹号</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h1 id="3-扩展语法GFM"><a href="#3-扩展语法GFM" class="headerlink" title="3. 扩展语法GFM"></a>3. 扩展语法GFM</h1><p>在众多markdown扩展语法中，GitHub Flavored Markdown （简称GFM）无疑时目前最流行的，它提供了包括表格，任务列表，删除线，围栏代码，Emoji等在内的标记语法，本书介绍的工具基本都支持GFM。</p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>删除线语法如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~~被删除的文字~~</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p><del>被删除的文字</del></p>
+<h2 id="表情符号"><a href="#表情符号" class="headerlink" title="表情符号"></a>表情符号</h2><p>使用：包裹表情代码即可，语法如下》</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">:smile:（笑脸）</span><br><span class="line">:bowtie:</span><br><span class="line">:smile:</span><br><span class="line">:simple_smile:</span><br><span class="line">:laughing:</span><br><span class="line">:blush:</span><br><span class="line">:smiley:</span><br><span class="line">:relaxed:</span><br><span class="line">:smirk:</span><br><span class="line">:heart_eyes:</span><br><span class="line">:kissing_heart:</span><br><span class="line">:kissing_closed_eyes:</span><br><span class="line">:flushed:</span><br><span class="line">:relieved:</span><br><span class="line">:satisfied:</span><br><span class="line">:grin:</span><br><span class="line">:wink:</span><br><span class="line">:stuck_out_tongue_winking_eye:</span><br><span class="line">:stuck_out_tongue_closed_eyes:</span><br><span class="line">:grinning:</span><br><span class="line">:kissing:</span><br><span class="line">:kissing_smiling_eyes:</span><br><span class="line">:stuck_out_tongue:</span><br><span class="line">:sleeping:</span><br><span class="line">:worried:</span><br><span class="line">:frowning:</span><br><span class="line">:anguished:</span><br><span class="line">:open_mouth:</span><br><span class="line">:grimacing:</span><br><span class="line">:confused:</span><br><span class="line">:hushed:</span><br><span class="line">:expressionless:</span><br><span class="line">:unamused:</span><br><span class="line">:sweat_smile:</span><br><span class="line">:sweat:</span><br><span class="line">:disappointed_relieved:</span><br><span class="line">:weary:</span><br><span class="line">:pensive:</span><br><span class="line">:disappointed:</span><br><span class="line">:confounded:</span><br><span class="line">:fearful:</span><br><span class="line">:cold_sweat:</span><br><span class="line">:persevere:</span><br><span class="line">:cry:</span><br><span class="line">:sob:</span><br><span class="line">:joy:</span><br><span class="line">:astonished:</span><br><span class="line">:scream:</span><br><span class="line">:neckbeard:</span><br><span class="line">:tired_face:</span><br><span class="line">:angry:</span><br><span class="line">:rage:</span><br><span class="line">:triumph:</span><br><span class="line">:sleepy:</span><br><span class="line">:yum:</span><br><span class="line">:mask:</span><br><span class="line">:sunglasses:</span><br><span class="line">:dizzy_face:</span><br><span class="line">:imp:</span><br><span class="line">:smiling_imp:</span><br><span class="line">:neutral_face:</span><br><span class="line">:no_mouth:</span><br><span class="line">:innocent:</span><br><span class="line">:alien:</span><br><span class="line">:yellow_heart:</span><br><span class="line">:blue_heart:</span><br><span class="line">:purple_heart:</span><br><span class="line">:heart:</span><br><span class="line">:green_heart:</span><br><span class="line">:broken_heart:</span><br><span class="line">:heartbeat:</span><br><span class="line">:heartpulse:</span><br><span class="line">:two_hearts:</span><br><span class="line">:revolving_hearts:</span><br><span class="line">:cupid:</span><br><span class="line">:sparkling_heart:</span><br><span class="line">:sparkles:</span><br><span class="line">:star:</span><br><span class="line">:star2:</span><br><span class="line">:dizzy:</span><br><span class="line">:boom:</span><br><span class="line">:collision:</span><br><span class="line">:anger:</span><br><span class="line">:exclamation:</span><br><span class="line">:question:</span><br><span class="line">:grey_exclamation:</span><br><span class="line">:grey_question:</span><br><span class="line">:zzz:</span><br><span class="line">:dash:</span><br><span class="line">:sweat_drops:</span><br><span class="line">:notes:</span><br><span class="line">:musical_note:</span><br><span class="line">:fire:</span><br><span class="line">:hankey:</span><br><span class="line">:poop:</span><br><span class="line">:shit:</span><br><span class="line">:+1:</span><br><span class="line">:thumbsup:</span><br><span class="line">:-1:</span><br><span class="line">:thumbsdown:</span><br><span class="line">:ok_hand:</span><br><span class="line">:punch:</span><br><span class="line">:facepunch:</span><br><span class="line">:fist:</span><br><span class="line">:v:</span><br><span class="line">:wave:</span><br><span class="line">:hand:</span><br><span class="line">:raised_hand:</span><br><span class="line">:open_hands:</span><br><span class="line">:point_up:</span><br><span class="line">:point_down:</span><br><span class="line">:point_left:</span><br><span class="line">:point_right:</span><br><span class="line">:raised_hands:</span><br><span class="line">:pray:</span><br><span class="line">:point_up_2:</span><br><span class="line">:clap:</span><br><span class="line">:muscle:</span><br><span class="line">:metal:</span><br><span class="line">:fu:</span><br><span class="line">:runner:</span><br><span class="line">:running:</span><br><span class="line">:couple:</span><br><span class="line">:family:</span><br><span class="line">:two_men_holding_hands:</span><br><span class="line">:two_women_holding_hands:</span><br><span class="line">:dancer:</span><br><span class="line">:dancers:</span><br><span class="line">:ok_woman:</span><br><span class="line">:no_good:</span><br><span class="line">:information_desk_person:</span><br><span class="line">:raising_hand:</span><br><span class="line">:bride_with_veil:</span><br><span class="line">:person_with_pouting_face:</span><br><span class="line">:person_frowning:</span><br><span class="line">:bow:</span><br><span class="line">:couplekiss:</span><br><span class="line">:couple_with_heart:</span><br><span class="line">:massage:</span><br><span class="line">:haircut:</span><br><span class="line">:nail_care:</span><br><span class="line">:boy:</span><br><span class="line">:girl:</span><br><span class="line">:woman:</span><br><span class="line">:man:</span><br><span class="line">:baby:</span><br><span class="line">:older_woman:</span><br><span class="line">:older_man:</span><br><span class="line">:person_with_blond_hair:</span><br><span class="line">:man_with_gua_pi_mao:</span><br><span class="line">:man_with_turban:</span><br><span class="line">:construction_worker:</span><br><span class="line">:cop:</span><br><span class="line">:angel:</span><br><span class="line">:princess:</span><br><span class="line">:smiley_cat:</span><br><span class="line">:smile_cat:</span><br><span class="line">:heart_eyes_cat:</span><br><span class="line">:kissing_cat:</span><br><span class="line">:smirk_cat:</span><br><span class="line">:scream_cat:</span><br><span class="line">:crying_cat_face:</span><br><span class="line">:joy_cat:</span><br><span class="line">:pouting_cat:</span><br><span class="line">:japanese_ogre:</span><br><span class="line">:japanese_goblin:</span><br><span class="line">:see_no_evil:</span><br><span class="line">:hear_no_evil:</span><br><span class="line">:speak_no_evil:</span><br><span class="line">:guardsman:</span><br><span class="line">:skull:</span><br><span class="line">:feet:</span><br><span class="line">:lips:</span><br><span class="line">:kiss:</span><br><span class="line">:droplet:</span><br><span class="line">:ear:</span><br><span class="line">:eyes:</span><br><span class="line">:nose:</span><br><span class="line">:tongue:</span><br><span class="line">:love_letter:</span><br><span class="line">:bust_in_silhouette:</span><br><span class="line">:busts_in_silhouette:</span><br><span class="line">:speech_balloon:</span><br><span class="line">:thought_balloon:</span><br><span class="line">:feelsgood:</span><br><span class="line">:finnadie:</span><br><span class="line">:goberserk:</span><br><span class="line">:godmode:</span><br><span class="line">:hurtrealbad:</span><br><span class="line">:rage1:</span><br><span class="line">:rage2:</span><br><span class="line">:rage3:</span><br><span class="line">:rage4:</span><br><span class="line">:suspect:</span><br><span class="line">:trollface:</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>:smile:（笑脸）</p>
+<p>:see_no_evil:</p>
+<p>更多表情符号请参考：[表情符号][<a href="http://www.webpagefx.com/tools/emoji-cheat-sheet/]">http://www.webpagefx.com/tools/emoji-cheat-sheet/]</a></p>
+<h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>在标准语法中，由&lt;&gt;包裹的URL地址被自动识别并解析为超链接，使用GFM扩展语法则可以不使用&lt;&gt;包裹。语法如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">标准语法中由&lt;&gt;包裹的URL地址被自动识别并解析为超链接。</span><br><span class="line">如:</span><br><span class="line">&lt;www.baidu.com&gt;</span><br><span class="line">使用GFM扩展语法可以不使用&lt;&gt;包裹。如：</span><br><span class="line">www.baidu.com</span><br><span class="line">如果不想自动链接也可以使用&#96;包裹URL地址</span><br><span class="line">&#96;www.baidu.com&#96;</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>标准语法中由&lt;&gt;包裹的URL地址被自动识别并解析为超链接。<br>如:<br>&lt;<a href="http://www.baidu.com&gt;/">www.baidu.com&gt;</a><br>使用GFM扩展语法可以不使用&lt;&gt;包裹。如：<br><a href="http://www.baidu.com/">www.baidu.com</a></p>
+<p>如果不想自动链接也可以使用包裹<code>URL地址</code></p>
+<p><code>www.baidu.com</code></p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>表格语法如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|表头1|表头2|表头3|</span><br><span class="line">|----|----|----|</span><br><span class="line">|内容1|内容2|内容3|</span><br><span class="line">|内容1|内容2|内容3|</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+<th>表头3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>内容1</td>
+<td>内容2</td>
+<td>内容3</td>
+</tr>
+<tr>
+<td>内容1</td>
+<td>内容2</td>
+<td>内容3</td>
+</tr>
+</tbody></table>
+<p>语法说明如下：</p>
+<p>1）单元格使用|来分隔，为了阅读更清晰，建议最前和最后都使用|。</p>
+<p>2）单元格和|之间的空格会被被移除。</p>
+<p>3）表头与其他行使用-来分隔。</p>
+<p>4）表格对齐格式如下：</p>
+<ul>
+<li>左对齐（默认）：<code>:</code></li>
+<li>右对齐：<code>-:</code></li>
+<li>居中对齐：<code>:-:</code></li>
+</ul>
+<p>5)块级元素（代码区块，引用区块）不能插入表格中。</p>
+<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><p>任务列表的语法如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- [] 未勾选</span><br><span class="line">- [x] 已勾选</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<ul>
+<li><p><input disabled="" type="checkbox">  未勾选</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  已勾选</p>
+</li>
+</ul>
+<p>语法说明如下：</p>
+<p>1）任务列表以-+空格开头，由[+空格/x+]组成。</p>
+<p>2）x可以是小写，也可以是大写，由些编辑器可能不支持大写，所以为了避免解析错误，推荐使用小写的x。</p>
+<h2 id="围栏代码块"><a href="#围栏代码块" class="headerlink" title="围栏代码块"></a>围栏代码块</h2><p>在基础的语法中代码块使用tab键或4格空格开头；在扩展语法中使用连续3个`或3个~~~包裹，还支持语法高亮可读性和可维护性更强一些。</p>
+<p>围栏代码块语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1：</span><br><span class="line">​&#96;&#96;&#96;+回车键</span><br><span class="line">或</span><br><span class="line">2：</span><br><span class="line">​&#96;&#96;&#96;（可加代码名称）</span><br><span class="line">代码</span><br><span class="line">​&#96;&#96;&#96;</span><br><span class="line">或</span><br><span class="line">3：</span><br><span class="line">~~~（可加代码名称）</span><br><span class="line">代码</span><br><span class="line">~~~</span><br><span class="line">或</span><br><span class="line">4：</span><br><span class="line">~~~+回车键</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>示例</p>
+<p>1：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">代码</span><br></pre></td></tr></table></figure>
+
+<p>或<br>3：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">代码</span><br></pre></td></tr></table></figure>
+
+<p>或<br>4：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h2><p>锚点，也称为书签，用来标记文档的特定位置，使用锚点可以跳转到当前文档或其他文档中指定的标记位置。</p>
+<p>Markdown会被渲染成HTML页面，在HTML页面中可以通过锚点实现跳转；</p>
+<p>GitHub、GitBook项目文档中的目录也是通过锚点实现跳转的。</p>
+<p>· 锚点的语法如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[锚点描述](#锚点名)</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p><a href="#1.%E5%BC%95%E7%94%A8">锚点描述</a></p>
+<p><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">锚点描述</a></p>
+<p>语法说明如下。</p>
+<p>1）锚点名建议使用字母和数字，当然中文也是被支持的，但不排除有些网站支持得不够好。</p>
+<p>2）锚点名是区分英文大小写的。</p>
+<p>3）在锚点名中不能含由空格，也不能含由特殊字符。</p>
+]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>essay</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pandas-1</title>
+    <url>/2021/03/11/pandas-1/</url>
+    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1303019637&auto=0&height=66"></iframe>
+
+<h1 id="pandas基础-jupyter"><a href="#pandas基础-jupyter" class="headerlink" title="pandas基础(jupyter)"></a>pandas基础(jupyter)</h1><span id="more"></span>
+
+<h2 id="一-创建、读取和存储"><a href="#一-创建、读取和存储" class="headerlink" title="一.创建、读取和存储"></a>一.<strong>创建、读取和存储</strong></h2><p>1.创建在 Pandas 中我们想要构造下面这一张表应该如何操作呢？</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>数学</th>
+<th>英语</th>
+<th>语文</th>
+<th>总分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>小明</td>
+<td>88</td>
+<td>77</td>
+<td>86</td>
+<td>251</td>
+</tr>
+<tr>
+<td>小刘</td>
+<td>86</td>
+<td>67</td>
+<td>69</td>
+<td>222</td>
+</tr>
+<tr>
+<td>小王</td>
+<td>96</td>
+<td>85</td>
+<td>66</td>
+<td>247</td>
+</tr>
+<tr>
+<td>小白</td>
+<td>77</td>
+<td>85</td>
+<td>69</td>
+<td>231</td>
+</tr>
+</tbody></table>
+<ol>
+<li><p>第一步一定是先导入我们的库——import pandas as pd</p>
+</li>
+<li><p>构造 DataFrame， 最常用的方式是字典+列表，语句很简单，先是字典外括，然后</p>
+<p> 依次打出每一列标题及其对应的列值（此处一定要用列表），这里列的顺序并不重要。</p>
+<p> 如下所示：</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df1=pd.DataFrame(&#123;<span class="string">&#x27;数学&#x27;</span>:[<span class="number">88</span>,<span class="number">86</span>,<span class="number">96</span>,<span class="number">77</span>],<span class="string">&#x27;英语&#x27;</span>:[<span class="number">77</span>,<span class="number">67</span>,<span class="number">85</span>,<span class="number">85</span>],<span class="string">&#x27;语文&#x27;</span>:[<span class="number">86</span>,<span class="number">69</span>,<span class="number">66</span>,<span class="number">69</span>],<span class="string">&#x27;总分&#x27;</span>:[<span class="number">251</span>,<span class="number">222</span>,<span class="number">247</span>,<span class="number">231</span>],index=[<span class="string">&#x27;小明&#x27;</span>，<span class="string">&#x27;小刘&#x27;</span>,<span class="string">&#x27;小王&#x27;</span>,<span class="string">&#x27;小白&#x27;</span>]&#125;)</span><br><span class="line">df1</span><br></pre></td></tr></table></figure>
+
+<p> 实例如下：</p>
+ <img src="https://i.loli.net/2021/03/11/ivm76lzodeuTVaZ.png" alt="image-20210311211748937" style="zoom: 67%;" /></li>
+</ol>
+<h2 id="二-读取"><a href="#二-读取" class="headerlink" title="二.读取"></a>二.读取</h2><p>​    更多时候，我们是把相关文件数据直接读进 PANDAS 中进行操作，这里介绍两种非常接近的读取方式，一种是 CSV 格式的文件，一种是 EXCEL 格式（.xlsx 和 xls 后缀）的文件。</p>
+<ol>
+<li><h3 id="读取-csv-文件："><a href="#读取-csv-文件：" class="headerlink" title="读取 csv 文件："></a>读取 csv 文件：</h3></li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df2=pd.read_csv(<span class="string">&#x27;流量练习数据.csv&#x27;</span>,engine=<span class="string">&#x27;python&#x27;</span>)</span><br><span class="line">df2.head()</span><br></pre></td></tr></table></figure>
+
+<p>engine 是使用的分析引擎，读取 csv 文件一般指定 python 避免中文和编码造成的报错。</p>
+<p>实例如下：</p>
+<img src="https://i.loli.net/2021/03/11/SElF2tompz4hydx.png" alt="image-20210311212801228" style="zoom:67%;" />
+
+<ol start="2">
+<li><h3 id="读取-Excel-文件"><a href="#读取-Excel-文件" class="headerlink" title="读取 Excel 文件"></a>读取 Excel 文件</h3></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">df3&#x3D;pd.read_excel(&#39;流量练习数据.xls&#39;)</span><br><span class="line">df3.head()</span><br></pre></td></tr></table></figure>
+
+<p>read_csv 和 read_excel 还有一些参数，比如 header、sep、names 等，大家可以做额外了解。实践中数据源的格式一般都是比较规整的，更多情况是直接读取。</p>
+<p>实例：</p>
+<img src="https://i.loli.net/2021/03/11/GuvdINsr7lPU8mo.png" alt="image-20210311213353131" style="zoom:67%;" />
+
+<h2 id="三-存储"><a href="#三-存储" class="headerlink" title="三.存储"></a>三.存储</h2><ol>
+<li><h3 id="存储excel"><a href="#存储excel" class="headerlink" title="存储excel"></a>存储excel</h3></li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df2.to_excel(<span class="string">&#x27;df2.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><h3 id="存储csv"><a href="#存储csv" class="headerlink" title="存储csv"></a>存储csv</h3></li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df3.to_csv(<span class="string">&#x27;df3.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/03/11/DymocQawZX8dEiU.png" alt="image-20210311214308041"></p>
+<h2 id="四-快速认识数据"><a href="#四-快速认识数据" class="headerlink" title="四.快速认识数据"></a>四.快速认识数据</h2><h3 id="1-查看数据，掐头看尾"><a href="#1-查看数据，掐头看尾" class="headerlink" title="1.查看数据，掐头看尾"></a>1.查看数据，掐头看尾</h3><p>​        很多时候我们想要对数据内容做一个总览，用 df.head()函数直接可以查看默认的前 5 行，与之对应，df.tail()就可以查看数据尾部的 5 行数据，这两个参数内可以传入一个数值来控制查看的行数，例如 df.head(10)表示查看前 10 行数据.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#查看前五行</span><br><span class="line">df.head()</span><br><span class="line">#查看后五行</span><br><span class="line">df.tail()</span><br><span class="line">#查看前十行</span><br><span class="line">df.head(10)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-格式查看"><a href="#2-格式查看" class="headerlink" title="2.格式查看"></a>2.格式查看</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#帮助我们一步摸清各列数据的类型，以及缺失情况</span></span><br><span class="line">df.info()</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.loli.net/2021/03/11/9T1magUSAwEsz3d.png" alt="image-20210311215136221" style="zoom:67%;" />
+
+<p>​        从上面直接可以知道数据集的行列数，数据集的大小，每一列的数据类型，以及有多少条非空数据。</p>
+<h3 id="3-统计信息概览"><a href="#3-统计信息概览" class="headerlink" title="3.统计信息概览"></a>3.统计信息概览</h3><p>​    快速计算数值型数据的关键统计指标，像平均数、中位数、标准差等等.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2.describe()</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<img src="https://i.loli.net/2021/03/11/2aT1sBdzlyZwCrJ.png" alt="image-20210311215511631" style="zoom:67%;" />
+
+<p>​        注意到本来 5 列数据，为什么返回结果只有两列？那是因为这个操作只针对数值型的列。其中 count 是统计每一列的有多少个非空数值，mean、std、min、max对应的分别是该列的均值、标准差、平均值和最大值，25%、50%、75%对应的则是分位数。</p>
+<h3 id="4-列的基本处理方式"><a href="#4-列的基本处理方式" class="headerlink" title="4.列的基本处理方式"></a>4.列的基本处理方式</h3><p>​        采用 SQL 四大法宝的逻辑来简单梳理针对列的基本处理方式——增、删、选、改。</p>
+<p>​        <code>tip：使用 Pandas 时，尽量避免用行或者 EXCEL 操作单元格的思维来处理数据，要逐渐养成一种列向思维</code></p>
+<h4 id="1-增"><a href="#1-增" class="headerlink" title="1.增"></a>1.增</h4><p>​        增加一列，用 df[‘新列名’] = 新列值的形式，在原数据基础上赋值即可：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2[&#39;new_line&#39;]&#x3D;range(1,len(df2)+1)</span><br><span class="line">df2.head()</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<img src="https://i.loli.net/2021/03/12/LSoFI89U7Jj3Dey.png" alt="image-20210312111703138" style="zoom:67%;" />
+
+
+
+<h4 id="2-删："><a href="#2-删：" class="headerlink" title="2.删："></a>2.删：</h4><p>我们用 drop 函数制定删除对应的列，axis = 1 表示针对列的操作，inplace 为 True，则直接在源数据上进行修改，否则源数据会保持原样。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2.drop(&#39;new_line&#39;,axis&#x3D;1,inplace &#x3D; True)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/03/12/OvLr2xsXnFuElYm.png" alt="image-20210312111942924"></p>
+<h4 id="3-选："><a href="#3-选：" class="headerlink" title="3.选："></a>3.选：</h4><p>想要选取某一列怎么办？df[‘列名’]即可：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2[&#39;访客数&#39;]</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/03/12/bYj6tS4UK1wy2vu.png" alt="image-20210312112125161"></p>
+<p>选取多列呢？需要用列表来传递：df[[‘第一列’,’第二列’,’第三列’..]]</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2[[&#39;访客数&#39;,&#39;来源明细&#39;]]</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<img src="https://i.loli.net/2021/03/12/aTepoSchMZNrAzm.png" alt="image-20210312112445371"  />
+
+<p><code>tip：加上head()仅查看前五行</code></p>
+<h4 id="4-改："><a href="#4-改：" class="headerlink" title="4.改："></a>4.改：</h4><p>​        好事多磨，复杂的针对特定条件和行列的筛选、修改，放在后面结合案例细讲，这里只讲一下最简单的更改：df[‘旧列名’] = 某个值或者某列值，就完成了对原列数值的修改。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2[&#39;访客数&#39;]&#x3D;range(1,len(df2)+1)</span><br><span class="line">df2.head(6)</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<p><img src="https://i.loli.net/2021/03/12/6bkUzHda7XjJOnq.png" alt="image-20210312113515695"></p>
+<h2 id="五-常用数据类型及操作"><a href="#五-常用数据类型及操作" class="headerlink" title="五.常用数据类型及操作"></a>五.常用数据类型及操作</h2><h3 id="1-字符串"><a href="#1-字符串" class="headerlink" title="1.字符串"></a>1.字符串</h3><p>​        字符串类型是最常用的格式之一了，Pandas 中字符串的操作和原生字符串操作几乎一毛一样，唯一不同的是需要在操作前加上”.str”。</p>
+<p><code>tip:我们最初用 df2.info()查看数据类型时，非数值型的列都返回的是object 格式，和 str 类型深层机制上的区别就不展开了，在常规实际应用中，我们可以先理解为 object 对应的就是 str 格式，int64 对应的就是 int 格式，float64对应的就是 float 格式即可。</code></p>
+<p>​        在案例数据中，我们发现来源明细那一列，可能是系统导出的历史遗留问题，每一个字符串前面都有一个“-”符号，又丑又无用，所以把他给拿掉:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2[&#39;来源明细&#39;].str.replace(&#39;-&#39;,&#39;&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<p><img src="https://i.loli.net/2021/03/12/e1ukTP6FH9yMnz4.png" alt="image-20210312114107080"></p>
+<p>以上操作并不会改变原数据，再次输入df2.head()：</p>
+<p><img src="https://i.loli.net/2021/03/12/xj9rDHeOzXBYt6p.png" alt="image-20210312114229951"></p>
+<p>所以，可以替换原数据对应的那一列：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2[&#39;来源明细&#39;]&#x3D;df2[&#39;来源明细&#39;].str.replace(&#39;-&#39;,&#39;&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<p><img src="https://i.loli.net/2021/03/12/myLjcKuPA9zNC6r.png" alt="image-20210312114546648"></p>
+<h3 id="2-数值型"><a href="#2-数值型" class="headerlink" title="2.数值型"></a>2.数值型</h3><p>​        数值型数据，常见的操作是计算，分为与单个值的运算，长度相等列的运算。</p>
+<p>​        以案例数据为例，源数据访客数我们是知道的，现在想把所有渠道的访客都加上10000，怎么操作呢？</p>
+<p>​        只需要选中访客数所在列，然后加上 10000 即可，pandas 自动将 10000 和每一行数值相加，针对单个值的其他运算（减乘除）也是如此。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2[&#39;访客数&#39;]</span><br><span class="line">df2[&#39;访客数&#39;]+10000</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/03/13/I7isfcJpde4nGuy.png" alt="image-20210313152107623" style="zoom:50%;" /><img src="https://i.loli.net/2021/03/13/ct7b1nsLyNvRXh8.png" alt="image-20210313152127229" style="zoom:50%;" /></p>
+<p><code>tip：以上操作并不会改变原数据</code></p>
+<p>​            列之间的运算语句也非常简洁。源数据是包含了访客数、转化率和客单价，而实际工作中我们对每个渠道贡献的销售额更感兴趣。（销售额 = 访客数 X 转化率 X 客单价）对应操作语句：df[‘销售额’] = df[‘访客数’] * df[‘转化率’] * df[‘客单价’]但为什么疯狂报错？</p>
+<p>​        导致报错的原因，是数值型数据和非数值型数据相互计算导致的。PANDAS 把带“%”符号的转化率识别成字符串类型，我们需要先拿掉百分号，再将这一列转化为浮点型数据：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2[&#39;支付转化率&#39;]&#x3D;df2[&#39;支付转化率&#39;].str.replace(&#39;%&#39;,&#39;&#39;).astype(float)</span><br><span class="line">df2.head()</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.loli.net/2021/03/13/CpXvON84dtqM9LV.png" alt="image-20210313152805433" style="zoom: 67%;" />
+
+<p>​        要注意的是，这样操作，把 9.98%变成了 9.98，所以我们还需要让支付转化率除以 100，来还原百分数的真实数值：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2[&#39;支付转化率&#39;]&#x3D;df2[&#39;支付转化率&#39;]&#x2F;100</span><br><span class="line">df2.head()</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.loli.net/2021/03/13/caZHVBKoUjfTFWt.png" alt="image-20210313152955280" style="zoom:67%;" />
+
+<p>然后，再用三个指标相乘计算销售额：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2[&#39;销售额&#39;]&#x3D;df2[&#39;支付转化率&#39;]*df2[&#39;访客数&#39;]*df2[&#39;客单价&#39;]</span><br><span class="line">df2.head()</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/03/13/wXkSlMKLA5Z4zjO.png" alt="image-20210313153246797"></p>
+<h3 id="3-时间类型"><a href="#3-时间类型" class="headerlink" title="3.时间类型"></a>3.时间类型</h3><p>​        PANDAS 中时间序列相关的水非常深，这里只对日常中最基础的时间格式进行讲解，对时间序列感兴趣的同学可以自行查阅相关资料，深入了解。</p>
+<p>​        以案例数据为例，我们这些渠道数据，是在 2019 年 8 月 2 日提取的，后面可能涉及到其他日期的渠道数据，所以需要加一列时间予以区分，在 EXCEL 中常用的时间格式是’2019-8-3’或者’2019/8/3’，我们用 PANDAS 来实现一下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2[&#39;date&#39;]&#x3D;&#39;2021-3-13&#39;</span><br><span class="line">df2.head()</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.loli.net/2021/03/13/Gjo5f6hyIEzZlKT.png" alt="image-20210313153918252" style="zoom:67%;" />
+
+<p>在实际业务中，一些时候 PANDAS 会把文件中日期格式的字段读取为字符串格</p>
+<p>式，这里我们先把字符串’2019-8-3’赋值给新增的日期列，然后用 to_datetime()</p>
+<p>函数将字符串类型转换成时间格式：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#上半图，dtype:object</span><br><span class="line">df2[&#39;date&#39;]</span><br><span class="line">#下半图dtype:datetime64</span><br><span class="line">df2[&#39;date&#39;]&#x3D;pd.to_datetime(df2[&#39;date&#39;])</span><br><span class="line">df2[&#39;date&#39;].head()</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.loli.net/2021/03/13/GLIw7luzAHb5XRy.png" alt="image-20210313154408801" style="zoom:67%;" />
+
+<p>​        转换成时间格式（这里是 datetime64）之后，我们可以用处理时间的思路高效处理这些数据，比如，我现在想知道提取数据这一天离年末还有多少天（’2021-12-31’），直接做减法（该函数接受时间格式的字符串序列，也接受单个字符串）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.to_datetime(&#39;2021-12-31&#39;)-pd.to_datetime(df2[&#39;date&#39;])</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.loli.net/2021/03/13/r3aMBL5vVTGzERH.png" alt="image-20210313154831812" style="zoom:67%;" />]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>pandas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pandas-2</title>
+    <url>/2021/03/14/pandas-2/</url>
+    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=520 height=86 src="//music.163.com/outchain/player?type=2&id=36229051&auto=0&height=66"></iframe>
+
+<h1 id="玩转Pandas索引（jupyter）"><a href="#玩转Pandas索引（jupyter）" class="headerlink" title="玩转Pandas索引（jupyter）"></a>玩转Pandas索引（jupyter）</h1><span id="more"></span>
+
+<p>​        第一篇潘大师（初识 Pandas）教程考虑到篇幅问题只讲了最基础的列向索引，但这显然不能满足同志们日益增长的个性化服务（选取）需求。为了舒缓痛感，增加快感，满足需求，第二篇内容我们单独把索引拎出来，结合场景详细介绍两种常用的索引方式：</p>
+<ul>
+<li><p>第一种是基于位置（整数）的索引，案例短平快，有个粗略的了解即可，实际中偶有用到，但它的应用范围不如第二种广泛。</p>
+</li>
+<li><p>第二种是基于名称（标签）的索引，这是要敲黑板练的重点，因为它将是我们后面进行数据清洗和分析的重要基石。</p>
+</li>
+</ul>
+<p>​    首先，简单介绍一下练习的案例数据：</p>
+<img src="https://i.loli.net/2021/03/14/f4TO1M2duLsIlND.png" alt="image-20210314094714042" style="zoom:50%;" />
+
+<p>​        和第一篇数据集一样，记录着不同流量来源下，各渠道来源明细所对应的访客数、支付转化率和客单价。数据集虽然简短（复杂的案例数据集在基础篇完结后会如约而至），但是有足够的代表性，下面开始我们索引的表演。</p>
+<h2 id="一。基于位置（数字）的索引"><a href="#一。基于位置（数字）的索引" class="headerlink" title="一。基于位置（数字）的索引"></a>一。基于位置（数字）的索引</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.iloc[row,col]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>第一个位置是行索引输入我们要选取的哪几行的位置。</p>
+</li>
+<li><p>第二个位置是列索引，输入我们想要选取哪几列的位置参数。</p>
+</li>
+<li><p>索引是从0开始，含首不含尾。</p>
+</li>
+</ul>
+<p>我们需要根据实际情况，填入对应的行参数和列参数：</p>
+<h3 id="场景一（行选取）"><a href="#场景一（行选取）" class="headerlink" title="场景一（行选取）"></a>场景一（行选取）</h3><p>目标：选择“流量来源”等于“一级”的所有行。</p>
+<p>思路：手指戳屏幕数一数，一级的渠道，是从第 1 行到第 13 行，对应行索引是 0-</p>
+<p>12，但 Python 切片默认是含首不含尾的，要想选取 0-12 的索引行，我们得输入</p>
+<p>“0:13”，列想要全部选取，则输入冒号“：”即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#df.iloc[:13],这样也可</span><br><span class="line">df.iloc[:13,;]</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/14/qDsV7ARyPjlINQF.png" alt="image-20210314095256264" style="zoom:67%;" /></p>
+<h3 id="场景二（列选取）"><a href="#场景二（列选取）" class="headerlink" title="场景二（列选取）"></a>场景二（列选取）</h3><p>目标：我们想要把所有渠道的流量来源和客单价单拎出来看一看。</p>
+<p>思路：所有流量渠道，也就是所有行，在第一个行参数的位置我们输入“：”；再看列，流量来源是第 1 列，客单价是第 5 列，对应的列索引分别是 0 和 4：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.iloc[;[0,4]]</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<img src="https://i.loli.net/2021/03/14/5Gp9OkMIx8nTaWm.png" alt="image-20210314095226123" style="zoom:67%;" />
+
+<p>​        值得注意的是，如果我们要跨列选取，得先把位置参数构造成列表形式，这里就是[0,4]，如果是连续选取，则无需构造成列表，直接输入 0:5（选取索引为 0 的列到索引为 4 的列）就好。</p>
+<h3 id="场景三（行列交叉选取）"><a href="#场景三（行列交叉选取）" class="headerlink" title="场景三（行列交叉选取）"></a>场景三（行列交叉选取）</h3><p>​        目标：我们想要看一看二级、三级流量来源、来源明细对应的访客和支付转化率</p>
+<p>思路：先看行，二级三级渠道对应行索引是 13:17，再次强调索引含首不含尾的原则，我们传入的行参数是 13:18；列的话我们需要流量来源、来源明细、访客和转化，也就是前 4 列，传入参数 0:4</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.iloc[13:18,0:4]</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/14/2pt5voY4InQGB7m.png" alt="image-20210314095608402" style="zoom:67%;" /></p>
+<h2 id="二-基于名称（标签）的索引"><a href="#二-基于名称（标签）的索引" class="headerlink" title="二.基于名称（标签）的索引"></a>二.基于名称（标签）的索引</h2><p>​        为了建立起横向对比的体感，我们依然沿用上面三个场景。</p>
+<h3 id="场景一（行选取）："><a href="#场景一（行选取）：" class="headerlink" title="场景一（行选取）："></a>场景一（行选取）：</h3><p>选择一级渠道的所有行。</p>
+<p>思路：这次我们不用一个个数位置了，要筛选流量渠道为”一级”的所有行，只需做一个判断，判断流量来源这一列，哪些值等于”一级”。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df[<span class="string">&#x27;流量来源&#x27;</span>]==<span class="string">&#x27;一级&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/14/CXcmAn5eEPOBtN9.png" alt="image-20210314095855525" style="zoom:67%;" /></p>
+<p>​        返回的结果由 True 和 False（布尔型）构成，在这个例子中分别代表结果等于一级和非一级。在 loc 方法中，我们可以把这一列判断得到的值传入行参数位置，Pandas 会默认返回结果为 True 的行（这里是索引从 0 到 12 的行），而丢掉结果为 False 的行，直接上例子：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#df.loc[df[&#39;流量来源&#39;]&#x3D;&#x3D;&#39;一级&#39;]，这样也可</span><br><span class="line">df.loc[df[&#39;流量来源&#39;]&#x3D;&#x3D;&#39;一级&#39;,:]</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/14/q8PDznM3wJH97gX.png" alt="image-20210314100051417" style="zoom:67%;" /></p>
+<h3 id="场景二（列选取）："><a href="#场景二（列选取）：" class="headerlink" title="场景二（列选取）："></a>场景二（列选取）：</h3><p>我们想要把所有渠道的流量来源和客单价单拎出来看一看。</p>
+<p>思路：所有渠道等于所有行，我们在行参数位置直接输入“:”，要提取流量来源和客单价列，直接输入名称到列参数位置，由于这里涉及到两列，所以得用列表包起来</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.loc[:,[&#39;流量来源&#39;,&#39;客单价&#39;]]</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.loli.net/2021/03/14/kfvx6G2Ii5UZ87b.png" alt="image-20210314100455536" style="zoom:67%;" />
+
+<h3 id="场景三（行列交叉选取）："><a href="#场景三（行列交叉选取）：" class="headerlink" title="场景三（行列交叉选取）："></a>场景三（行列交叉选取）：</h3><p>我们想要提取二级、三级流量来源、来源明细对应的访客和支付转化率。</p>
+<p>思路：行提取用判断，列提取输入具体名称参数。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.loc[df[&#39;流量来源&#39;].isin([&#39;二级&#39;,&#39;三级&#39;]),[&#39;流量来源&#39;,&#39;来源明细&#39;,&#39;访客数&#39;,&#39;支付转化率&#39;]]</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<p><img src="https://i.loli.net/2021/03/14/Gpls6MCQaef1jBV.png" alt="image-20210314101043051"></p>
+<p>​        此处插入了一条 isin 函数，这个函数能够帮助我们快速判断源数据中某一列（Series）的值是否等于列表中的值。拿案例来说，df[‘流量来源’].isin([‘二级’,’三 级’])，判断的是流量来源这一列的值，是否等于“二级”或者“三级”，如果等于（等于任意一个）就返回 True，否则返回 False。我们再把这个布尔型判断结果传入行参数，就能够很容易的得到流量来源等于二级或者三级的渠道。</p>
+<p>显然loc 的应用场景更加广泛，应该给他加个鸡腿，再来个接地气的场景练练手。插入场景之前，我们先花 30 秒的时间捋一捋 Pandas 中列（Series）向求值的用法，具体操作如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df[&#39;访客数&#39;].mean()#计算均值</span><br><span class="line">df[&#39;访客数&#39;].std()#计算标准差</span><br><span class="line">df[&#39;访客数&#39;].median()#计算中位数</span><br><span class="line">df[&#39;访客数&#39;].max()#计算最大值</span><br><span class="line">df[&#39;访客数&#39;].min()#计算最小值</span><br></pre></td></tr></table></figure>
+
+<p><strong>场景四：</strong></p>
+<p>对于流量渠道数据，我们真正应该关注的是优质渠道，假如这里我们定义访客数、转化率、客单价都高于平均值渠道是优质渠道，那怎么找到这些渠道呢？</p>
+<p>思路：优质渠道，得同时满足访客、转化、客单高于平均值这三个条件，这是解题的关键。</p>
+<p>先看看均值各是多少：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">print(&#39;访客数均值：&#39;,df[&#39;访客数&#39;].mean())</span><br><span class="line">print(&#39;转化率均值：&#39;,df[&#39;支付转化率&#39;].mean())</span><br><span class="line">print(&#39;客单价均值：&#39;,df[&#39;客单价&#39;].mean())</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/14/YzUb9EhwKJ4Zmtn.png" alt="image-20210314102139194" style="zoom: 67%;" /></p>
+<p>再判断各指标列是否大于均值，要三个条件同时满足，他们之间是一个“且”的关系（同时满足），在 pandas中，要表示同时满足，各条件之间要用”&amp;”符号连接，条件内部最好用括号区分；如果是“或”的关系（满足一个即可），则用“|”符号连接：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(df[&#39;访客数&#39;] &gt; df[&#39;访客数&#39;].mean()) &amp; (df[&#39;支付转化率&#39;] &gt; df[&#39;支付转化率&#39;].mean()) &amp; (df[&#39;客单价&#39;] &gt; df[&#39;客单价&#39;].mean())</span><br></pre></td></tr></table></figure>
+<p>实例：</p>
+<p><img src="https://i.loli.net/2021/03/14/kmItuWGAfzMyp4D.png" alt="image-20210314102321867"></p>
+<p>​        这样连接之后，返回 True 则表示该渠道同时满足访客、转化率、客单价都高于均值的条件，接下来我们只需要把这些值传入到行参数的位置。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.loc[(df[&#39;访客数&#39;] &gt; df[&#39;访客数&#39;].mean()) &amp; </span><br><span class="line">      (df[&#39;支付转化率&#39;] &gt; df[&#39;支付转化率&#39;].mean()) &amp; </span><br><span class="line">      (df[&#39;客单价&#39;] &gt; df[&#39;客单价&#39;].mean()),:]</span><br></pre></td></tr></table></figure>
+<p>实例：</p>
+<img src="https://i.loli.net/2021/03/14/lCoxiRYj2zrJXsE.png" alt="image-20210314102514439" style="zoom:67%;" />
+
+<p>​        到这一步，我们直接筛选出了 4 条关键指标都高于均值的优质渠道。这两种索引方式，分别是基于位置（数字）的索引和基于名称（标签）的索引，关键在于把脑海中想要选取的行和列，映射到对应的行参数与列参数中去。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>pandas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>傅里叶级数及变换</title>
+    <url>/2021/03/14/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%8F%8A%E5%8F%98%E6%8D%A2/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="三角函数的正交性"><a href="#三角函数的正交性" class="headerlink" title="三角函数的正交性"></a>三角函数的正交性</h2><h3 id="三角函数系"><a href="#三角函数系" class="headerlink" title="三角函数系"></a>三角函数系</h3><p>三角函数系本身是一个集合:</p>
+<p>{$0(sin0x),1(cos0x),sinx,cosx,sin2x,cos2x,…,sinnx,cosnx$}</p>
+<h3 id="正交性：从三角函数系中任取两个不同的项相乘均等于0"><a href="#正交性：从三角函数系中任取两个不同的项相乘均等于0" class="headerlink" title="正交性：从三角函数系中任取两个不同的项相乘均等于0"></a>正交性：从三角函数系中任取两个不同的项相乘均等于0</h3><p>示例：</p>
+<p>$\displaystyle \int^{\pi}_{-\pi}{cosnxsinnxdx}=0$,{$n\in N$}</p>
+<p>$\displaystyle \int^{\pi}_{-\pi}{cosnxcosmxdx}=0$,{$n\neq m$}</p>
+<p>$\displaystyle \int^{\pi}_{-\pi}{sinnxsinmxdx}=0$,{$n\neq m$}</p>
+<h2 id="周期为-2-pi-的函数展开为傅里叶级数"><a href="#周期为-2-pi-的函数展开为傅里叶级数" class="headerlink" title="周期为$2\pi$的函数展开为傅里叶级数"></a>周期为$2\pi$的函数展开为傅里叶级数</h2><p>设有函数$f(x)$,周期T=$2\pi$,即$f(x)=f(x+2\pi)$</p>
+<p>则傅里叶级数展开公式为：</p>
+<p>$f(x)=$$\displaystyle \sum^{n \to \infty}<em>{n=0}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=0}b</em>{n}sinnx$                                      （1）</p>
+<p>=$a_{0}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx  $                                        （2）           </p>
+<p>,注意此式子中$a_{0}$跟下面$\frac{a_{0}}{2}$中的$a_{0}$不是同一个$a_{0}$</p>
+<p>大多数书籍傅里叶级数展开式为</p>
+<p>$f(x)=$$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$                              （3）</p>
+<p>这两个式子的不同之处在与$\frac{a_{0}}{2}$和n从1开始累加，</p>
+<ol>
+<li>求$a_{0}$，对(2)式两边进行$-\pi到\pi$的积分，则：</li>
+</ol>
+<p>$\displaystyle \int^{\pi}<em>{-\pi}{f(x)dx}$=$\displaystyle \int^{\pi}</em>{-\pi}{a_{0}dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnx dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnx dx}$</p>
+<p>其中根据三角函数的正交性：$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnx dx}$=0，$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnx dx}$=0</p>
+<p>求得$a_{0}$=$\frac{1}{2\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
+<p>则令$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
+<p>得到（3）式</p>
+<ol start="2">
+<li>求$a_{n}$,对（3）式两边同时乘$cosmx$，并对等式两边进行$-\pi到\pi$的积分，则：</li>
+</ol>
+<p>$\displaystyle \int^{\pi}<em>{-\pi}{f(x)cosmxdx}$=$\displaystyle \int^{\pi}</em>{-\pi}{\frac{a_{0}}{2}cosmxdxdx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnxcosmxdx dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnxcosmxdx dx}$</p>
+<p>其中根据三角函数的正交性：$\displaystyle \int^{\pi}<em>{-\pi}{\frac{a</em>{0}}{2}cosmxdxdx}$=0,$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnxcosmxdx dx}$=0</p>
+<p>而$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnxcosmxdx dx}$中当n=m时$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle a</em>{n}cosnxcosmxdx$=$a_{n}\pi$</p>
+<p>所以$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
+<ol start="3">
+<li>求$b_{n}$,对（3）式两边同时乘$sinmx$，并对等式两边进行$-\pi到\pi$的积分，得：</li>
+</ol>
+<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
+<p>故周期为$2\pi$傅里叶展开式为：</p>
+<p>$f(x)=$$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$            </p>
+<p>$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
+<p>$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
+<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
+<h2 id="周期为-2L-的函数展开为傅里叶级数"><a href="#周期为-2L-的函数展开为傅里叶级数" class="headerlink" title="周期为$2L$的函数展开为傅里叶级数"></a>周期为$2L$的函数展开为傅里叶级数</h2><p>函数：$f(t)=f(t+2L)$</p>
+<p>换元：x=$\frac{\pi}{L}t$,即t=$\frac{L}{\pi}$</p>
+<table>
+<thead>
+<tr>
+<th>t</th>
+<th>x</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2L</td>
+<td>2$\pi$</td>
+</tr>
+<tr>
+<td>4L</td>
+<td>4$\pi$</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>则$f(t)=f(\frac{L}{\pi})$，令$g(x)=f(\frac{L}{\pi})$</p>
+<p>则$g(x)$周期为$2\pi$这样就化成了周期为2$\pi$的傅里叶级数展开</p>
+<p>把x=$\frac{\pi}{L}t$代入得</p>
+<p>$cosnx=cos\frac{n\pi}{L}t$</p>
+<p>$sinnx=sin\frac{n\pi}{L}t$</p>
+<p>$g(x)=f(t)$</p>
+<p>$\displaystyle \int^{\pi}<em>{-\pi}{xdx}$=$\displaystyle \int^{-L}</em>{L}{xdt}$(看下图)</p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>t</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-$\pi$</td>
+<td>-L</td>
+</tr>
+<tr>
+<td>$\pi$</td>
+<td>L</td>
+</tr>
+</tbody></table>
+<p>故：</p>
+<p>$g(x)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$    </p>
+<p>==$ f(t)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cos\frac{n\pi}{L}t+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sin\frac{n\pi}{L}t$==</p>
+<p>$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
+<p>==$a_{0}$=$\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)dx}$==</p>
+<p>$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
+<p>==$a_{n}=\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)cos\frac{n\pi}{L}tdt}$==</p>
+<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
+<p>==$b_{n}$=$\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)sin\frac{n\pi}{L}tdt}$==</p>
+<p>在工程当中：t从0开始·，周期T=2L,$\omega=\frac{2\pi}{T}$</p>
+<p>$\displaystyle \int^{L}<em>{-L}{dt}\Rightarrow\displaystyle \int^{2L}</em>{0}{dt}\Rightarrow\displaystyle \int^{T}_{0}{dt}$</p>
+<p>所以：</p>
+<p>==$ f(t)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosn\omega t+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sin\omega t$==</p>
+<p>==$a_{0}$=$\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)dx}$==</p>
+<p>==$a_{n}=\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)cosn\omega tdt}$==</p>
+<p>==$b_{n}$=$\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)sinn\omega tdt}$==</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>傅里叶</tag>
+      </tags>
+  </entry>
+</search>
