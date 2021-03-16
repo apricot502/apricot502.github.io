@@ -49,7 +49,10 @@
   <entry>
     <title>Hello World</title>
     <url>/2021/03/13/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <content><![CDATA[<hr>
+<span id="more"></span>
+
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -73,7 +76,10 @@
   <entry>
     <title>markdown-1.md</title>
     <url>/2021/03/11/markdown-1/</url>
-    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=450 src="//music.163.com/outchain/player?type=0&id=5321532436&auto=0&height=430"></iframe>
+    <content><![CDATA[<hr>
+<span id="more"></span>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=450 src="//music.163.com/outchain/player?type=0&id=5321532436&auto=0&height=430"></iframe>
 
 <h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>1.使用，-标记一级标题跟二级标题</p>
 <h1 id="展示一级标题"><a href="#展示一级标题" class="headerlink" title="展示一级标题"></a>展示一级标题</h1><h2 id="使用-表示1-6级标题"><a href="#使用-表示1-6级标题" class="headerlink" title="使用#表示1-6级标题"></a>使用#表示1-6级标题</h2><h3 id="2-段落格式markdown段落没有特殊格式，直接编写就好，段落的换行是使用两个以上空格加上回车。"><a href="#2-段落格式markdown段落没有特殊格式，直接编写就好，段落的换行是使用两个以上空格加上回车。" class="headerlink" title="2.段落格式markdown段落没有特殊格式，直接编写就好，段落的换行是使用两个以上空格加上回车。"></a>2.段落格式markdown段落没有特殊格式，直接编写就好，段落的换行是使用两个以上空格加上回车。</h3><p>段落 </p>
@@ -299,7 +305,10 @@
   <entry>
     <title>markdown-2</title>
     <url>/2021/03/11/markdown-2/</url>
-    <content><![CDATA[<h1 id="1-引用"><a href="#1-引用" class="headerlink" title="1.引用"></a>1.引用</h1><p>在markdown中，引用由&gt;+引用内容来标记，如下所示。</p>
+    <content><![CDATA[<hr>
+<span id="more"></span>
+
+<h1 id="1-引用"><a href="#1-引用" class="headerlink" title="1.引用"></a>1.引用</h1><p>在markdown中，引用由&gt;+引用内容来标记，如下所示。</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 引用内容</span></span><br></pre></td></tr></table></figure>
 
 <p>示例：</p>
@@ -426,11 +435,12 @@
   <entry>
     <title>pandas-1</title>
     <url>/2021/03/11/pandas-1/</url>
-    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1303019637&auto=0&height=66"></iframe>
+    <content><![CDATA[<hr>
+<span id="more"></span>
 
-<h1 id="pandas基础-jupyter"><a href="#pandas基础-jupyter" class="headerlink" title="pandas基础(jupyter)"></a>pandas基础(jupyter)</h1><span id="more"></span>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1303019637&auto=0&height=66"></iframe>
 
-<h2 id="一-创建、读取和存储"><a href="#一-创建、读取和存储" class="headerlink" title="一.创建、读取和存储"></a>一.<strong>创建、读取和存储</strong></h2><p>1.创建在 Pandas 中我们想要构造下面这一张表应该如何操作呢？</p>
+<h1 id="pandas基础-jupyter"><a href="#pandas基础-jupyter" class="headerlink" title="pandas基础(jupyter)"></a>pandas基础(jupyter)</h1><h2 id="一-创建、读取和存储"><a href="#一-创建、读取和存储" class="headerlink" title="一.创建、读取和存储"></a>一.<strong>创建、读取和存储</strong></h2><p>1.创建在 Pandas 中我们想要构造下面这一张表应该如何操作呢？</p>
 <table>
 <thead>
 <tr>
@@ -619,11 +629,12 @@
   <entry>
     <title>pandas-2</title>
     <url>/2021/03/14/pandas-2/</url>
-    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=520 height=86 src="//music.163.com/outchain/player?type=2&id=36229051&auto=0&height=66"></iframe>
+    <content><![CDATA[<hr>
+<span id="more"></span>
 
-<h1 id="玩转Pandas索引（jupyter）"><a href="#玩转Pandas索引（jupyter）" class="headerlink" title="玩转Pandas索引（jupyter）"></a>玩转Pandas索引（jupyter）</h1><span id="more"></span>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=520 height=86 src="//music.163.com/outchain/player?type=2&id=36229051&auto=0&height=66"></iframe>
 
-<p>​        第一篇潘大师（初识 Pandas）教程考虑到篇幅问题只讲了最基础的列向索引，但这显然不能满足同志们日益增长的个性化服务（选取）需求。为了舒缓痛感，增加快感，满足需求，第二篇内容我们单独把索引拎出来，结合场景详细介绍两种常用的索引方式：</p>
+<h1 id="玩转Pandas索引（jupyter）"><a href="#玩转Pandas索引（jupyter）" class="headerlink" title="玩转Pandas索引（jupyter）"></a>玩转Pandas索引（jupyter）</h1><p>​        第一篇潘大师（初识 Pandas）教程考虑到篇幅问题只讲了最基础的列向索引，但这显然不能满足同志们日益增长的个性化服务（选取）需求。为了舒缓痛感，增加快感，满足需求，第二篇内容我们单独把索引拎出来，结合场景详细介绍两种常用的索引方式：</p>
 <ul>
 <li><p>第一种是基于位置（整数）的索引，案例短平快，有个粗略的了解即可，实际中偶有用到，但它的应用范围不如第二种广泛。</p>
 </li>
@@ -719,7 +730,8 @@
   <entry>
     <title>傅里叶级数及变换</title>
     <url>/2021/03/14/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%8F%8A%E5%8F%98%E6%8D%A2/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<hr>
+<span id="more"></span>
 
 <h2 id="三角函数的正交性"><a href="#三角函数的正交性" class="headerlink" title="三角函数的正交性"></a>三角函数的正交性</h2><h3 id="三角函数系"><a href="#三角函数系" class="headerlink" title="三角函数系"></a>三角函数系</h3><p>三角函数系本身是一个集合:</p>
 <p>{$0(sin0x),1(cos0x),sinx,cosx,sin2x,cos2x,…,sinnx,cosnx$}</p>
