@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="傅里叶," />
+  <meta name="keywords" content="pandas," />
 
 
 
@@ -89,15 +89,28 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="傅里叶级数及变换">
-<meta property="og:url" content="http://example.com/2021/03/14/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%8F%8A%E5%8F%98%E6%8D%A2/index.html">
+<meta property="og:title" content="pandas-3">
+<meta property="og:url" content="http://example.com/2021/03/16/pandas-3/index.html">
 <meta property="og:site_name" content="aprioct502">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-14T06:29:10.000Z">
-<meta property="article:modified_time" content="2021-03-16T02:39:23.008Z">
+<meta property="og:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316111131629.png">
+<meta property="og:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316111243282.png">
+<meta property="og:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316111307925.png">
+<meta property="og:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316112211162.png">
+<meta property="og:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316115248466.png">
+<meta property="og:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316115430612.png">
+<meta property="og:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316115645619.png">
+<meta property="og:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316120307528.png">
+<meta property="og:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316120346659.png">
+<meta property="og:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316120438719.png">
+<meta property="og:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316121222330.png">
+<meta property="og:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316121330467.png">
+<meta property="article:published_time" content="2021-03-16T03:01:11.000Z">
+<meta property="article:modified_time" content="2021-03-16T04:15:22.202Z">
 <meta property="article:author" content="apricot502">
-<meta property="article:tag" content="傅里叶">
+<meta property="article:tag" content="pandas">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/03/16/pandas-3/pandas-3.assets/image-20210316111131629.png">
 
 
 
@@ -127,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2021/03/14/傅里叶级数及变换/"/>
+  <link rel="canonical" href="http://example.com/2021/03/16/pandas-3/"/>
 
 
 
 
 
-  <title>傅里叶级数及变换 | aprioct502</title>
+  <title>pandas-3 | aprioct502</title>
   
 
 
@@ -304,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/14/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%8F%8A%E5%8F%98%E6%8D%A2/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/16/pandas-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -321,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">傅里叶级数及变换</h1>
+          <h1 class="post-title" itemprop="name headline">pandas-3</h1>
         
 
         <div class="post-meta">
@@ -333,8 +346,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-14T14:29:10+08:00">
-                2021-03-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-16T11:01:11+08:00">
+                2021-03-16
               </time>
             
 
@@ -356,8 +369,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/math/" itemprop="url" rel="index">
-                    <span itemprop="name">math</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -396,105 +409,52 @@
         <hr>
 <span id="more"></span>
 
-<h2 id="三角函数的正交性"><a href="#三角函数的正交性" class="headerlink" title="三角函数的正交性"></a>三角函数的正交性</h2><h3 id="三角函数系"><a href="#三角函数系" class="headerlink" title="三角函数系"></a>三角函数系</h3><p>三角函数系本身是一个集合:</p>
-<p>{$0(sin0x),1(cos0x),sinx,cosx,sin2x,cos2x,…,sinnx,cosnx$}</p>
-<h3 id="正交性：从三角函数系中任取两个不同的项相乘均等于0"><a href="#正交性：从三角函数系中任取两个不同的项相乘均等于0" class="headerlink" title="正交性：从三角函数系中任取两个不同的项相乘均等于0"></a>正交性：从三角函数系中任取两个不同的项相乘均等于0</h3><p>示例：</p>
-<p>$\displaystyle \int^{\pi}_{-\pi}{cosnxsinnxdx}=0$,{$n\in N$}</p>
-<p>$\displaystyle \int^{\pi}_{-\pi}{cosnxcosmxdx}=0$,{$n\neq m$}</p>
-<p>$\displaystyle \int^{\pi}_{-\pi}{sinnxsinmxdx}=0$,{$n\neq m$}</p>
-<h2 id="周期为-2-pi-的函数展开为傅里叶级数"><a href="#周期为-2-pi-的函数展开为傅里叶级数" class="headerlink" title="周期为$2\pi$的函数展开为傅里叶级数"></a>周期为$2\pi$的函数展开为傅里叶级数</h2><p>设有函数$f(x)$,周期T=$2\pi$,即$f(x)=f(x+2\pi)$</p>
-<p>则傅里叶级数展开公式为：</p>
-<p>$f(x)=$$\displaystyle \sum^{n \to \infty}<em>{n=0}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=0}b</em>{n}sinnx$                                      （1）</p>
-<p>=$a_{0}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx  $                                        （2）           </p>
-<p>,注意此式子中$a_{0}$跟下面$\frac{a_{0}}{2}$中的$a_{0}$不是同一个$a_{0}$</p>
-<p>大多数书籍傅里叶级数展开式为</p>
-<p>$f(x)=$$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$                              （3）</p>
-<p>这两个式子的不同之处在与$\frac{a_{0}}{2}$和n从1开始累加，</p>
-<ol>
-<li>求$a_{0}$，对(2)式两边进行$-\pi到\pi$的积分，则：</li>
-</ol>
-<p>$\displaystyle \int^{\pi}<em>{-\pi}{f(x)dx}$=$\displaystyle \int^{\pi}</em>{-\pi}{a_{0}dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnx dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnx dx}$</p>
-<p>其中根据三角函数的正交性：$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnx dx}$=0，$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnx dx}$=0</p>
-<p>求得$a_{0}$=$\frac{1}{2\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
-<p>则令$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
-<p>得到（3）式</p>
-<ol start="2">
-<li>求$a_{n}$,对（3）式两边同时乘$cosmx$，并对等式两边进行$-\pi到\pi$的积分，则：</li>
-</ol>
-<p>$\displaystyle \int^{\pi}<em>{-\pi}{f(x)cosmxdx}$=$\displaystyle \int^{\pi}</em>{-\pi}{\frac{a_{0}}{2}cosmxdxdx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnxcosmxdx dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnxcosmxdx dx}$</p>
-<p>其中根据三角函数的正交性：$\displaystyle \int^{\pi}<em>{-\pi}{\frac{a</em>{0}}{2}cosmxdxdx}$=0,$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnxcosmxdx dx}$=0</p>
-<p>而$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnxcosmxdx dx}$中当n=m时$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle a</em>{n}cosnxcosmxdx$=$a_{n}\pi$</p>
-<p>所以$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
-<ol start="3">
-<li>求$b_{n}$,对（3）式两边同时乘$sinmx$，并对等式两边进行$-\pi到\pi$的积分，得：</li>
-</ol>
-<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
-<p>故周期为$2\pi$傅里叶展开式为：</p>
-<p>$f(x)=$$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$            </p>
-<p>$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
-<p>$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
-<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
-<h2 id="周期为-2L-的函数展开为傅里叶级数"><a href="#周期为-2L-的函数展开为傅里叶级数" class="headerlink" title="周期为$2L$的函数展开为傅里叶级数"></a>周期为$2L$的函数展开为傅里叶级数</h2><p>函数：$f(t)=f(t+2L)$</p>
-<p>换元：x=$\frac{\pi}{L}t$,即t=$\frac{L}{\pi}$</p>
-<table>
-<thead>
-<tr>
-<th>t</th>
-<th>x</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2L</td>
-<td>2$\pi$</td>
-</tr>
-<tr>
-<td>4L</td>
-<td>4$\pi$</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p>则$f(t)=f(\frac{L}{\pi})$，令$g(x)=f(\frac{L}{\pi})$</p>
-<p>则$g(x)$周期为$2\pi$这样就化成了周期为2$\pi$的傅里叶级数展开</p>
-<p>把x=$\frac{\pi}{L}t$代入得</p>
-<p>$cosnx=cos\frac{n\pi}{L}t$</p>
-<p>$sinnx=sin\frac{n\pi}{L}t$</p>
-<p>$g(x)=f(t)$</p>
-<p>$\displaystyle \int^{\pi}<em>{-\pi}{xdx}$=$\displaystyle \int^{-L}</em>{L}{xdt}$(看下图)</p>
-<table>
-<thead>
-<tr>
-<th>x</th>
-<th>t</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-$\pi$</td>
-<td>-L</td>
-</tr>
-<tr>
-<td>$\pi$</td>
-<td>L</td>
-</tr>
-</tbody></table>
-<p>故：</p>
-<p>$g(x)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$    </p>
-<p>==$ f(t)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cos\frac{n\pi}{L}t+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sin\frac{n\pi}{L}t$==</p>
-<p>$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
-<p>==$a_{0}$=$\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)dx}$==</p>
-<p>$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
-<p>==$a_{n}=\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)cos\frac{n\pi}{L}tdt}$==</p>
-<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
-<p>==$b_{n}$=$\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)sin\frac{n\pi}{L}tdt}$==</p>
-<p>在工程当中：t从0开始·，周期T=2L,$\omega=\frac{2\pi}{T}$</p>
-<p>$\displaystyle \int^{L}<em>{-L}{dt}\Rightarrow\displaystyle \int^{2L}</em>{0}{dt}\Rightarrow\displaystyle \int^{T}_{0}{dt}$</p>
-<p>所以：</p>
-<p>==$ f(t)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosn\omega t+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sin\omega t$==</p>
-<p>==$a_{0}$=$\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)dx}$==</p>
-<p>==$a_{n}=\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)cosn\omega tdt}$==</p>
-<p>==$b_{n}$=$\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)sinn\omega tdt}$==</p>
+<h1 id="Pandas常用功能"><a href="#Pandas常用功能" class="headerlink" title="Pandas常用功能"></a>Pandas常用功能</h1><p>​        首先，导入案例数据集。因为案例数据存放在同一个 Excel 表的不同 Sheet 下，我们需要指定 sheetname 分别读取：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">d1&#x3D;pd.read_excel(&#39;清洗数据集.xlsx&#39;,sheet_name&#x3D;&#39;一级流量&#39;)</span><br><span class="line">d1.head()</span><br><span class="line">d1&#x3D;pd.read_excel(&#39;清洗数据集.xlsx&#39;,sheet_name&#x3D;&#39;二级流量&#39;)</span><br><span class="line">d1.head()</span><br><span class="line">d1&#x3D;pd.read_excel(&#39;清洗数据集.xlsx&#39;,sheet_name&#x3D;&#39;三级流量&#39;)</span><br><span class="line">d1.head()</span><br></pre></td></tr></table></figure>
+
+<p>示例：           <img src="pandas-3.assets/image-20210316111131629.png" alt="image-20210316111131629" style="zoom: 50%;" /><img src="pandas-3.assets/image-20210316111243282.png" alt="image-20210316111243282" style="zoom:50%;" /></p>
+<img src="pandas-3.assets/image-20210316111307925.png" alt="image-20210316111307925" style="zoom: 50%;" />
+
+<p>读取完数据，就可以开始进行列表的操作了。</p>
+<h2 id="一，增——拓展数据维度"><a href="#一，增——拓展数据维度" class="headerlink" title="一，增——拓展数据维度"></a>一，增——拓展数据维度</h2><h3 id="1-纵向合并"><a href="#1-纵向合并" class="headerlink" title="1.纵向合并"></a>1.纵向合并</h3><p>​        这三个 sheet 的数据，列维度完全一致（每列数据都是同一类型），纵向合并起来分析十分方便。说到纵向合并，concat 大佬不请自来，他的招式简单明了——pd.concat([表 1，表 2，表 3])，表 1，表 2，表 3分别为三个sheet的名字，对于列字段统一的数据，我们只需把表依次传入参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df &#x3D; pd.concat([d1,d2,d3])</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+
+<p>示例如下：<img src="pandas-3.assets/image-20210316112211162.png" alt="image-20210316112211162" style="zoom:50%;" /></p>
+<p>注：cancat传入参数axis设置成1，可以进行横向的合并；pandas 中很多函数功能十分强大，能够实现多种功能，但对于萌新来说，过多甚至交叉的功能往往会造成懵 B 的状态，所以这里一种功能先只用一种方式来实现。</p>
+<h3 id="2-横向合并"><a href="#2-横向合并" class="headerlink" title="2.横向合并"></a>2.横向合并</h3><p>横向合并涉及到连接问题，为方便理解，我们构造一些更有代表性的数据集练手：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">h1 &#x3D; pd.DataFrame(&#123;&#39;语文&#39;:[93,80,85,76,58],&#39;数学&#39;:[87,99,95,85,70],&#39;英语&#39;:[80,85,97,65,88]&#125;,index &#x3D; [&#39;韩梅梅&#39;,&#39;李雷&#39;,&#39;李华&#39;,&#39;王明&#39;,&#39;铁蛋&#39;])</span><br><span class="line">h1</span><br><span class="line">h2 &#x3D; pd.DataFrame(&#123;&#39;篮球&#39;:[93,80,85,76],&#39;舞蹈&#39;:[87,99,95,85]&#125;,</span><br><span class="line">                 index &#x3D; [&#39;李华&#39;,&#39;王明&#39;,&#39;铁蛋&#39;,&#39;刘强&#39;])</span><br><span class="line">h2</span><br></pre></td></tr></table></figure>
+<p>实例：<br><img src="pandas-3.assets/image-20210316115248466.png" alt="image-20210316115248466" style="zoom: 50%;" /></p>
+<img src="pandas-3.assets/image-20210316115430612.png" alt="image-20210316115430612" style="zoom:50%;" />
+
+<p>​        两个 DataFrame 是两张成绩表，h1 是 5 位同学的数学、英语、语文成绩，h2 是 4 位同学的篮球和舞蹈成绩，现在想找到并合并两张表同时出现的同学及其成绩，可以用 merge 方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;inner&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<img src="pandas-3.assets/image-20210316115645619.png" alt="image-20210316115645619" style="zoom:50%;" />
+
+<p>详解一下 merge 的参数，left 和 rgiht 分别对应着需要连接的左表和右<strong>表</strong>，这里语数外成绩表是左表，篮球、舞蹈成绩是右表。left_index 与 right_index 是当我们用索引（这两个表的名字在索引中）连接时指</p>
+<p>定的参数，设置为 on 表示用该表的索引作为连接的条件（或者说桥梁）。假设姓名是单独的一列值，且需要根据姓名进行匹配，那就需要用“left_on = ‘姓名’,right_on = ‘姓名’”，我们可以分别指定左表的匹配列和右表的匹配列。</p>
+<p>how 是指定连接方式，这里用的 inner，表示我们基于姓名索引来匹配，只返回两个表中共同（同时出现）姓名的数据。下面详解一下 inner 还涉及到的其他参数——left,right,outer。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;right&#39;)</span><br><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;left&#39;)</span><br><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;outer&#39;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>左右连接，outer：</strong></p>
+<p>right：<img src="pandas-3.assets/image-20210316120307528.png" alt="image-20210316120307528" style="zoom:67%;" /></p>
+<p>left ：<img src="pandas-3.assets/image-20210316120346659.png" alt="image-20210316120346659" style="zoom: 67%;" /></p>
+<p>outer:<img src="pandas-3.assets/image-20210316120438719.png" alt="image-20210316120438719" style="zoom:67%;" /></p>
+<p>左连接（left）和右连接（right），我们可以直观理解为哪边的表是主体，谁是主体（所有行全部保持），先看左连接：左表 h1 原封不动，右边根据左表进行合并，如果存在相关的名字，就正常返回数据，如果不存在（韩梅梅、李雷），就返回空(NAN)值；</p>
+<p>右连接：就是以右表为主体，左表有则返回无则为空。</p>
+<p>外连接：两张表并集的产物，我的数据全保留，你的也全保留，你有我无的就空着，你无我有的也空着。</p>
+<h2 id="二，删——删空去重"><a href="#二，删——删空去重" class="headerlink" title="二，删——删空去重"></a>二，删——删空去重</h2><h3 id="1-删空"><a href="#1-删空" class="headerlink" title="1.删空"></a>1.删空</h3><p>在一些场景，源数据的缺失（空值）对于分析来说是干扰项，需要系统的删除。上文我们合并后的 df 数据集就是有缺失数据的：</p>
+<img src="pandas-3.assets/image-20210316121222330.png" alt="image-20210316121222330" style="zoom:67%;" />
+
+<p>要删除空值，一个 dropna 即可搞定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.dropna()</span><br></pre></td></tr></table></figure>
+
+<img src="pandas-3.assets/image-20210316121330467.png" alt="image-20210316121330467" style="zoom:50%;" />
+
+<p>dropna 函数默认删除所有出现<strong>空值的行</strong>，即只要一行中任意一个字段为空，就会</p>
+<p>被删除。我们可以设置 subset 参数，例如 dropna(subset = [‘city’])，来指定当</p>
+<p>一行中的 city 字段为空时，才会被删除。</p>
 
       
     </div>
@@ -512,7 +472,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6/" rel="tag"># 傅里叶</a>
+            <a href="/tags/pandas/" rel="tag"># pandas</a>
           
         </div>
       
@@ -525,8 +485,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/03/14/pandas-2/" rel="next" title="pandas-2">
-                <i class="fa fa-chevron-left"></i> pandas-2
+              <a href="/2021/03/14/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%8F%8A%E5%8F%98%E6%8D%A2/" rel="next" title="傅里叶级数及变换">
+                <i class="fa fa-chevron-left"></i> 傅里叶级数及变换
               </a>
             
           </div>
@@ -534,10 +494,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/03/16/pandas-3/" rel="prev" title="pandas-3">
-                pandas-3 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -690,7 +646,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E7%9A%84%E6%AD%A3%E4%BA%A4%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">三角函数的正交性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E7%B3%BB"><span class="nav-number">1.1.</span> <span class="nav-text">三角函数系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E4%BA%A4%E6%80%A7%EF%BC%9A%E4%BB%8E%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E7%B3%BB%E4%B8%AD%E4%BB%BB%E5%8F%96%E4%B8%A4%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84%E9%A1%B9%E7%9B%B8%E4%B9%98%E5%9D%87%E7%AD%89%E4%BA%8E0"><span class="nav-number">1.2.</span> <span class="nav-text">正交性：从三角函数系中任取两个不同的项相乘均等于0</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%A8%E6%9C%9F%E4%B8%BA-2-pi-%E7%9A%84%E5%87%BD%E6%95%B0%E5%B1%95%E5%BC%80%E4%B8%BA%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">周期为$2\pi$的函数展开为傅里叶级数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%A8%E6%9C%9F%E4%B8%BA-2L-%E7%9A%84%E5%87%BD%E6%95%B0%E5%B1%95%E5%BC%80%E4%B8%BA%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">周期为$2L$的函数展开为傅里叶级数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Pandas%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD"><span class="nav-number">1.</span> <span class="nav-text">Pandas常用功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%EF%BC%8C%E5%A2%9E%E2%80%94%E2%80%94%E6%8B%93%E5%B1%95%E6%95%B0%E6%8D%AE%E7%BB%B4%E5%BA%A6"><span class="nav-number">1.1.</span> <span class="nav-text">一，增——拓展数据维度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%BA%B5%E5%90%91%E5%90%88%E5%B9%B6"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.纵向合并</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%A8%AA%E5%90%91%E5%90%88%E5%B9%B6"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.横向合并</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%EF%BC%8C%E5%88%A0%E2%80%94%E2%80%94%E5%88%A0%E7%A9%BA%E5%8E%BB%E9%87%8D"><span class="nav-number">1.2.</span> <span class="nav-text">二，删——删空去重</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%A0%E7%A9%BA"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.删空</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -840,4 +840,64 @@
         <tag>傅里叶</tag>
       </tags>
   </entry>
+  <entry>
+    <title>pandas-3</title>
+    <url>/2021/03/16/pandas-3/</url>
+    <content><![CDATA[<hr>
+<span id="more"></span>
+
+<h1 id="Pandas常用功能"><a href="#Pandas常用功能" class="headerlink" title="Pandas常用功能"></a>Pandas常用功能</h1><p>​        首先，导入案例数据集。因为案例数据存放在同一个 Excel 表的不同 Sheet 下，我们需要指定 sheetname 分别读取：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">d1&#x3D;pd.read_excel(&#39;清洗数据集.xlsx&#39;,sheet_name&#x3D;&#39;一级流量&#39;)</span><br><span class="line">d1.head()</span><br><span class="line">d1&#x3D;pd.read_excel(&#39;清洗数据集.xlsx&#39;,sheet_name&#x3D;&#39;二级流量&#39;)</span><br><span class="line">d1.head()</span><br><span class="line">d1&#x3D;pd.read_excel(&#39;清洗数据集.xlsx&#39;,sheet_name&#x3D;&#39;三级流量&#39;)</span><br><span class="line">d1.head()</span><br></pre></td></tr></table></figure>
+
+<p>示例：           <img src="pandas-3.assets/image-20210316111131629.png" alt="image-20210316111131629" style="zoom: 50%;" /><img src="pandas-3.assets/image-20210316111243282.png" alt="image-20210316111243282" style="zoom:50%;" /></p>
+<img src="pandas-3.assets/image-20210316111307925.png" alt="image-20210316111307925" style="zoom: 50%;" />
+
+<p>读取完数据，就可以开始进行列表的操作了。</p>
+<h2 id="一，增——拓展数据维度"><a href="#一，增——拓展数据维度" class="headerlink" title="一，增——拓展数据维度"></a>一，增——拓展数据维度</h2><h3 id="1-纵向合并"><a href="#1-纵向合并" class="headerlink" title="1.纵向合并"></a>1.纵向合并</h3><p>​        这三个 sheet 的数据，列维度完全一致（每列数据都是同一类型），纵向合并起来分析十分方便。说到纵向合并，concat 大佬不请自来，他的招式简单明了——pd.concat([表 1，表 2，表 3])，表 1，表 2，表 3分别为三个sheet的名字，对于列字段统一的数据，我们只需把表依次传入参数：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.concat([d1,d2,d3])</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+
+<p>示例如下：<img src="pandas-3.assets/image-20210316112211162.png" alt="image-20210316112211162" style="zoom:50%;" /></p>
+<p>注：cancat传入参数axis设置成1，可以进行横向的合并；pandas 中很多函数功能十分强大，能够实现多种功能，但对于萌新来说，过多甚至交叉的功能往往会造成懵 B 的状态，所以这里一种功能先只用一种方式来实现。</p>
+<h3 id="2-横向合并"><a href="#2-横向合并" class="headerlink" title="2.横向合并"></a>2.横向合并</h3><p>横向合并涉及到连接问题，为方便理解，我们构造一些更有代表性的数据集练手：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">h1 &#x3D; pd.DataFrame(&#123;&#39;语文&#39;:[93,80,85,76,58],&#39;数学&#39;:[87,99,95,85,70],&#39;英语&#39;:[80,85,97,65,88]&#125;,index &#x3D; [&#39;韩梅梅&#39;,&#39;李雷&#39;,&#39;李华&#39;,&#39;王明&#39;,&#39;铁蛋&#39;])</span><br><span class="line">h1</span><br><span class="line">h2 &#x3D; pd.DataFrame(&#123;&#39;篮球&#39;:[93,80,85,76],&#39;舞蹈&#39;:[87,99,95,85]&#125;,</span><br><span class="line">                 index &#x3D; [&#39;李华&#39;,&#39;王明&#39;,&#39;铁蛋&#39;,&#39;刘强&#39;])</span><br><span class="line">h2</span><br></pre></td></tr></table></figure>
+<p>实例：<br><img src="pandas-3.assets/image-20210316115248466.png" alt="image-20210316115248466" style="zoom: 50%;" /></p>
+<img src="pandas-3.assets/image-20210316115430612.png" alt="image-20210316115430612" style="zoom:50%;" />
+
+<p>​        两个 DataFrame 是两张成绩表，h1 是 5 位同学的数学、英语、语文成绩，h2 是 4 位同学的篮球和舞蹈成绩，现在想找到并合并两张表同时出现的同学及其成绩，可以用 merge 方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;inner&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<img src="pandas-3.assets/image-20210316115645619.png" alt="image-20210316115645619" style="zoom:50%;" />
+
+<p>详解一下 merge 的参数，left 和 rgiht 分别对应着需要连接的左表和右<strong>表</strong>，这里语数外成绩表是左表，篮球、舞蹈成绩是右表。left_index 与 right_index 是当我们用索引（这两个表的名字在索引中）连接时指</p>
+<p>定的参数，设置为 on 表示用该表的索引作为连接的条件（或者说桥梁）。假设姓名是单独的一列值，且需要根据姓名进行匹配，那就需要用“left_on = ‘姓名’,right_on = ‘姓名’”，我们可以分别指定左表的匹配列和右表的匹配列。</p>
+<p>how 是指定连接方式，这里用的 inner，表示我们基于姓名索引来匹配，只返回两个表中共同（同时出现）姓名的数据。下面详解一下 inner 还涉及到的其他参数——left,right,outer。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;right&#39;)</span><br><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;left&#39;)</span><br><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;outer&#39;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>左右连接，outer：</strong></p>
+<p>right：<img src="pandas-3.assets/image-20210316120307528.png" alt="image-20210316120307528" style="zoom:67%;" /></p>
+<p>left ：<img src="pandas-3.assets/image-20210316120346659.png" alt="image-20210316120346659" style="zoom: 67%;" /></p>
+<p>outer:<img src="pandas-3.assets/image-20210316120438719.png" alt="image-20210316120438719" style="zoom:67%;" /></p>
+<p>左连接（left）和右连接（right），我们可以直观理解为哪边的表是主体，谁是主体（所有行全部保持），先看左连接：左表 h1 原封不动，右边根据左表进行合并，如果存在相关的名字，就正常返回数据，如果不存在（韩梅梅、李雷），就返回空(NAN)值；</p>
+<p>右连接：就是以右表为主体，左表有则返回无则为空。</p>
+<p>外连接：两张表并集的产物，我的数据全保留，你的也全保留，你有我无的就空着，你无我有的也空着。</p>
+<h2 id="二，删——删空去重"><a href="#二，删——删空去重" class="headerlink" title="二，删——删空去重"></a>二，删——删空去重</h2><h3 id="1-删空"><a href="#1-删空" class="headerlink" title="1.删空"></a>1.删空</h3><p>在一些场景，源数据的缺失（空值）对于分析来说是干扰项，需要系统的删除。上文我们合并后的 df 数据集就是有缺失数据的：</p>
+<img src="pandas-3.assets/image-20210316121222330.png" alt="image-20210316121222330" style="zoom:67%;" />
+
+<p>要删除空值，一个 dropna 即可搞定：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.dropna()</span><br></pre></td></tr></table></figure>
+
+<img src="pandas-3.assets/image-20210316121330467.png" alt="image-20210316121330467" style="zoom:50%;" />
+
+<p>dropna 函数默认删除所有出现<strong>空值的行</strong>，即只要一行中任意一个字段为空，就会</p>
+<p>被删除。我们可以设置 subset 参数，例如 dropna(subset = [‘city’])，来指定当</p>
+<p>一行中的 city 字段为空时，才会被删除。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>pandas</tag>
+      </tags>
+  </entry>
 </search>
