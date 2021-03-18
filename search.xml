@@ -76,7 +76,9 @@
     <title>markdown-1.md</title>
     <url>/2021/03/11/markdown-1/</url>
     <content><![CDATA[<hr>
-<h1 id="markdown—基础一"><a href="#markdown—基础一" class="headerlink" title="markdown—基础一"></a>markdown—基础一</h1><span id="more"></span>
+<center><b> markdown—基础一</b></center>
+
+<span id="more"></span>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=450 src="//music.163.com/outchain/player?type=0&id=5321532436&auto=0&height=430"></iframe>
 
@@ -305,7 +307,9 @@
     <title>markdown-2</title>
     <url>/2021/03/11/markdown-2/</url>
     <content><![CDATA[<hr>
-<h1 id="markdown—基础二"><a href="#markdown—基础二" class="headerlink" title="markdown—基础二"></a>markdown—基础二</h1><span id="more"></span>
+<center><b>markdown—基础二</b></center>
+
+<span id="more"></span>
 
 <h1 id="1-引用"><a href="#1-引用" class="headerlink" title="1.引用"></a>1.引用</h1><p>在markdown中，引用由&gt;+引用内容来标记，如下所示。</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 引用内容</span></span><br></pre></td></tr></table></figure>
@@ -1018,18 +1022,141 @@
     <title>数据结构-2</title>
     <url>/2021/03/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-2/</url>
     <content><![CDATA[<hr>
-<p>二 线性表</p>
-<span id="more"></span>
+<h1 id="二-线性表"><a href="#二-线性表" class="headerlink" title="二 线性表"></a>二 线性表</h1><span id="more"></span>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=420 height=86 src="//music.163.com/outchain/player?type=2&id=1463165983&auto=0&height=66"></iframe>
 
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+<h2 id="2-1线性表的类型定义"><a href="#2-1线性表的类型定义" class="headerlink" title="2.1线性表的类型定义"></a>2.1线性表的类型定义</h2><p>​        线性结构是一个数据元素的有序（次序）集。</p>
+<p>​        线性结构的基本特征为：在数据元素的非空有限集合中。</p>
+<ol>
+<li>必存在唯一的一个“第一元素”；</li>
+<li>必存在唯一的一个“最后元素” ；</li>
+<li>除最后元素在外，均有唯一的后继；</li>
+<li>除第一元素之外，均有唯一的前驱。</li>
+</ol>
+<blockquote>
+<p>线性表是一种最简单的线性结构。</p>
+</blockquote>
+<p><strong>线性表（P18）</strong>—— 一个线性表是n个数据元素的有限序列。</p>
+<p>例：</p>
+<table>
+<thead>
+<tr>
+<th>学号</th>
+<th>姓名</th>
+<th>年龄</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>001</td>
+<td>张三</td>
+<td>18</td>
+</tr>
+<tr>
+<td>002</td>
+<td>李四</td>
+<td>19</td>
+</tr>
+<tr>
+<td>……</td>
+<td>……</td>
+<td>……</td>
+</tr>
+</tbody></table>
+<p><img src="https://i.loli.net/2021/03/17/osm7O15CjZzTJrH.png" alt="image-20210317185933837"></p>
+<p><strong>特征：（P19）</strong></p>
+<ul>
+<li>元素个数n—表长度，n=0空表</li>
+<li><blockquote>
+<p>1&lt;i&lt;n时</p>
+<ul>
+<li>ai的直接前驱是ai-1，a1无直接前驱</li>
+<li>ai的直接后继是ai+1，an无直接后继</li>
+</ul>
+</blockquote>
+</li>
+<li>i为数据元素ai在线性表中的位序</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ADT List &#123;</span><br><span class="line">数据对象：</span><br><span class="line">D＝&#123; ai | ai ∈ElemSet, i&#x3D;1,2,...,n,  n≥0 &#125;</span><br><span class="line">&#123;称 n 为线性表的表长; 称 n&#x3D;0 时的线性表为空表。&#125;</span><br><span class="line">数据关系：</span><br><span class="line">R1＝&#123; &lt;ai-1 ,ai &gt;|ai-1 ,ai∈D,  i&#x3D;2,...,n &#125;</span><br><span class="line">&#123;设线性表为 (a1，a2,  . . . ，ai，. . . ，an), 称 i 为 ai 在线性表中的位序。&#125;</span><br><span class="line">基本操作：</span><br><span class="line">结构初始化操作</span><br><span class="line">结构销毁操作</span><br><span class="line">引用型操作</span><br><span class="line">加工型操作</span><br><span class="line">&#125; ADT List</span><br></pre></td></tr></table></figure>
+
+<p>线性表上的基本操作有：<br>⑴  创建线性表：InitList(L)<br>⑵  求线性表的长度：ListLength (L)<br>(3)  按值查找：LocateElem (L,x)，ｘ是给定的一个数据元素。(4)  插入操作：ListInsert(L,i,x)<br>(5)  删除操作：ListDelete (L,i)<br>(6)  显示操作：ListShow (L)     </p>
+<p>​        利用上述定义的线性表以实现其它更复杂的操作</p>
+<p>例 2-1：</p>
+<p>假设:有两个集合A和B分别用两个线性表 LA 和 LB 表示，即：线性表中的数据元素即为集合中的成员。现要求一个新的集合A＝A∪B。</p>
+<p>​        即要求对线性表作如下操作：扩大线性表 LA，将存在于线性表LB 中而不存在于线性表 LA 中的数据元素插入到线性表 LA 中去。</p>
+<p>1．从线性表LB中依次察看每个数据元素;<code>GetElem(LB, i)→e</code></p>
+<p>2．依值在线性表LA中进行查访; <code>LocateElem(LA, e, equal( ))</code></p>
+<p>3．若不存在，则插入之。<code> ListInsert(LA, n+1, e)</code> </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">union</span><span class="params">(List &amp;La, List Lb)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    La_len = ListLength(La);    <span class="comment">// 求线性表的长度</span></span><br><span class="line">    Lb_len = ListLength(Lb);   </span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>;  i &lt;= Lb_len;  i++) </span><br><span class="line">    &#123;</span><br><span class="line">    	GetElem(Lb, i, e); <span class="comment">// 取Lb中第i个数据元素赋给e</span></span><br><span class="line">    	<span class="keyword">if</span> (!LocateElem(La, e, equal( )) ) </span><br><span class="line">       			ListInsert(La, ++La_len, e);</span><br><span class="line">      <span class="comment">// La中不存在和 e 相同的数据元素，则插入之</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="comment">// union</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-2线性表的顺序表示和实现"><a href="#2-2线性表的顺序表示和实现" class="headerlink" title="2.2线性表的顺序表示和实现"></a>2.2线性表的顺序表示和实现</h2><p><strong>线性表的顺序表示（P21）</strong>——用一组地址连续的存储单元存放一个线性表。</p>
+<p><img src="https://i.loli.net/2021/03/17/AKfEuahm1XGrCiN.png" alt="image-20210317191313905"></p>
+<p><strong>线性表的起始地址称作线性表的基地址</strong></p>
+<p>以“存储位置相邻”表示有序对&lt;ai-1，ai&gt;  即：<br>         LOC(ai) = LOC(ai-1) + C 一个数据元素所占存储量↑</p>
+<p>所有数据元素的存储位置均取决于第一个数据元素的存储位置<br>             LOC(ai) = LOC(a1) + (i-1)×C<br>                                     ↑基地址</p>
+<p>线性表的这种机内表示称做线性表的顺序存储结构或顺序映像（sequential  mapping），这种结构是一种随机存取的存储结构。通常称这种存储结构的线性表为顺序表。</p>
+<p>顺序映像—— 以x的存储位置和y的存储位置之间某种关系表示逻辑关系&lt;x,y&gt;。最简单的方法就是令y的存储位置与x的存储位置相邻。</p>
+<img src="https://i.loli.net/2021/03/17/6VFaW8RthyOQHTP.png" alt="image-20210317191503215" style="zoom:50%;" />
+
+<pre><code>     高级程序设计语言中的数组类型也有随机存取的特性。因此，通常都用数组来描述顺序存储结构。由于线性表的长度可变，且所需的最大空间随问题不同而不同，则可用动态分配的一维数组实现顺序表。以下为顺序映像的C语言描述。
+</code></pre>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define  LIST_INIT_SIZE     100  </span><br><span class="line">          &#x2F;&#x2F; 线性表存储空间的初始分配量</span><br><span class="line">#define  LISTINCREMENT    10 </span><br><span class="line">                    &#x2F;&#x2F; 线性表存储空间的分配增量</span><br><span class="line">ypedef  struct </span><br><span class="line">&#123;</span><br><span class="line">  ElemType *elem;    &#x2F;&#x2F; 存储空间基址</span><br><span class="line">  int      length;   &#x2F;&#x2F; 当前长度</span><br><span class="line">  int    listsize;  &#x2F;&#x2F; 当前分配的存储容量  (以sizeof(ElemType)为单位)</span><br><span class="line">&#125; SqList;  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化-InitList-Sq"><a href="#初始化-InitList-Sq" class="headerlink" title="初始化 InitList_Sq"></a><strong>初始化 InitList_Sq</strong></h3><p>   算法分析：为顺序表分配一个预定义大小的数组空间，并将线性表的当前长度设置为0.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Status InitList_Sq( SqList   &amp; L ) &#x2F;&#x2F; 构造一个空的线性表                            </span><br><span class="line">&#123;</span><br><span class="line">	L.elem &#x3D; (ElemType*) malloc (LIST_INIT_SIZE*sizeof (ElemType));</span><br><span class="line">	if (!L.elem) exit(OVERFLOW);</span><br><span class="line">	L.length &#x3D; 0;</span><br><span class="line">	L.listsize &#x3D; LIST_INIT_SIZE</span><br><span class="line">	return OK;</span><br><span class="line"></span><br><span class="line">&#125;&#x2F;&#x2F; InitList_Sq</span><br></pre></td></tr></table></figure>
+
+<h3 id="插入ListInsert"><a href="#插入ListInsert" class="headerlink" title="插入ListInsert"></a><strong>插入ListInsert</strong></h3><blockquote>
+<p>算法分析:插入元素时，线性表的逻辑结构发生什么变化？</p>
+</blockquote>
+<p> (a1, …, ai-1, ai, …, an) 改变为 (a1, …, ai-1, e, ai, …, an)</p>
+<img src="https://i.loli.net/2021/03/17/pLOIzWqZjHJeQiY.png" alt="image-20210317192406933" style="zoom:50%;" />
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Status ListInsert_Sq(SqList &amp;L, int i, ElemType e)</span><br><span class="line">&#123;</span><br><span class="line">  &#x2F;&#x2F; 在顺序表L的第 i 个元素之前插入新的元素e,</span><br><span class="line"> &#x2F;&#x2F; i 的合法范围为  1≤i≤L.length+1</span><br><span class="line">   if (i &lt; 1 || i &gt; L.length+1) return ERROR;  &#x2F;&#x2F; 插入位置不合法</span><br><span class="line">   if (L.length &gt;&#x3D; L.listsize)</span><br><span class="line">   &#123;&#x2F;&#x2F; 当前存储空间已满，增加分配</span><br><span class="line">   	newbase &#x3D; (ElemType *)realloc(L.elem, (L.listsize+LISTINCREMENT)*sizeof(ElemType));</span><br><span class="line">          if (!newbase) exit(OVERFLOW);      &#x2F;&#x2F; 存储分配失败</span><br><span class="line">          L.elem &#x3D; newbase;                &#x2F;&#x2F; 新基址</span><br><span class="line">          L.listsize +&#x3D; LISTINCREMENT; &#x2F;&#x2F; 增加存储容量&#125;</span><br><span class="line">          q &#x3D; &amp;(L.elem[i-1]);                 &#x2F;&#x2F; q 指示插入位置</span><br><span class="line">          for (p &#x3D; &amp;(L.elem[L.length-1]); p &gt;&#x3D; q;  --p)  </span><br><span class="line">                     *(p+1) &#x3D; *p;       &#x2F;&#x2F; 插入位置及之后的元素右移</span><br><span class="line">           *q &#x3D; e;       &#x2F;&#x2F; 插入e</span><br><span class="line">           ++L.length;   &#x2F;&#x2F; 表长增1</span><br><span class="line">           return OK;&#125; &#x2F;&#x2F; ListInsert_Sq                         </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>算法时间复杂度T(n)<br>设Pi是在第i个元素之前插入一个元素的概率，则在长度为n的线性表中插入一个元素时，所需移动的元素次数的平均次数为：</p>
+<p><img src="https://i.loli.net/2021/03/17/ma5yPtGxNn8eDBS.png" alt="image-20210317193200787"></p>
+<p>若假定在线性表中任何一个位置上进行插入的概率都是相等的，则移动元素的期望值为：</p>
+<p><img src="https://i.loli.net/2021/03/17/5RrfM4lU1wZhB6u.png" alt="image-20210317193234655"></p>
+</blockquote>
+<h3 id="删除-ListDelet"><a href="#删除-ListDelet" class="headerlink" title="删除 ListDelet"></a>删除 ListDelet</h3><blockquote>
+<p>算法分析：删除元素时，线性表的逻辑结构发生什么变化？</p>
+</blockquote>
+<p> (a1, …, ai-1, ai, ai+1, …, an) 改变为 (a1, …, ai-1, ai+1, …, an)</p>
+<img src="https://i.loli.net/2021/03/17/Ad1WLx3bQ2wvUDn.png" alt="image-20210317193506241" style="zoom:50%;" />
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Status ListDelete_Sq(SqList &amp;L, int i, ElemType e)</span><br><span class="line">&#123;</span><br><span class="line">       if (i &lt; 1 || i &gt; L.length) return ERROR;  &#x2F;&#x2F; 删除位置不合法</span><br><span class="line">       p &#x3D; &amp;(L.elem[i-1]);      &#x2F;&#x2F; p 为被删除元素的位置</span><br><span class="line">       e &#x3D; *p;                             &#x2F;&#x2F; 被删除元素的值赋给 e</span><br><span class="line">       q &#x3D; L.elem+L.length-1;     &#x2F;&#x2F; 表尾元素的位置</span><br><span class="line">      for (++p; p &lt;&#x3D; q; ++p)  *(p-1) &#x3D; *p;  &#x2F;&#x2F; 被删除元素之后的元素左移</span><br><span class="line">      --L.length;                                             &#x2F;&#x2F; 表长减1    </span><br><span class="line">      return OK;</span><br><span class="line">     &#125; &#x2F;&#x2F; ListDelete_Sq                         </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>算法时间复杂度T(n)<br>          假设删除第 i 个元素的概率为     , 则在长度为n 的线性表中删除一个元素所需移动元素次数的期望值为：</p>
+<p><img src="https://i.loli.net/2021/03/17/5UcN3IBHl4huO2a.png" alt="image-20210317193730013"></p>
+<p>若假定在线性表中任何一个位置上进行删除的概率都是相等的，则移动元素的期望值为：</p>
+<p><img src="https://i.loli.net/2021/03/17/SjK2WZE9M7vOR46.png" alt="image-20210317193755526"></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>顺序表的优缺点？</p>
+<p>优点：顺序存储结构的线性表是可以随机存取其中的任意元素。<br>缺点：<br>（1）数据元素最大个数需预先确定，<br>（2）插入与删除运算的效率很低。<br>（3）存储空间不便于扩充。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="2-3线性表的链式表示和实现"><a href="#2-3线性表的链式表示和实现" class="headerlink" title="2.3线性表的链式表示和实现"></a>2.3线性表的链式表示和实现</h2><h2 id="2-4一元多项式的表示和相加"><a href="#2-4一元多项式的表示和相加" class="headerlink" title="2.4一元多项式的表示和相加"></a>2.4一元多项式的表示和相加</h2>]]></content>
+      <categories>
+        <category>course</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
   </entry>
   <entry>
     <title>markdown-3</title>
     <url>/2021/03/17/markdown-3/</url>
     <content><![CDATA[<hr>
-<h1 id="你好，Typora"><a href="#你好，Typora" class="headerlink" title="你好，Typora"></a>你好，Typora</h1><span id="more"></span>
+<center><b>你好，Typora</b></center>
+
+<span id="more"></span>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=420 height=86 src="//music.163.com/outchain/player?type=2&id=1823305772&auto=0&height=66"></iframe>
 
@@ -1225,5 +1352,18 @@
       <tags>
         <tag>essay</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>数据结构实验-1</title>
+    <url>/2021/03/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C-1/</url>
+    <content><![CDATA[<hr>
+<h1 id="数据结构实验-1"><a href="#数据结构实验-1" class="headerlink" title="数据结构实验-1"></a>数据结构实验-1</h1><span id="more"></span>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=420 height=86 src="//music.163.com/outchain/player?type=2&id=1426649237&auto=0&height=66"></iframe>
+
+<p>基于visual Studio2017。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 30</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">char</span> a[MAXSIZE][<span class="number">12</span>];<span class="comment">//电话号码</span></span><br><span class="line">	<span class="keyword">char</span> name[MAXSIZE][<span class="number">7</span>];<span class="comment">//姓名</span></span><br><span class="line">	<span class="keyword">int</span> length;<span class="comment">//线性表长度</span></span><br><span class="line">&#125;SqList;</span><br><span class="line">SqList a;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*函数申明*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">create_list</span><span class="params">(SqList* L)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">out_list</span><span class="params">(SqList L)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert_sq</span><span class="params">(SqList* L, <span class="keyword">int</span> I, <span class="keyword">char</span> e[], <span class="keyword">char</span> n[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delete_sq</span><span class="params">(SqList* L, <span class="keyword">int</span> i)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">locate_sq</span><span class="params">(SqList L, <span class="keyword">char</span> n[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writeExcel</span><span class="params">(SqList L, <span class="keyword">char</span> path[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">open_list</span><span class="params">(SqList* L, <span class="keyword">int</span> i, <span class="keyword">char</span> path[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">hangshu</span><span class="params">(<span class="keyword">char</span> file[])</span></span>;</span><br><span class="line"><span class="comment">/*主函数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, k, loc;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> ch, n[<span class="number">7</span>], path[<span class="number">50</span>], e[<span class="number">12</span>];</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n=====================================&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n\n\n&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n        1.新建线性表&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n        2.读取线性表（excel表格）&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n        3.插入元素&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n        4.删除元素&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n        5.查找元素&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n        6.显示线性表所有内容&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n        7.将线性表保存至excel&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n        0.结束程序运行&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n=====================================&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n        请输入您的选择（1,2,3,4,5,6,7,0)：&quot;</span>);</span><br><span class="line"></span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;k);</span><br><span class="line">		<span class="keyword">switch</span> (k)</span><br><span class="line">		&#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>: &#123;</span><br><span class="line">			create_list(&amp;a);</span><br><span class="line">			out_list(a);</span><br><span class="line">		&#125; <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>: &#123;</span><br><span class="line"></span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;请输入表格路径（绝对路径或相对路径xxx.xls）：&quot;</span>);</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, path);</span><br><span class="line">			i = hangshu(path);</span><br><span class="line">			open_list(&amp;a, i, path);</span><br><span class="line">		&#125; <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">3</span>: &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;\n请输入您要插入的位置1-%d:&quot;</span>, a.length+<span class="number">1</span>);</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;i);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;请输入姓名：&quot;</span>);</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, &amp;n);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;\n请输入电话号码：&quot;</span>);</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, &amp;e);</span><br><span class="line">			insert_sq(&amp;a, i, e, n);</span><br><span class="line">		&#125; <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">4</span>: &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;\n请输入您要删除的位置1-%d:&quot;</span>, a.length);</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;i);</span><br><span class="line">			delete_sq(&amp;a, i);</span><br><span class="line">			out_list(a);</span><br><span class="line">		&#125; <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">case</span> <span class="number">5</span>: &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;\n请输入您要查找的数：&quot;</span>);</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, n);</span><br><span class="line">			i = locate_sq(a, n);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;查找的同学在第%d行\n姓名：%s\n电话：%s&quot;</span>, i+<span class="number">1</span>, n, a.a[i]);</span><br><span class="line">		&#125; <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">6</span>: &#123;</span><br><span class="line">			out_list(a);</span><br><span class="line">		&#125;<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">7</span>: &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;请输入路径(绝对路径或相对路径xxx.xls）：&quot;</span>);</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, path);</span><br><span class="line">			writeExcel(a, path);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;保存成功&quot;</span>);</span><br><span class="line">		&#125;<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">0</span>: &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;\n        0.结束程序运行&quot;</span>);</span><br><span class="line">		&#125; <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:<span class="built_in">printf</span>(<span class="string">&quot;请重新输入&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">while</span> (k != <span class="number">0</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;\n       按回车键，返回…\n&quot;</span>);</span><br><span class="line">	ch = getchar();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">create_list</span><span class="params">(SqList* L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入线性表的长度:&quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;L-&gt;length);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; L-&gt;length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;第%d位同学姓名：&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, &amp;(L-&gt;name[i]));</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;第%d位同学电话：&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, &amp;(L-&gt;a[i]));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">open_list</span><span class="params">(SqList* L, <span class="keyword">int</span> k, <span class="keyword">char</span> path[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	FILE *fp = <span class="literal">NULL</span>;</span><br><span class="line">	fp = fopen(path, <span class="string">&quot;r&quot;</span>);</span><br><span class="line">	L-&gt;length = k;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; L-&gt;length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">fscanf</span>(fp, <span class="string">&quot;%s\t%s\n&quot;</span>, &amp;L-&gt;name[i], &amp;L-&gt;a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	fclose(fp);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">out_list</span><span class="params">(SqList L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; L.length; i++) <span class="built_in">printf</span>(<span class="string">&quot;%7s:%15s\n&quot;</span>, L.name[i], L.a[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert_sq</span><span class="params">(SqList* L, <span class="keyword">int</span> i, <span class="keyword">char</span> e[], <span class="keyword">char</span> n[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	<span class="keyword">if</span> (L-&gt;length == MAXSIZE) <span class="built_in">printf</span>(<span class="string">&quot;线性表已满&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (i&lt;<span class="number">1</span> || i&gt;L-&gt;length + <span class="number">1</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;输入位置错\n&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = L-&gt;length - <span class="number">1</span>; j &gt;= i - <span class="number">1</span>; j--)</span><br><span class="line">		&#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="keyword">sizeof</span>(L-&gt;name[j + <span class="number">1</span>]); k++)</span><br><span class="line">			&#123;</span><br><span class="line">				L-&gt;name[j + <span class="number">1</span>][k] = L-&gt;name[j][k];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="keyword">sizeof</span>(L-&gt;a[j + <span class="number">1</span>]); k++)</span><br><span class="line">			&#123;</span><br><span class="line">				L-&gt;a[j + <span class="number">1</span>][k] = L-&gt;a[j][k];</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="keyword">sizeof</span>(L-&gt;name[i - <span class="number">1</span>]); k++)</span><br><span class="line">		&#123;</span><br><span class="line">			</span><br><span class="line">			L-&gt;name[i - <span class="number">1</span>][k] = n[k];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="keyword">sizeof</span>(L-&gt;a[i - <span class="number">1</span>]); k++)</span><br><span class="line">		&#123;</span><br><span class="line">			L-&gt;a[i - <span class="number">1</span>][k] = e[k];</span><br><span class="line">		&#125;</span><br><span class="line">		L-&gt;length++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delete_sq</span><span class="params">(SqList* L, <span class="keyword">int</span> i)</span><span class="comment">//删除线性表中的元素</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> x[<span class="number">12</span>]; <span class="keyword">int</span> j; <span class="keyword">char</span> n[<span class="number">7</span>];</span><br><span class="line">	<span class="keyword">if</span> (L-&gt;length == <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">&quot;空表! \n&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (i&lt;<span class="number">1</span> || i&gt;L-&gt;length) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;输入位置错误! \n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="keyword">sizeof</span>(L-&gt;name[i - <span class="number">1</span>]); k++)</span><br><span class="line">		&#123;</span><br><span class="line">			x[k] = L-&gt;a[i - <span class="number">1</span>][k];</span><br><span class="line">			n[k] = L-&gt;name[i - <span class="number">1</span>][k];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (j = i; j &lt;= L-&gt;length - <span class="number">1</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="keyword">sizeof</span>(L-&gt;name[i - <span class="number">1</span>]); k++)</span><br><span class="line">			&#123;</span><br><span class="line">				L-&gt;a[j - <span class="number">1</span>][k] = L-&gt;a[j][k];</span><br><span class="line">				L-&gt;name[j - <span class="number">1</span>][k] = L-&gt;name[j][k];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		L-&gt;length--;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;删除了：姓名：%s\n电话号码：%12s\n&quot;</span>, n, x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">locate_sq</span><span class="params">(SqList L, <span class="keyword">char</span> n[])</span><span class="comment">//查找数据位置</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (i &lt;= L.length - <span class="number">1</span> &amp;&amp; <span class="built_in">strcmp</span>(L.name[i], n)) i++;</span><br><span class="line">	<span class="keyword">if</span> (i &lt;= L.length - <span class="number">1</span>) <span class="keyword">return</span> (i);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span>(<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writeExcel</span><span class="params">(SqList L, <span class="keyword">char</span> path[])</span><span class="comment">//写入到excel</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	FILE *fp = <span class="literal">NULL</span>;</span><br><span class="line">	fp = fopen(path, <span class="string">&quot;w&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; L.length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">fprintf</span>(fp, <span class="string">&quot;%s\t%s\n&quot;</span>, L.name[i], L.a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	fclose(fp);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">hangshu</span><span class="params">(<span class="keyword">char</span> file[])</span><span class="comment">//查看文件有多少行有</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> c[<span class="number">30</span>][<span class="number">30</span>], t[<span class="number">30</span>][<span class="number">30</span>];</span><br><span class="line">	<span class="keyword">int</span> h = <span class="number">0</span>;</span><br><span class="line">	FILE *fp;</span><br><span class="line">	fp = fopen(file, <span class="string">&quot;r&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span> (fp == <span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;<span class="comment">//表示文件打开错误</span></span><br><span class="line">	<span class="keyword">while</span> (!feof(fp))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">fscanf</span>(fp, <span class="string">&quot;%s\t%s\n&quot;</span>, &amp;c[h], &amp;t[h]);</span><br><span class="line">		<span class="comment">//printf(&quot;%s\t%s\n&quot;, c[h], t[h]);</span></span><br><span class="line"></span><br><span class="line">		h++;</span><br><span class="line">	&#125;</span><br><span class="line">	fclose(fp);</span><br><span class="line">	<span class="keyword">return</span> h;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
   </entry>
 </search>
