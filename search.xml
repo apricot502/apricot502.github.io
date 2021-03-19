@@ -854,50 +854,118 @@
 <p>​        首先，导入案例数据集。因为案例数据存放在同一个 Excel 表的不同 Sheet 下，我们需要指定 sheetname 分别读取：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">d1&#x3D;pd.read_excel(&#39;清洗数据集.xlsx&#39;,sheet_name&#x3D;&#39;一级流量&#39;)</span><br><span class="line">d1.head()</span><br><span class="line">d1&#x3D;pd.read_excel(&#39;清洗数据集.xlsx&#39;,sheet_name&#x3D;&#39;二级流量&#39;)</span><br><span class="line">d1.head()</span><br><span class="line">d1&#x3D;pd.read_excel(&#39;清洗数据集.xlsx&#39;,sheet_name&#x3D;&#39;三级流量&#39;)</span><br><span class="line">d1.head()</span><br></pre></td></tr></table></figure>
 
-<p>示例：           <img src="pandas-3.assets/image-20210316111131629.png" alt="image-20210316111131629" style="zoom: 50%;" /><img src="pandas-3.assets/image-20210316111243282.png" alt="image-20210316111243282" style="zoom:50%;" /></p>
-<img src="pandas-3.assets/image-20210316111307925.png" alt="image-20210316111307925" style="zoom: 50%;" />
+<p>示例：           <img src="https://i.loli.net/2021/03/19/rGX49wxsqiBtgzj.png" alt="image-20210316111131629" style="zoom: 50%;" /><img src="https://i.loli.net/2021/03/19/5bzPdp1Je6YvxOn.png" alt="image-20210316111243282" style="zoom:50%;" /></p>
+<img src="https://i.loli.net/2021/03/19/PKrcXJ4SkhQ6DtU.png" alt="image-20210316111307925" style="zoom: 50%;" />
 
 <p>读取完数据，就可以开始进行列表的操作了。</p>
 <h2 id="一，增——拓展数据维度"><a href="#一，增——拓展数据维度" class="headerlink" title="一，增——拓展数据维度"></a>一，增——拓展数据维度</h2><h3 id="1-纵向合并"><a href="#1-纵向合并" class="headerlink" title="1.纵向合并"></a>1.纵向合并</h3><p>​        这三个 sheet 的数据，列维度完全一致（每列数据都是同一类型），纵向合并起来分析十分方便。说到纵向合并，concat 大佬不请自来，他的招式简单明了——pd.concat([表 1，表 2，表 3])，表 1，表 2，表 3分别为三个sheet的名字，对于列字段统一的数据，我们只需把表依次传入参数：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.concat([d1,d2,d3])</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
 
-<p>示例如下：<img src="pandas-3.assets/image-20210316112211162.png" alt="image-20210316112211162" style="zoom:50%;" /></p>
+<p>示例如下：<img src="https://i.loli.net/2021/03/19/J7D69Vy1R8p3ths.png" alt="image-20210316112211162" style="zoom:50%;" /></p>
 <p>注：cancat传入参数axis设置成1，可以进行横向的合并；pandas 中很多函数功能十分强大，能够实现多种功能，但对于萌新来说，过多甚至交叉的功能往往会造成懵 B 的状态，所以这里一种功能先只用一种方式来实现。</p>
 <h3 id="2-横向合并"><a href="#2-横向合并" class="headerlink" title="2.横向合并"></a>2.横向合并</h3><p>横向合并涉及到连接问题，为方便理解，我们构造一些更有代表性的数据集练手：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">h1 &#x3D; pd.DataFrame(&#123;&#39;语文&#39;:[93,80,85,76,58],&#39;数学&#39;:[87,99,95,85,70],&#39;英语&#39;:[80,85,97,65,88]&#125;,index &#x3D; [&#39;韩梅梅&#39;,&#39;李雷&#39;,&#39;李华&#39;,&#39;王明&#39;,&#39;铁蛋&#39;])</span><br><span class="line">h1</span><br><span class="line">h2 &#x3D; pd.DataFrame(&#123;&#39;篮球&#39;:[93,80,85,76],&#39;舞蹈&#39;:[87,99,95,85]&#125;,</span><br><span class="line">                 index &#x3D; [&#39;李华&#39;,&#39;王明&#39;,&#39;铁蛋&#39;,&#39;刘强&#39;])</span><br><span class="line">h2</span><br></pre></td></tr></table></figure>
-<p>实例：<br><img src="pandas-3.assets/image-20210316115248466.png" alt="image-20210316115248466" style="zoom: 50%;" /></p>
-<img src="pandas-3.assets/image-20210316115430612.png" alt="image-20210316115430612" style="zoom:50%;" />
+<p>实例：<br><img src="https://i.loli.net/2021/03/18/85miVrLwRlWUeNT.png" alt="image-20210316115248466" style="zoom: 50%;" /></p>
+<img src="https://i.loli.net/2021/03/18/xSKRylwTkoQUvzf.png" alt="image-20210316115430612" style="zoom:50%;" />
 
 <p>​        两个 DataFrame 是两张成绩表，h1 是 5 位同学的数学、英语、语文成绩，h2 是 4 位同学的篮球和舞蹈成绩，现在想找到并合并两张表同时出现的同学及其成绩，可以用 merge 方法：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;inner&#39;)</span><br></pre></td></tr></table></figure>
 
 <p>实例：</p>
-<img src="pandas-3.assets/image-20210316115645619.png" alt="image-20210316115645619" style="zoom:50%;" />
-
+<p>![](<a href="https://i.loli.net/2021/03/18/ZYL8p6i7BxEUtbk.png&quot;">https://i.loli.net/2021/03/18/ZYL8p6i7BxEUtbk.png&quot;</a> alt=”image-20210316115645619” style=”zoom:50%;”)</p>
 <p>详解一下 merge 的参数，left 和 rgiht 分别对应着需要连接的左表和右<strong>表</strong>，这里语数外成绩表是左表，篮球、舞蹈成绩是右表。left_index 与 right_index 是当我们用索引（这两个表的名字在索引中）连接时指</p>
 <p>定的参数，设置为 on 表示用该表的索引作为连接的条件（或者说桥梁）。假设姓名是单独的一列值，且需要根据姓名进行匹配，那就需要用“left_on = ‘姓名’,right_on = ‘姓名’”，我们可以分别指定左表的匹配列和右表的匹配列。</p>
 <p>how 是指定连接方式，这里用的 inner，表示我们基于姓名索引来匹配，只返回两个表中共同（同时出现）姓名的数据。下面详解一下 inner 还涉及到的其他参数——left,right,outer。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;right&#39;)</span><br><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;left&#39;)</span><br><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;outer&#39;)</span><br></pre></td></tr></table></figure>
 
 <p><strong>左右连接，outer：</strong></p>
-<p>right：<img src="pandas-3.assets/image-20210316120307528.png" alt="image-20210316120307528" style="zoom:67%;" /></p>
-<p>left ：<img src="pandas-3.assets/image-20210316120346659.png" alt="image-20210316120346659" style="zoom: 67%;" /></p>
-<p>outer:<img src="pandas-3.assets/image-20210316120438719.png" alt="image-20210316120438719" style="zoom:67%;" /></p>
+<p>right：<img src="https://i.loli.net/2021/03/18/N3QImDTZj2nFoVi.png" alt="image-20210316120307528" style="zoom:67%;" /></p>
+<p>left ：<img src="https://i.loli.net/2021/03/19/aKsqBwyehl9iVrL.png" alt="image-20210316120346659" style="zoom: 67%;" /></p>
+<p>outer:<img src="https://i.loli.net/2021/03/19/p6BtHdVG2QP5Z7o.png" alt="image-20210316120438719" style="zoom:67%;" /></p>
 <p>左连接（left）和右连接（right），我们可以直观理解为哪边的表是主体，谁是主体（所有行全部保持），先看左连接：左表 h1 原封不动，右边根据左表进行合并，如果存在相关的名字，就正常返回数据，如果不存在（韩梅梅、李雷），就返回空(NAN)值；</p>
 <p>右连接：就是以右表为主体，左表有则返回无则为空。</p>
 <p>外连接：两张表并集的产物，我的数据全保留，你的也全保留，你有我无的就空着，你无我有的也空着。</p>
 <h2 id="二，删——删空去重"><a href="#二，删——删空去重" class="headerlink" title="二，删——删空去重"></a>二，删——删空去重</h2><h3 id="1-删空"><a href="#1-删空" class="headerlink" title="1.删空"></a>1.删空</h3><p>在一些场景，源数据的缺失（空值）对于分析来说是干扰项，需要系统的删除。上文我们合并后的 df 数据集就是有缺失数据的：</p>
-<img src="pandas-3.assets/image-20210316121222330.png" alt="image-20210316121222330" style="zoom:67%;" />
+<img src="https://i.loli.net/2021/03/19/xu3jRpHXQVeJknv.png" alt="image-20210316121222330" style="zoom:67%;" />
 
 <p>要删除空值，一个 dropna 即可搞定：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.dropna()</span><br></pre></td></tr></table></figure>
 
-<img src="pandas-3.assets/image-20210316121330467.png" alt="image-20210316121330467" style="zoom:50%;" />
+<img src="https://i.loli.net/2021/03/19/BeZc4G7NmDnVpFA.png" alt="image-20210316121330467" style="zoom:50%;" />
 
-<p>dropna 函数默认删除所有出现<strong>空值的行</strong>，即只要一行中任意一个字段为空，就会</p>
-<p>被删除。我们可以设置 subset 参数，例如 dropna(subset = [‘city’])，来指定当</p>
-<p>一行中的 city 字段为空时，才会被删除。</p>
-<img src="pandas-3.assets/image-20210316121330467.png" alt="image-20210316121330467" style="zoom:50%;" />]]></content>
+<p>dropna 函数默认删除所有出现<strong>空值的行</strong>，即只要一行中任意一个字段为空，就会被删除。我们可以设置 subset 参数，例如 dropna(subset = [‘city’])，来指定当一行中的 city 字段为空时，才会被删除。</p>
+<h3 id="2-去重"><a href="#2-去重" class="headerlink" title="2.去重"></a>2.去重</h3><p>说是讲去重，但是案例数据比较干净，没有两行数据是完全一样的，所以我们要制造点困难，增加几行重复值：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">repeat &#x3D; pd.concat([df,df])</span><br><span class="line">print(&#39;重复的数据集一共多少行：&#39;,len(repeat))</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/19/wmqAogZufdEBp48.png" alt="image-20210318223435029" style="zoom:67%;" /></p>
+<p>把源数据重复两遍，赋值给 repeat，这样每一行数据都有重复的数据。要把重复数据删掉，一行代码就搞定：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unique &#x3D; repeat.drop_duplicates()</span><br><span class="line">print(&#39;去重后的数据集一共多少行：&#39;,len(unique))</span><br><span class="line">unique</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/19/ASIO8lM7LZ1m3fj.png" alt="image-20210318223544833" style="zoom:67%;" /></p>
+<p><strong>drop_duplicates 方法去重默认会删掉完全重复的行</strong>（每个值都一样的行），如果我们要删除指定列重复的数据，可以通过指定 subset 参数来实现，假如我们有个奇葩想法，要基于“流量级别”这列进行去重，则可以：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.drop_duplicates(subset &#x3D; &#39;流量级别&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/18/DMFtsuVkqYvy6zZ.png" alt="image-20210318224024320"></p>
+<p>​        我们会发现，流量有三个级别，通过指定 <strong>subset</strong> 参数，我们删除了这个字段重复的行，保留了各自不重复的第一行。继续展开讲，在源数据中，流量渠道为“一级”的有 7 行数据，每行数据其他字段都不相同，这里我们删除了后 6 行，只保留了第一行，但如果我们想在去重的过程中删除前面 6 行，保留最后一行数据怎么操作？答案很简单，指定 keep 参数即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.drop_duplicates(subset &#x3D; &#39;流量级别&#39;,keep &#x3D; &#39;last&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/18/7BHWrvIhGVwsk3j.png" alt="image-20210318223827090" style="zoom:67%;" /></p>
+<p>keep 值等于 last，保留最后一行数据，不输入 keep 值时，系统默认会给 keep 赋值为 first，就会保留第一行数据而删掉其他的。</p>
+<h2 id="三，查——基于条件查询"><a href="#三，查——基于条件查询" class="headerlink" title="三，查——基于条件查询"></a>三，查——基于条件查询</h2><p>​        查，不是单纯的返回几行数据，而是根据业务实际需求，基于一定的条件查看和选择数据。</p>
+<h3 id="1-按条件索引-筛选"><a href="#1-按条件索引-筛选" class="headerlink" title="1.按条件索引/筛选"></a>1.按条件索引/筛选</h3><p>这次需求是筛选出访客数大于 10000 的一级渠道，loc 一下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.loc[(df[&#39;访客数&#39;] &gt; 10000) &amp; (df[&#39;流量级别&#39;] &#x3D;&#x3D; &#39;一级&#39;),:]</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/18/yPKoHC7saBjXlZc.png" alt="image-20210318224752271" style="zoom:67%;" /></p>
+<h3 id="2-排序"><a href="#2-排序" class="headerlink" title="2.排序"></a>2.排序</h3><p>​        很多情况下，我们都需要通过排序来观察数据规律，以及快速筛选出 TOP N 的数据项。对于案例数据，我们怎么样按交易金额进行排序并筛选出 TOP3 的渠道呢？</p>
+<p>问题的关键就在于排序，这个时候 sort_values 函数就派上用场了：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sort_df &#x3D; df.sort_values(&#39;支付金额&#39;,ascending &#x3D; False)</span><br><span class="line">sort_df</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/19/h56YAC1zSVHi4s9.png" alt="image-20210319093118845" style="zoom:67%;" /></p>
+<p>​        整个操作十分简单，sort_values 函数，顾名思义是按照<strong>数值</strong>进行排序，首先要传入的参数是列参数，即我们根据哪一列的数值来进行排序，ascending 参数决定了排序顺序，等于 Flase 则是从大到小的降序，设置为 True 则是升序。</p>
+<p>排序完之后，筛选 TOP3 渠道就非常简单：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sort_df.head(3)</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/19/WETFdzMgmjvYyxD.png" alt="image-20210319093252407" style="zoom:67%;" /></p>
+<p>​        补充一个知识点，如果跟着文章操作，会发现无论是删空的 dropna，还是去重的drop_duplicates，或者是排序的 sort_values，在对源数据进行操作后，源数据并未改变，这是因为我们没有对这几个函数的 inplace 值进行设置，如果设置成inplace = True，删空、去重和排序都会在源数据上生效。但这里为了避免出现不必要的错误而无法更改，更建议大家把操作后的源数据赋值给新的变量，如 new = df.dropna()，而不是将源数据的 inplace 参数设置为True。</p>
+<h2 id="四，分——分组和切分"><a href="#四，分——分组和切分" class="headerlink" title="四，分——分组和切分"></a>四，分——分组和切分</h2><p>在分组的版块中，我们重点介绍groupby 分组和 cut 切分。</p>
+<h3 id="1-分组"><a href="#1-分组" class="headerlink" title="1.分组"></a>1.分组</h3><p>​        在案例数据中，总的流量级别有三级，每一级下又有多个投放地区，如果我们想汇总看每个级别流量所对应的总访客数和支付金额，就需要用到分组了。groupby 是分组函数，最主要的参数是列参数，即按照哪一列或者哪几列（多列要用列表外括）进行汇总，这里是按照流量级别：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.groupby(&#39;流量级别&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/19/QuEB1xeZc2KOl3F.png" alt="image-20210319093637450"></p>
+<p>​        可以看到，直接分组之后，没有返回任何我们期望的数据，要进一步得到数据，需要在分组的时候对相关字段进行计算（常用的计算方法包括 sum、max、min、mean、std）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.groupby(&#39;流量级别&#39;).sum()</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/19/u2VtXaRUJH6OqTI.png" alt="image-20210319094054375" style="zoom:67%;" /></p>
+<p>​        后面加上了 sum，代表我们先按照流量级别进行分组，再对分组内的字段求和。由于没有指定求和的列，所以是对所有数值型字段进行了求和。此处我们只想要各级别流量下的访客数和支付金额，需要指明参数：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#df.groupby(&#39;流量级别&#39;).sum()[[&#39;访客数&#39;,&#39;支付金额&#39;]]这样也可</span><br><span class="line">df.groupby(&#39;流量级别&#39;)[[&#39;访客数&#39;,&#39;支付金额&#39;]].sum()</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/19/wPzWiER74ajMSxK.png" alt="image-20210319094512545" style="zoom:67%;" /></p>
+<p>​        流量级别作为汇总的依据列，默认转化为索引列，如果我们不希望它变成索引，向groupby 内传入参数 <strong>as_index = False</strong> 即可：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.groupby(&#39;流量级别&#39;,as_index &#x3D; False)[[&#39;访客数&#39;,&#39;支付金额&#39;]].sum()</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/19/wvldCoIRhLNfatD.png" alt="image-20210319095107484" style="zoom:67%;" /></p>
+<h3 id="2-切分"><a href="#2-切分" class="headerlink" title="2.切分"></a>2.切分</h3><p>切分（分桶）操作常用于一维数组的分类和打标，cut 函数能够高效的完成任务。它的主要参数和用法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.cut(x,bins,right,labels)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li>第一个参数x是我们要传入和切分的一维数组，可以使列表，也可以是DataFrame的一列。</li>
+<li>bins表示切分的方式，可以自定义传入列表[a,b,c]，表示按照a-b，b-c的区间来进行切分也可以输入数值（例如5），直接指定分成五组。</li>
+<li>right的值可以设置为True或者False，当为为True时，表示分组区间是包含右边不包含左边；当为False代表区间含左不含右。</li>
+<li>labels则是打标参数，我们把某列数据切分为3组，每一组我们可以给它设置·一个对应的标签，如[低，中，高]。</li>
+</ul>
+</blockquote>
+<p>​        以案例数据为例，每个渠道都有对应的访客数，我们现在希望对各渠道访客级别进行评估，按照访客数大小，分成辣鸡（流量 100 以内的）、百级、千级和万级的渠道。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.cut(x &#x3D; df[&#39;访客数&#39;],bins &#x3D; [0,100,1000,10000,100000])</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/19/HRNzSbcFKTo6mGh.png" alt="image-20210319100722848" style="zoom:50%;" /></p>
+<p>​        因为我们想对流量级别进行百、千、万的归类，所以把分组数值标准传入 bins 参数。从结果可以看到，在不设置 right 的情况下，分组区间是默认左开右闭的，而我们希望的是左闭右开，即百级流量渠道访客数在 0-99 之间，所以需要将 right值设置为 False。</p>
+<p>​        下面我们直接对分组后的数据进行打标，访客数在 0-99 设置为“辣鸡”，100-999 设置为百级，千级和万级以此类推，同时将打好标签的数据作为新列给到源数据：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df[&#39;分类打标&#39;] &#x3D; pd.cut(x &#x3D; df[&#39;访客数&#39;],bins &#x3D; [0,100,1000,10000,100000],</span><br><span class="line">                    right &#x3D; False,labels &#x3D; [&#39;辣鸡&#39;,&#39;百级&#39;,&#39;千级&#39;,&#39;万级&#39;])</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/03/19/HK9F1VSspeLqMi4.png" alt="image-20210319100518628" style="zoom:67%;" /></p>
+<p>​        非常高效，一行半代码就搞定了分组、判断和打标的过程。</p>
+]]></content>
       <categories>
         <category>python</category>
       </categories>
