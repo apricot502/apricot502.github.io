@@ -527,7 +527,7 @@
  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df1=pd.DataFrame(&#123;<span class="string">&#x27;数学&#x27;</span>:[<span class="number">88</span>,<span class="number">86</span>,<span class="number">96</span>,<span class="number">77</span>],<span class="string">&#x27;英语&#x27;</span>:[<span class="number">77</span>,<span class="number">67</span>,<span class="number">85</span>,<span class="number">85</span>],<span class="string">&#x27;语文&#x27;</span>:[<span class="number">86</span>,<span class="number">69</span>,<span class="number">66</span>,<span class="number">69</span>],<span class="string">&#x27;总分&#x27;</span>:[<span class="number">251</span>,<span class="number">222</span>,<span class="number">247</span>,<span class="number">231</span>],index=[<span class="string">&#x27;小明&#x27;</span>，<span class="string">&#x27;小刘&#x27;</span>,<span class="string">&#x27;小王&#x27;</span>,<span class="string">&#x27;小白&#x27;</span>]&#125;)</span><br><span class="line">df1</span><br></pre></td></tr></table></figure>
 
 <p> 实例如下：</p>
- <img src="https://i.loli.net/2021/03/11/ivm76lzodeuTVaZ.png" alt="image-20210311211748937" style="zoom: 67%;" /></li>
+ <img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403182153.png" alt="image-20210311211748937" style="zoom: 67%;" /></li>
 </ol>
 <h2 id="二-读取"><a href="#二-读取" class="headerlink" title="二.读取"></a>二.读取</h2><p>​    更多时候，我们是把相关文件数据直接读进 PANDAS 中进行操作，这里介绍两种非常接近的读取方式，一种是 CSV 格式的文件，一种是 EXCEL 格式（.xlsx 和 xls 后缀）的文件。</p>
 <ol>
@@ -1581,6 +1581,75 @@
       </categories>
       <tags>
         <tag>数据结构实验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pandas-4</title>
+    <url>/2021/04/03/pandas-4/</url>
+    <content><![CDATA[<hr>
+<h1 id="Apply-函数"><a href="#Apply-函数" class="headerlink" title="Apply 函数"></a><strong>Apply 函数</strong></h1><span id="more"></span>
+
+<p>apply 函数主要作用是做聚合运算，以及在分组基础上根据实际情况来自定义一些规则，常见用法和参数如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.groupby([&#39;列名&#39;]).apply(func,args)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>参数func是最重要的参数，它接收一个函数，会把分组后的数据根据函数来进行处理</li>
+<li>args参数是我们可以给函数参入的参数，这个仅做了解，和其他参数一样比较少</li>
+</ol>
+<h2 id="场景一"><a href="#场景一" class="headerlink" title="场景一"></a>场景一</h2><p><strong>背景：</strong>我们拿到了一份 4 位同学三次模拟考试的成绩，想知道每位同学历次模拟中最好成绩和最差成绩分别是多少。</p>
+<p><strong>思路：</strong>最好和最差，分别对应着 max 与 min，我们先按姓名分组，再用 apply 函数返回对应的最大和最小值，最终将结果合并。</p>
+<p>先导入源数据：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">score &#x3D; pd.read_excel(&#39;apply案例数据.xlsx&#39;,sheet_name &#x3D; &#39;成绩表&#39;)</span><br><span class="line">score.head(6)</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403150841.png" alt="image-20210403150839651" style="zoom:50%;" />
+
+
+
+<p>看一看每位同学最高成绩：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">max_score &#x3D; score.groupby(&#39;姓名&#39;)[&#39;综合成绩&#39;].apply(max).reset_index()</span><br><span class="line">max_score</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151152.png" alt="image-20210403151148838" style="zoom:50%;" />
+
+<p>​        我们指定“综合成绩”列，然后把 max 函数直接传入 apply 参数内，返回了对应分组内成绩的最大值。有一些常见函数，如 max、min、len 等函数可以直接传入apply。</p>
+<p>​        groupby 分组默认会把分组依据列（姓名）变成索引，这里用 reset_index 方法重置或者说取消姓名索引，将它保留在列的位置，维持 DataFrame 格式，方便后续匹配。</p>
+<p>再筛选出最低成绩：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">min_score &#x3D; score.groupby(&#39;姓名&#39;)[&#39;综合成绩&#39;].apply(min).reset_index()</span><br><span class="line">min_score</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151356.png" alt="image-20210403151355702"></p>
+<p>两张表按姓名合并：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">score_combine &#x3D; pd.merge(max_score,min_score,left_on &#x3D; &#39;姓名&#39;,right_on &#x3D; &#39;姓名&#39;,how &#x3D; &#39;inner&#39;)</span><br><span class="line">score_combine.columns &#x3D; [&#39;姓名&#39;,&#39;最好成绩&#39;,&#39;最差成绩&#39;]</span><br><span class="line">score_combine</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151500.png" alt="image-20210403151459277"></p>
+<p>得到了我们预期的结果，只是列名略丑，可以用.columns 方法来赋值更改。场景一比较死板和严肃，场景二我们换个更接地气的风格。</p>
+<h2 id="场景二"><a href="#场景二" class="headerlink" title="场景二"></a>场景二</h2><p><strong>背景：</strong>Boss 丢过来一份省市销售表，里面包含省份、城市、最近 1 个月销售额 3个字段，没等你开口问需求，Boss 就开腔了：“小 Z 啊，我最近对 3 这个数字有执念，我想看看每个省份销售排名第 3 的都是哪些城市，以及他们的销售额情况。对了，这个需求要尽快！”</p>
+<p><strong>思路：</strong>问题的关键是找到每个省份销售排名第 3 的城市，首先，应该对省份、城市按销售额进行降序排列，然后，找到对应排名第 3 的城市，Emmm，如果是排名第 1 的城市，我们可以通过排序后去重实现，但是这个排名第 3，小 Z 疯狂挠头，想到了apply。</p>
+<p>先导入数据源，对数据做个初步了解：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order &#x3D; pd.read_excel(&#39;apply案例数据.xlsx&#39;,sheet_name &#x3D; &#39;省市销售数据&#39;)</span><br><span class="line">order.head()</span><br></pre></td></tr></table></figure>
+
+<p>实例·：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151803.png" alt="image-20210403151800730"></p>
+<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151840.png" alt="image-20210403151839431" style="zoom:67%;" />
+
+<p>数据源有省份、城市、近 1 月销售额 3 个字段，一共 210 行（销售额）乱序排列，且都没有空值，整体比较规整。</p>
+<p>要得到销售排名第 3 的城市，要先进行排序，这里我们用省份、近 1 月销售额两个关键字段进行降序排列，得到我们期待的顺序：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order_rank &#x3D; order.sort_values([&#39;省份&#39;,&#39;近1月销售额&#39;],ascending &#x3D; False)</span><br><span class="line">order_rank</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403152207.png" alt="image-20210403152206797"></p>
+<p>接着，在 apply 函数登场前，我们先详细剖析一下整个过程：</p>
+<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403152607.png" alt="Screenshot 2021-04-03 152337" style="zoom:67%;" />
+
+<p>第一步分组非常简单，按省份分组即可。而取第 3 名的城市和销售，表明我们需要城市和销售两个字段，所以在分组后指明这两列：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order_rank.groupby(&#39;省份&#39;)[[&#39;城市&#39;,&#39;近1月销售额&#39;]]</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403152739.png" alt="image-20210403152738388"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>pandas</tag>
       </tags>
   </entry>
 </search>
