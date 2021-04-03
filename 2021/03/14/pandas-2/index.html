@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/03/14/kmItuWGAfzMyp4D.png">
 <meta property="og:image" content="https://i.loli.net/2021/03/14/lCoxiRYj2zrJXsE.png">
 <meta property="article:published_time" content="2021-03-14T01:30:37.000Z">
-<meta property="article:modified_time" content="2021-03-17T09:41:58.159Z">
+<meta property="article:modified_time" content="2021-04-03T10:56:12.477Z">
 <meta property="article:author" content="apricot502">
 <meta property="article:tag" content="pandas">
 <meta name="twitter:card" content="summary">
@@ -261,7 +261,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-17 17:41:58" itemprop="dateModified" datetime="2021-03-17T17:41:58+08:00">2021-03-17</time>
+                <time title="修改时间：2021-04-03 18:56:12" itemprop="dateModified" datetime="2021-04-03T18:56:12+08:00">2021-04-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -286,8 +286,6 @@
       
         <hr>
 <h1 id="玩转Pandas索引（jupyter）"><a href="#玩转Pandas索引（jupyter）" class="headerlink" title="玩转Pandas索引（jupyter）"></a>玩转Pandas索引（jupyter）</h1><span id="more"></span>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=520 height=86 src="//music.163.com/outchain/player?type=2&id=36229051&auto=0&height=66"></iframe>
 
 <p>​        第一篇潘大师（初识 Pandas）教程考虑到篇幅问题只讲了最基础的列向索引，但这显然不能满足同志们日益增长的个性化服务（选取）需求。为了舒缓痛感，增加快感，满足需求，第二篇内容我们单独把索引拎出来，结合场景详细介绍两种常用的索引方式：</p>
 <ul>
@@ -320,7 +318,7 @@
 <p>实例：<img src="https://i.loli.net/2021/03/14/qDsV7ARyPjlINQF.png" alt="image-20210314095256264" style="zoom:67%;" /></p>
 <h3 id="场景二（列选取）"><a href="#场景二（列选取）" class="headerlink" title="场景二（列选取）"></a>场景二（列选取）</h3><p>目标：我们想要把所有渠道的流量来源和客单价单拎出来看一看。</p>
 <p>思路：所有流量渠道，也就是所有行，在第一个行参数的位置我们输入“：”；再看列，流量来源是第 1 列，客单价是第 5 列，对应的列索引分别是 0 和 4：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.iloc[;[0,4]]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.iloc[;,[0,4]]</span><br></pre></td></tr></table></figure>
 
 <p>实例：</p>
 <img src="https://i.loli.net/2021/03/14/5Gp9OkMIx8nTaWm.png" alt="image-20210314095226123" style="zoom:67%;" />

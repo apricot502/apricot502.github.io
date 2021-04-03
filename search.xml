@@ -641,7 +641,7 @@
 
 <p><img src="https://i.loli.net/2021/03/13/wXkSlMKLA5Z4zjO.png" alt="image-20210313153246797"></p>
 <h3 id="3-时间类型"><a href="#3-时间类型" class="headerlink" title="3.时间类型"></a>3.时间类型</h3><p>​        PANDAS 中时间序列相关的水非常深，这里只对日常中最基础的时间格式进行讲解，对时间序列感兴趣的同学可以自行查阅相关资料，深入了解。</p>
-<p>​        以案例数据为例，我们这些渠道数据，是在 2019 年 8 月 2 日提取的，后面可能涉及到其他日期的渠道数据，所以需要加一列时间予以区分，在 EXCEL 中常用的时间格式是’2019-8-3’或者’2019/8/3’，我们用 PANDAS 来实现一下：</p>
+<p>​        以案例数据为例，我们这些渠道数据，是在 2021 年 3 月 13 日提取的，后面可能涉及到其他日期的渠道数据，所以需要加一列时间予以区分，在 EXCEL 中常用的时间格式是’2021-3-13’或者’2021/3/13’，我们用 PANDAS 来实现一下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2[&#39;date&#39;]&#x3D;&#39;2021-3-13&#39;</span><br><span class="line">df2.head()</span><br></pre></td></tr></table></figure>
 
 <img src="https://i.loli.net/2021/03/13/Gjo5f6hyIEzZlKT.png" alt="image-20210313153918252" style="zoom:67%;" />
@@ -669,8 +669,6 @@
     <url>/2021/03/14/pandas-2/</url>
     <content><![CDATA[<hr>
 <h1 id="玩转Pandas索引（jupyter）"><a href="#玩转Pandas索引（jupyter）" class="headerlink" title="玩转Pandas索引（jupyter）"></a>玩转Pandas索引（jupyter）</h1><span id="more"></span>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=520 height=86 src="//music.163.com/outchain/player?type=2&id=36229051&auto=0&height=66"></iframe>
 
 <p>​        第一篇潘大师（初识 Pandas）教程考虑到篇幅问题只讲了最基础的列向索引，但这显然不能满足同志们日益增长的个性化服务（选取）需求。为了舒缓痛感，增加快感，满足需求，第二篇内容我们单独把索引拎出来，结合场景详细介绍两种常用的索引方式：</p>
 <ul>
@@ -703,7 +701,7 @@
 <p>实例：<img src="https://i.loli.net/2021/03/14/qDsV7ARyPjlINQF.png" alt="image-20210314095256264" style="zoom:67%;" /></p>
 <h3 id="场景二（列选取）"><a href="#场景二（列选取）" class="headerlink" title="场景二（列选取）"></a>场景二（列选取）</h3><p>目标：我们想要把所有渠道的流量来源和客单价单拎出来看一看。</p>
 <p>思路：所有流量渠道，也就是所有行，在第一个行参数的位置我们输入“：”；再看列，流量来源是第 1 列，客单价是第 5 列，对应的列索引分别是 0 和 4：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.iloc[;[0,4]]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.iloc[;,[0,4]]</span><br></pre></td></tr></table></figure>
 
 <p>实例：</p>
 <img src="https://i.loli.net/2021/03/14/5Gp9OkMIx8nTaWm.png" alt="image-20210314095226123" style="zoom:67%;" />
@@ -794,9 +792,8 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;inner&#39;)</span><br></pre></td></tr></table></figure>
 
 <p>实例：</p>
-<p>![](<a href="https://raw.githubusercontent.com/apricot502/images/master/img20210319103410.png&quot;">https://raw.githubusercontent.com/apricot502/images/master/img20210319103410.png&quot;</a> alt=”image-20210316115645619” style=”zoom:50%;”)</p>
-<p>详解一下 merge 的参数，left 和 rgiht 分别对应着需要连接的左表和右<strong>表</strong>，这里语数外成绩表是左表，篮球、舞蹈成绩是右表。left_index 与 right_index 是当我们用索引（这两个表的名字在索引中）连接时指</p>
-<p>定的参数，设置为 on 表示用该表的索引作为连接的条件（或者说桥梁）。假设姓名是单独的一列值，且需要根据姓名进行匹配，那就需要用“left_on = ‘姓名’,right_on = ‘姓名’”，我们可以分别指定左表的匹配列和右表的匹配列。</p>
+<p>![111](<a href="https://raw.githubusercontent.com/apricot502/images/master/img20210403190912.png&quot;">https://raw.githubusercontent.com/apricot502/images/master/img20210403190912.png&quot;</a> alt=”image-20210316115645619” style=”zoom:50%;”)</p>
+<p>详解一下 merge 的参数，left 和 rgiht 分别对应着需要连接的左表和右表，这里语数外成绩表是左表，篮球、舞蹈成绩是右表。left_index 与 right_index 是当我们用索引（这两个表的名字在索引中）连接时指定的参数，设置为 on 表示用该表的索引作为连接的条件（或者说桥梁）。假设姓名是单独的一列值，且需要根据姓名进行匹配，那就需要用“left_on = ‘姓名’,right_on = ‘姓名’”，我们可以分别指定左表的匹配列和右表的匹配列。</p>
 <p>how 是指定连接方式，这里用的 inner，表示我们基于姓名索引来匹配，只返回两个表中共同（同时出现）姓名的数据。下面详解一下 inner 还涉及到的其他参数——left,right,outer。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;right&#39;)</span><br><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;left&#39;)</span><br><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;outer&#39;)</span><br></pre></td></tr></table></figure>
 
@@ -871,7 +868,7 @@
 
 <blockquote>
 <ul>
-<li>第一个参数x是我们要传入和切分的一维数组，可以使列表，也可以是DataFrame的一列。</li>
+<li>第一个参数x是我们要传入和切分的一维数组，可以是列表，也可以是DataFrame的一列。</li>
 <li>bins表示切分的方式，可以自定义传入列表[a,b,c]，表示按照a-b，b-c的区间来进行切分也可以输入数值（例如5），直接指定分成五组。</li>
 <li>right的值可以设置为True或者False，当为为True时，表示分组区间是包含右边不包含左边；当为False代表区间含左不含右。</li>
 <li>labels则是打标参数，我们把某列数据切分为3组，每一组我们可以给它设置·一个对应的标签，如[低，中，高]。</li>
@@ -1644,6 +1641,21 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order_rank.groupby(&#39;省份&#39;)[[&#39;城市&#39;,&#39;近1月销售额&#39;]]</span><br></pre></td></tr></table></figure>
 
 <p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403152739.png" alt="image-20210403152738388"></p>
+<p>但是我们可以在脑海中构建一下，截图只展示了部分：</p>
+<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403201502.png" alt="未标题-1"></p>
+<p>有个问题需要注意，有一些直辖市是和省并列的，而作为城市只有单独的一行，这样的城市我们就默认返回其本身的数据；对于非直辖市省份来说，就需要定位筛选。</p>
+<p>拿 x2 来举例，要找到这个数据中排名第三的城市和销售额，应该怎么做呢？答案是直接索引，把他看作是一个 DataFrame 格式的表，要选取第 3 行的所有值，包括城市和销售额，这里用 iloc 索引，很简单的一行代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">x.iloc[2,:]</span><br></pre></td></tr></table></figure>
+
+<p>下面把我们针对直辖市的判断和非直辖市的筛选逻辑整合成一个函数:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def get_third(x):</span><br><span class="line">    #如果分组长度小于等于1，意味着直辖市</span><br><span class="line">    if len(x) &lt;&#x3D; 1:</span><br><span class="line">        #返回第0行的所有值，即直辖市本身</span><br><span class="line">        return x.iloc[0,:]</span><br><span class="line">    </span><br><span class="line">    #针对非直辖市</span><br><span class="line">    else:</span><br><span class="line">        #直接返回第3行（排名第3，索引是2）所有值（城市，近1月销售额）</span><br><span class="line">        return x.iloc[2,:]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order_rank.groupby(&#39;省份&#39;)[[&#39;城市&#39;,&#39;近1月销售额&#39;]].apply(get_third)</span><br></pre></td></tr></table></figure>
+
+
+<p>实例：</p>
+<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403201509.png" alt="image-20210403201045237"></p>
+<p>​        至此，每个省份，销售额排名第三的城市已经成功筛选出来。回顾整个操作流程，先排序，后分组，最后通过定义函数传入 apply，提取出我们的目标值。分组后数据的抽象形态，以及如何判断和取出我们需要的值，是解决问题的关键和难点。</p>
 ]]></content>
       <categories>
         <category>python</category>
