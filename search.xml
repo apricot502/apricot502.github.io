@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>English</title>
-    <url>/2021/03/11/English/</url>
+    <url>/English/</url>
     <content><![CDATA[<hr>
 <h1 id="English"><a href="#English" class="headerlink" title="English"></a>English</h1><span id="more"></span>
 
@@ -82,7 +82,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2021/03/13/hello-world/</url>
+    <url>/hello-world/</url>
     <content><![CDATA[<hr>
 <span id="more"></span>
 
@@ -108,8 +108,204 @@
       </tags>
   </entry>
   <entry>
+    <title>傅里叶级数及变换</title>
+    <url>/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%8F%8A%E5%8F%98%E6%8D%A2/</url>
+    <content><![CDATA[<hr>
+<span id="more"></span>
+
+<h2 id="三角函数的正交性"><a href="#三角函数的正交性" class="headerlink" title="三角函数的正交性"></a>三角函数的正交性</h2><h3 id="三角函数系"><a href="#三角函数系" class="headerlink" title="三角函数系"></a>三角函数系</h3><p>三角函数系本身是一个集合:</p>
+<p>{$0(sin0x),1(cos0x),sinx,cosx,sin2x,cos2x,…,sinnx,cosnx$}</p>
+<h3 id="正交性：从三角函数系中任取两个不同的项相乘均等于0"><a href="#正交性：从三角函数系中任取两个不同的项相乘均等于0" class="headerlink" title="正交性：从三角函数系中任取两个不同的项相乘均等于0"></a>正交性：从三角函数系中任取两个不同的项相乘均等于0</h3><p>示例：</p>
+<p>$\displaystyle \int^{\pi}_{-\pi}{cosnxsinnxdx}=0$,{$n\in N$}</p>
+<p>$\displaystyle \int^{\pi}_{-\pi}{cosnxcosmxdx}=0$,{$n\neq m$}</p>
+<p>$\displaystyle \int^{\pi}_{-\pi}{sinnxsinmxdx}=0$,{$n\neq m$}</p>
+<h2 id="周期为-2-pi-的函数展开为傅里叶级数"><a href="#周期为-2-pi-的函数展开为傅里叶级数" class="headerlink" title="周期为$2\pi$的函数展开为傅里叶级数"></a>周期为$2\pi$的函数展开为傅里叶级数</h2><p>设有函数$f(x)$,周期T=$2\pi$,即$f(x)=f(x+2\pi)$</p>
+<p>则傅里叶级数展开公式为：</p>
+<p>$f(x)=$$\displaystyle \sum^{n \to \infty}<em>{n=0}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=0}b</em>{n}sinnx$                                      （1）</p>
+<p>=$a_{0}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx  $                                        （2）           </p>
+<p>,注意此式子中$a_{0}$跟下面$\frac{a_{0}}{2}$中的$a_{0}$不是同一个$a_{0}$</p>
+<p>大多数书籍傅里叶级数展开式为</p>
+<p>$f(x)=$$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$                              （3）</p>
+<p>这两个式子的不同之处在与$\frac{a_{0}}{2}$和n从1开始累加，</p>
+<ol>
+<li>求$a_{0}$，对(2)式两边进行$-\pi到\pi$的积分，则：</li>
+</ol>
+<p>$\displaystyle \int^{\pi}<em>{-\pi}{f(x)dx}$=$\displaystyle \int^{\pi}</em>{-\pi}{a_{0}dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnx dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnx dx}$</p>
+<p>其中根据三角函数的正交性：$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnx dx}$=0，$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnx dx}$=0</p>
+<p>求得$a_{0}$=$\frac{1}{2\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
+<p>则令$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
+<p>得到（3）式</p>
+<ol start="2">
+<li>求$a_{n}$,对（3）式两边同时乘$cosmx$，并对等式两边进行$-\pi到\pi$的积分，则：</li>
+</ol>
+<p>$\displaystyle \int^{\pi}<em>{-\pi}{f(x)cosmxdx}$=$\displaystyle \int^{\pi}</em>{-\pi}{\frac{a_{0}}{2}cosmxdxdx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnxcosmxdx dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnxcosmxdx dx}$</p>
+<p>其中根据三角函数的正交性：$\displaystyle \int^{\pi}<em>{-\pi}{\frac{a</em>{0}}{2}cosmxdxdx}$=0,$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnxcosmxdx dx}$=0</p>
+<p>而$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnxcosmxdx dx}$中当n=m时$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle a</em>{n}cosnxcosmxdx$=$a_{n}\pi$</p>
+<p>所以$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
+<ol start="3">
+<li>求$b_{n}$,对（3）式两边同时乘$sinmx$，并对等式两边进行$-\pi到\pi$的积分，得：</li>
+</ol>
+<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
+<p>故周期为$2\pi$傅里叶展开式为：</p>
+<p>$f(x)=$$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$            </p>
+<p>$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
+<p>$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
+<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
+<h2 id="周期为-2L-的函数展开为傅里叶级数"><a href="#周期为-2L-的函数展开为傅里叶级数" class="headerlink" title="周期为$2L$的函数展开为傅里叶级数"></a>周期为$2L$的函数展开为傅里叶级数</h2><p>函数：$f(t)=f(t+2L)$</p>
+<p>换元：x=$\frac{\pi}{L}t$,即t=$\frac{L}{\pi}$</p>
+<table>
+<thead>
+<tr>
+<th>t</th>
+<th>x</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2L</td>
+<td>2$\pi$</td>
+</tr>
+<tr>
+<td>4L</td>
+<td>4$\pi$</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>则$f(t)=f(\frac{L}{\pi})$，令$g(x)=f(\frac{L}{\pi})$</p>
+<p>则$g(x)$周期为$2\pi$这样就化成了周期为2$\pi$的傅里叶级数展开</p>
+<p>把x=$\frac{\pi}{L}t$代入得</p>
+<p>$cosnx=cos\frac{n\pi}{L}t$</p>
+<p>$sinnx=sin\frac{n\pi}{L}t$</p>
+<p>$g(x)=f(t)$</p>
+<p>$\displaystyle \int^{\pi}<em>{-\pi}{xdx}$=$\displaystyle \int^{-L}</em>{L}{xdt}$(看下图)</p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>t</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-$\pi$</td>
+<td>-L</td>
+</tr>
+<tr>
+<td>$\pi$</td>
+<td>L</td>
+</tr>
+</tbody></table>
+<p>故：</p>
+<p>$g(x)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$    </p>
+<p>==$ f(t)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cos\frac{n\pi}{L}t+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sin\frac{n\pi}{L}t$==</p>
+<p>$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
+<p>==$a_{0}$=$\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)dx}$==</p>
+<p>$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
+<p>==$a_{n}=\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)cos\frac{n\pi}{L}tdt}$==</p>
+<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
+<p>==$b_{n}$=$\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)sin\frac{n\pi}{L}tdt}$==</p>
+<p>在工程当中：t从0开始·，周期T=2L,$\omega=\frac{2\pi}{T}$</p>
+<p>$\displaystyle \int^{L}<em>{-L}{dt}\Rightarrow\displaystyle \int^{2L}</em>{0}{dt}\Rightarrow\displaystyle \int^{T}_{0}{dt}$</p>
+<p>所以：</p>
+<p>==$ f(t)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosn\omega t+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sin\omega t$==</p>
+<p>==$a_{0}$=$\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)dx}$==</p>
+<p>==$a_{n}=\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)cosn\omega tdt}$==</p>
+<p>==$b_{n}$=$\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)sinn\omega tdt}$==</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>傅里叶</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>numpy</title>
+    <url>/numpy/</url>
+    <content><![CDATA[<hr>
+<h1 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h1><span id="more"></span>
+
+<h2 id="Numpy的数据结构ndarry"><a href="#Numpy的数据结构ndarry" class="headerlink" title="Numpy的数据结构ndarry"></a>Numpy的数据结构ndarry</h2><p>ndarry:一种多维数组对象</p>
+<h3 id="1-ndarray介绍"><a href="#1-ndarray介绍" class="headerlink" title="1.ndarray介绍"></a>1.ndarray介绍</h3><p><strong>ndarray：</strong></p>
+<ul>
+<li><p>N-dimensional array， N维数组,</p>
+</li>
+<li><p>一种由相同类型的元素组成的多维数组，元素数量是事先指定好的.</p>
+</li>
+<li><p>元素的数据类型由dtype（data-type）对象来指定，每个ndarray只有一种dtype类型</p>
+</li>
+<li><p>大小固定，创建好数组时一旦指定好大小，就不会再发生改变</p>
+</li>
+</ul>
+<p><img src="numpy.assets/image-20210403204412903.png" alt="image-20210403204412903"></p>
+<p><strong>ndarry属性:</strong></p>
+<ul>
+<li>ndim 维度数量</li>
+<li>dtype，一个用于说明数组元素数据类型的对象</li>
+<li>size，元素总个数，即shape中各数组相乘</li>
+</ul>
+<p>创建一个三维数组如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a&#x3D;np.array([[[3.4,5,6,8],[3,2.4,5,7]],[[2.3,4,5,6],[0.9,5,6,1]],[[9,6.7,3,2],[1,3,4,5]]])</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403210227.png" alt="image-20210403210224915"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 数组维度</span><br><span class="line">a.ndim</span><br></pre></td></tr></table></figure>
+
+<p>实例:</p>
+<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403205943.png" alt="image-20210403205941211"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#数组元素类型</span><br><span class="line">a.dtype</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403210415.png" alt="image-20210403210413142"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 数组形状</span><br><span class="line">a.shape</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403210529.png" alt="image-20210403210528064"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 数组元素总个数</span><br><span class="line">a.size</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403210652.png" alt="image-20210403210650997"></p>
+<h3 id="2-ndarray的常见创建方式"><a href="#2-ndarray的常见创建方式" class="headerlink" title="2.ndarray的常见创建方式"></a>2.ndarray的常见创建方式</h3>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>numpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ps-工作区</title>
+    <url>/ps-%E5%B7%A5%E4%BD%9C%E5%8C%BA/</url>
+    <content><![CDATA[<hr>
+<h1 id="ps工作区"><a href="#ps工作区" class="headerlink" title="ps工作区"></a>ps工作区</h1><span id="more"></span>
+
+<h2 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h2><h3 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h3><p>1.选择”菜单“&gt;”打开“，切换到文件夹Lessons\Lesson01,再双击01Start.psd。将其打开。</p>
+<p>​        这个文件包含背景图像和缎带图像如下图示：</p>
+<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210413204631.png" alt="image-20210406195703885" style="zoom: 50%;" /><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210413204632.png" alt="image-20210406195754099" style="zoom: 67%;" /></p>
+<p>2.点击工具栏面板顶部的双箭头可切换到双栏视图入下图：</p>
+<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210413204633.png" alt="image-20210406200042452" style="zoom:67%;" /><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210413204634.png" alt="image-20210406200103696"></p>
+<blockquote>
+<p>提示：可以自定义工具面板——重新排列，删除和添加工具。为此，可按住缩放工具下方的”编辑工具条“图标，并选择”编辑工具栏“。</p>
+</blockquote>
+<p>3.在工作区底端的状态栏中，最左边列出百分比为图像的当前缩放比例，如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210413204635.png" alt="image-20210406200706734"></p>
+<p>4.将鼠标指向工具面板中的放大镜按钮，将出现工具提示，指出工具名称（缩放工具）和快捷键（Z），或直接用快捷键alt+鼠标滚轮直接进行缩放。</p>
+<p>快捷键</p>
+<blockquote>
+<p>放大缩小：alt+鼠标滚轮</p>
+<p>还原图层：Ctrl+Z</p>
+<p>撤回还原编辑：Ctrl+shift+Z</p>
+<p>来回切换工具：shift+L</p>
+<blockquote>
+<p>处理选取（选择选取后的操作）：</p>
+<p>取消选区：Ctrl+D</p>
+<p>移动选区：Ctrl+鼠标移动</p>
+<p>微移选取（每次1像素）：Ctrl+方向键</p>
+<p>微移选取（每次10像素）：Ctrl+shift+方向键</p>
+</blockquote>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
     <title>markdown-1.md</title>
-    <url>/2021/03/11/markdown-1/</url>
+    <url>/markdown-1/</url>
     <content><![CDATA[<hr>
 <center><b> markdown—基础一</b></center>
 
@@ -340,7 +536,7 @@
   </entry>
   <entry>
     <title>markdown-2</title>
-    <url>/2021/03/11/markdown-2/</url>
+    <url>/markdown-2/</url>
     <content><![CDATA[<hr>
 <center><b>markdown—基础二</b></center>
 
@@ -472,7 +668,7 @@
   </entry>
   <entry>
     <title>pandas-1</title>
-    <url>/2021/03/11/pandas-1/</url>
+    <url>/pandas-1/</url>
     <content><![CDATA[<hr>
 <h1 id="pandas基础-jupyter"><a href="#pandas基础-jupyter" class="headerlink" title="pandas基础(jupyter)"></a>pandas基础(jupyter)</h1><span id="more"></span>
 
@@ -666,7 +862,7 @@
   </entry>
   <entry>
     <title>pandas-2</title>
-    <url>/2021/03/14/pandas-2/</url>
+    <url>/pandas-2/</url>
     <content><![CDATA[<hr>
 <h1 id="玩转Pandas索引（jupyter）"><a href="#玩转Pandas索引（jupyter）" class="headerlink" title="玩转Pandas索引（jupyter）"></a>玩转Pandas索引（jupyter）</h1><span id="more"></span>
 
@@ -765,7 +961,7 @@
   </entry>
   <entry>
     <title>pandas-3</title>
-    <url>/2021/03/16/pandas-3/</url>
+    <url>/pandas-3/</url>
     <content><![CDATA[<hr>
 <h1 id="Pandas常用功能"><a href="#Pandas常用功能" class="headerlink" title="Pandas常用功能"></a>Pandas常用功能</h1><span id="more"></span>
 
@@ -893,121 +1089,205 @@
       </tags>
   </entry>
   <entry>
-    <title>傅里叶级数及变换</title>
-    <url>/2021/03/14/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%8F%8A%E5%8F%98%E6%8D%A2/</url>
+    <title>pandas-4</title>
+    <url>/pandas-4/</url>
     <content><![CDATA[<hr>
-<span id="more"></span>
+<h1 id="Apply-函数"><a href="#Apply-函数" class="headerlink" title="Apply 函数"></a><strong>Apply 函数</strong></h1><span id="more"></span>
 
-<h2 id="三角函数的正交性"><a href="#三角函数的正交性" class="headerlink" title="三角函数的正交性"></a>三角函数的正交性</h2><h3 id="三角函数系"><a href="#三角函数系" class="headerlink" title="三角函数系"></a>三角函数系</h3><p>三角函数系本身是一个集合:</p>
-<p>{$0(sin0x),1(cos0x),sinx,cosx,sin2x,cos2x,…,sinnx,cosnx$}</p>
-<h3 id="正交性：从三角函数系中任取两个不同的项相乘均等于0"><a href="#正交性：从三角函数系中任取两个不同的项相乘均等于0" class="headerlink" title="正交性：从三角函数系中任取两个不同的项相乘均等于0"></a>正交性：从三角函数系中任取两个不同的项相乘均等于0</h3><p>示例：</p>
-<p>$\displaystyle \int^{\pi}_{-\pi}{cosnxsinnxdx}=0$,{$n\in N$}</p>
-<p>$\displaystyle \int^{\pi}_{-\pi}{cosnxcosmxdx}=0$,{$n\neq m$}</p>
-<p>$\displaystyle \int^{\pi}_{-\pi}{sinnxsinmxdx}=0$,{$n\neq m$}</p>
-<h2 id="周期为-2-pi-的函数展开为傅里叶级数"><a href="#周期为-2-pi-的函数展开为傅里叶级数" class="headerlink" title="周期为$2\pi$的函数展开为傅里叶级数"></a>周期为$2\pi$的函数展开为傅里叶级数</h2><p>设有函数$f(x)$,周期T=$2\pi$,即$f(x)=f(x+2\pi)$</p>
-<p>则傅里叶级数展开公式为：</p>
-<p>$f(x)=$$\displaystyle \sum^{n \to \infty}<em>{n=0}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=0}b</em>{n}sinnx$                                      （1）</p>
-<p>=$a_{0}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx  $                                        （2）           </p>
-<p>,注意此式子中$a_{0}$跟下面$\frac{a_{0}}{2}$中的$a_{0}$不是同一个$a_{0}$</p>
-<p>大多数书籍傅里叶级数展开式为</p>
-<p>$f(x)=$$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$                              （3）</p>
-<p>这两个式子的不同之处在与$\frac{a_{0}}{2}$和n从1开始累加，</p>
+<p>apply 函数主要作用是做聚合运算，以及在分组基础上根据实际情况来自定义一些规则，常见用法和参数如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.groupby([&#39;列名&#39;]).apply(func,args)</span><br></pre></td></tr></table></figure>
+
 <ol>
-<li>求$a_{0}$，对(2)式两边进行$-\pi到\pi$的积分，则：</li>
+<li>参数func是最重要的参数，它接收一个函数，会把分组后的数据根据函数来进行处理</li>
+<li>args参数是我们可以给函数参入的参数，这个仅做了解，和其他参数一样比较少</li>
 </ol>
-<p>$\displaystyle \int^{\pi}<em>{-\pi}{f(x)dx}$=$\displaystyle \int^{\pi}</em>{-\pi}{a_{0}dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnx dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnx dx}$</p>
-<p>其中根据三角函数的正交性：$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnx dx}$=0，$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnx dx}$=0</p>
-<p>求得$a_{0}$=$\frac{1}{2\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
-<p>则令$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
-<p>得到（3）式</p>
-<ol start="2">
-<li>求$a_{n}$,对（3）式两边同时乘$cosmx$，并对等式两边进行$-\pi到\pi$的积分，则：</li>
-</ol>
-<p>$\displaystyle \int^{\pi}<em>{-\pi}{f(x)cosmxdx}$=$\displaystyle \int^{\pi}</em>{-\pi}{\frac{a_{0}}{2}cosmxdxdx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnxcosmxdx dx}$+$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnxcosmxdx dx}$</p>
-<p>其中根据三角函数的正交性：$\displaystyle \int^{\pi}<em>{-\pi}{\frac{a</em>{0}}{2}cosmxdxdx}$=0,$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{b_{n} sinnxcosmxdx dx}$=0</p>
-<p>而$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle \sum^{n \to \infty}</em>{n=1}{a_{n} cosnxcosmxdx dx}$中当n=m时$\displaystyle \int^{\pi}<em>{-\pi}\displaystyle a</em>{n}cosnxcosmxdx$=$a_{n}\pi$</p>
-<p>所以$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
-<ol start="3">
-<li>求$b_{n}$,对（3）式两边同时乘$sinmx$，并对等式两边进行$-\pi到\pi$的积分，得：</li>
-</ol>
-<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
-<p>故周期为$2\pi$傅里叶展开式为：</p>
-<p>$f(x)=$$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$            </p>
-<p>$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
-<p>$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
-<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
-<h2 id="周期为-2L-的函数展开为傅里叶级数"><a href="#周期为-2L-的函数展开为傅里叶级数" class="headerlink" title="周期为$2L$的函数展开为傅里叶级数"></a>周期为$2L$的函数展开为傅里叶级数</h2><p>函数：$f(t)=f(t+2L)$</p>
-<p>换元：x=$\frac{\pi}{L}t$,即t=$\frac{L}{\pi}$</p>
-<table>
-<thead>
-<tr>
-<th>t</th>
-<th>x</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2L</td>
-<td>2$\pi$</td>
-</tr>
-<tr>
-<td>4L</td>
-<td>4$\pi$</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p>则$f(t)=f(\frac{L}{\pi})$，令$g(x)=f(\frac{L}{\pi})$</p>
-<p>则$g(x)$周期为$2\pi$这样就化成了周期为2$\pi$的傅里叶级数展开</p>
-<p>把x=$\frac{\pi}{L}t$代入得</p>
-<p>$cosnx=cos\frac{n\pi}{L}t$</p>
-<p>$sinnx=sin\frac{n\pi}{L}t$</p>
-<p>$g(x)=f(t)$</p>
-<p>$\displaystyle \int^{\pi}<em>{-\pi}{xdx}$=$\displaystyle \int^{-L}</em>{L}{xdt}$(看下图)</p>
-<table>
-<thead>
-<tr>
-<th>x</th>
-<th>t</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-$\pi$</td>
-<td>-L</td>
-</tr>
-<tr>
-<td>$\pi$</td>
-<td>L</td>
-</tr>
-</tbody></table>
-<p>故：</p>
-<p>$g(x)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosnx+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sinnx$    </p>
-<p>==$ f(t)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cos\frac{n\pi}{L}t+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sin\frac{n\pi}{L}t$==</p>
-<p>$a_{0}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)dx}$</p>
-<p>==$a_{0}$=$\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)dx}$==</p>
-<p>$a_{n}=\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)cosnxdx}$</p>
-<p>==$a_{n}=\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)cos\frac{n\pi}{L}tdt}$==</p>
-<p>$b_{n}$=$\frac{1}{\pi}\displaystyle \int^{\pi}_{-\pi}{f(x)sinnxdx}$</p>
-<p>==$b_{n}$=$\frac{1}{L}\displaystyle \int^{L}_{-L}{f(x)sin\frac{n\pi}{L}tdt}$==</p>
-<p>在工程当中：t从0开始·，周期T=2L,$\omega=\frac{2\pi}{T}$</p>
-<p>$\displaystyle \int^{L}<em>{-L}{dt}\Rightarrow\displaystyle \int^{2L}</em>{0}{dt}\Rightarrow\displaystyle \int^{T}_{0}{dt}$</p>
-<p>所以：</p>
-<p>==$ f(t)$=$\frac{a_{0}}{2}+\displaystyle \sum^{n \to \infty}<em>{n=1}a</em>{n}cosn\omega t+\displaystyle \sum^{n \to \infty}<em>{n=1}b</em>{n}sin\omega t$==</p>
-<p>==$a_{0}$=$\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)dx}$==</p>
-<p>==$a_{n}=\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)cosn\omega tdt}$==</p>
-<p>==$b_{n}$=$\frac{2}{T}\displaystyle \int^{T}_{0}{f(x)sinn\omega tdt}$==</p>
+<h2 id="场景一"><a href="#场景一" class="headerlink" title="场景一"></a>场景一</h2><p><strong>背景：</strong>我们拿到了一份 4 位同学三次模拟考试的成绩，想知道每位同学历次模拟中最好成绩和最差成绩分别是多少。</p>
+<p><strong>思路：</strong>最好和最差，分别对应着 max 与 min，我们先按姓名分组，再用 apply 函数返回对应的最大和最小值，最终将结果合并。</p>
+<p>先导入源数据：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">score &#x3D; pd.read_excel(&#39;apply案例数据.xlsx&#39;,sheet_name &#x3D; &#39;成绩表&#39;)</span><br><span class="line">score.head(6)</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403150841.png" alt="image-20210403150839651" style="zoom:50%;" />
+
+
+
+<p>看一看每位同学最高成绩：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">max_score &#x3D; score.groupby(&#39;姓名&#39;)[&#39;综合成绩&#39;].apply(max).reset_index()</span><br><span class="line">max_score</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151152.png" alt="image-20210403151148838" style="zoom:50%;" />
+
+<p>​        我们指定“综合成绩”列，然后把 max 函数直接传入 apply 参数内，返回了对应分组内成绩的最大值。有一些常见函数，如 max、min、len 等函数可以直接传入apply。</p>
+<p>​        groupby 分组默认会把分组依据列（姓名）变成索引，这里用 reset_index 方法重置或者说取消姓名索引，将它保留在列的位置，维持 DataFrame 格式，方便后续匹配。</p>
+<p>再筛选出最低成绩：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">min_score &#x3D; score.groupby(&#39;姓名&#39;)[&#39;综合成绩&#39;].apply(min).reset_index()</span><br><span class="line">min_score</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151356.png" alt="image-20210403151355702"></p>
+<p>两张表按姓名合并：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">score_combine &#x3D; pd.merge(max_score,min_score,left_on &#x3D; &#39;姓名&#39;,right_on &#x3D; &#39;姓名&#39;,how &#x3D; &#39;inner&#39;)</span><br><span class="line">score_combine.columns &#x3D; [&#39;姓名&#39;,&#39;最好成绩&#39;,&#39;最差成绩&#39;]</span><br><span class="line">score_combine</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151500.png" alt="image-20210403151459277"></p>
+<p>得到了我们预期的结果，只是列名略丑，可以用.columns 方法来赋值更改。场景一比较死板和严肃，场景二我们换个更接地气的风格。</p>
+<h2 id="场景二"><a href="#场景二" class="headerlink" title="场景二"></a>场景二</h2><p><strong>背景：</strong>Boss 丢过来一份省市销售表，里面包含省份、城市、最近 1 个月销售额 3个字段，没等你开口问需求，Boss 就开腔了：“小 Z 啊，我最近对 3 这个数字有执念，我想看看每个省份销售排名第 3 的都是哪些城市，以及他们的销售额情况。对了，这个需求要尽快！”</p>
+<p><strong>思路：</strong>问题的关键是找到每个省份销售排名第 3 的城市，首先，应该对省份、城市按销售额进行降序排列，然后，找到对应排名第 3 的城市，Emmm，如果是排名第 1 的城市，我们可以通过排序后去重实现，但是这个排名第 3，小 Z 疯狂挠头，想到了apply。</p>
+<p>先导入数据源，对数据做个初步了解：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order &#x3D; pd.read_excel(&#39;apply案例数据.xlsx&#39;,sheet_name &#x3D; &#39;省市销售数据&#39;)</span><br><span class="line">order.head()</span><br></pre></td></tr></table></figure>
+
+<p>实例·：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151803.png" alt="image-20210403151800730"></p>
+<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151840.png" alt="image-20210403151839431" style="zoom:67%;" />
+
+<p>数据源有省份、城市、近 1 月销售额 3 个字段，一共 210 行（销售额）乱序排列，且都没有空值，整体比较规整。</p>
+<p>要得到销售排名第 3 的城市，要先进行排序，这里我们用省份、近 1 月销售额两个关键字段进行降序排列，得到我们期待的顺序：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order_rank &#x3D; order.sort_values([&#39;省份&#39;,&#39;近1月销售额&#39;],ascending &#x3D; False)</span><br><span class="line">order_rank</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403152207.png" alt="image-20210403152206797"></p>
+<p>接着，在 apply 函数登场前，我们先详细剖析一下整个过程：</p>
+<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403152607.png" alt="Screenshot 2021-04-03 152337" style="zoom:67%;" />
+
+<p>第一步分组非常简单，按省份分组即可。而取第 3 名的城市和销售，表明我们需要城市和销售两个字段，所以在分组后指明这两列：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order_rank.groupby(&#39;省份&#39;)[[&#39;城市&#39;,&#39;近1月销售额&#39;]]</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403152739.png" alt="image-20210403152738388"></p>
+<p>但是我们可以在脑海中构建一下，截图只展示了部分：</p>
+<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403201502.png" alt="未标题-1"></p>
+<p>有个问题需要注意，有一些直辖市是和省并列的，而作为城市只有单独的一行，这样的城市我们就默认返回其本身的数据；对于非直辖市省份来说，就需要定位筛选。</p>
+<p>拿 x2 来举例，要找到这个数据中排名第三的城市和销售额，应该怎么做呢？答案是直接索引，把他看作是一个 DataFrame 格式的表，要选取第 3 行的所有值，包括城市和销售额，这里用 iloc 索引，很简单的一行代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">x.iloc[2,:]</span><br></pre></td></tr></table></figure>
+
+<p>下面把我们针对直辖市的判断和非直辖市的筛选逻辑整合成一个函数:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def get_third(x):</span><br><span class="line">    #如果分组长度小于等于1，意味着直辖市</span><br><span class="line">    if len(x) &lt;&#x3D; 1:</span><br><span class="line">        #返回第0行的所有值，即直辖市本身</span><br><span class="line">        return x.iloc[0,:]</span><br><span class="line">    </span><br><span class="line">    #针对非直辖市</span><br><span class="line">    else:</span><br><span class="line">        #直接返回第3行（排名第3，索引是2）所有值（城市，近1月销售额）</span><br><span class="line">        return x.iloc[2,:]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order_rank.groupby(&#39;省份&#39;)[[&#39;城市&#39;,&#39;近1月销售额&#39;]].apply(get_third)</span><br></pre></td></tr></table></figure>
+
+
+<p>实例：</p>
+<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403201509.png" alt="image-20210403201045237"></p>
+<p>​        至此，每个省份，销售额排名第三的城市已经成功筛选出来。回顾整个操作流程，先排序，后分组，最后通过定义函数传入 apply，提取出我们的目标值。分组后数据的抽象形态，以及如何判断和取出我们需要的值，是解决问题的关键和难点。</p>
 ]]></content>
       <categories>
-        <category>math</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>傅里叶</tag>
+        <tag>pandas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构-1</title>
+    <url>/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1/</url>
+    <content><![CDATA[<hr>
+<h1 id="一-绪论"><a href="#一-绪论" class="headerlink" title="一,绪论"></a>一,绪论</h1><span id="more"></span>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=420 height=86 src="//music.163.com/outchain/player?type=2&id=1814769698&auto=0&height=66"></iframe>
+
+<h2 id="1-1什么是数据结构"><a href="#1-1什么是数据结构" class="headerlink" title="1.1什么是数据结构"></a>1.1什么是数据结构</h2><p>​        <strong>数据结构定义(P3)</strong>:   是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。</p>
+<p>​        程序设计的实质（P3-4）对确定的问题选择一种好的结构，加上设计一种好的算法。即：程序=数据结构+算法。</p>
+<img src="https://i.loli.net/2021/03/17/GJmIgCqAYrUy4bj.png" alt="image-20210317161108282" style="zoom:50%;" />
+
+<p>​        数据结构是介于数学，计算机硬件和计算机软件三者之间的一门核心课程，它不仅是一般程序设计的基础，也是设计和实现编译程序，操作系统，数据库系统及其他系统程序和大型应用程序的重要基础。</p>
+<img src="https://i.loli.net/2021/03/17/ZwDK8GjexcmAEPp.png" alt="image-20210317161205118" style="zoom:50%;" />
+
+<h2 id="1-2基本概念与术语"><a href="#1-2基本概念与术语" class="headerlink" title="1.2基本概念与术语"></a>1.2基本概念与术语</h2><p><strong>数据（data) （P4）</strong>—客观事物的符号表示，所有能输入到计算机中并被计算机程序处理的符号的总称<br><strong>数据元素（data element） （P4）</strong>—数据的基本单位，在计算机程序中通常作为一个整体进行考虑和处理。也称节点（node）或记录（record）。有时，一个数据元素可由若干数据项组成。<br><strong>数据项（data item）（P4）</strong>—数据不可分割的最小单位，也称域(field)</p>
+<p><strong>数据对象（data object）（P4）</strong> —性质相同的数据元素的集合，是数据的一个子集。如整数数据对象</p>
+<p><strong>数据结构（P5）</strong>—相互之间存在一种或多种特定关系的数据元素的集合称为，可表示为一个二元组：</p>
+<p><img src="https://i.loli.net/2021/03/17/uKN6UqsXQ4niDS3.png" alt="image-20210317161452821"></p>
+<p><strong>数据的存储（物理）结构（P6）</strong>—是数据的逻辑结构在计算机存储器内的表示（或映像）。是逻辑结构在计算机存储器中的实现，它依赖于计算机。</p>
+<p><strong>存储结构可分为4大类：</strong>顺序、链式==、<em>索引、散列</em>==</p>
+<p><strong>顺序存储结构</strong>——借助元素在存储器中的相对位置来表示数据元素间的逻辑关系。<br><strong>链式存储结构</strong>——借助指示元素存储地址的指针表示数据元素间的逻辑关系。</p>
+<p>数据的逻辑结构与存储结构密切相关<br>    算法设计——&gt;逻辑结构<br>    算法实现——&gt;存储结构</p>
+<p><strong>数据的运算</strong>—在数据的逻辑结构上定义的操作算法,在数据的存储结构上实现。</p>
+<p>最常用的数据运算有 5 种：<strong>插入、删除、修改、查找、排序</strong></p>
+<h2 id="1-3抽样数据类型的表示与实现"><a href="#1-3抽样数据类型的表示与实现" class="headerlink" title="1.3抽样数据类型的表示与实现"></a>1.3抽样数据类型的表示与实现</h2><p><strong>数据类型（P7）</strong>—高级语言中指数据的取值范围及其上可进行的操作的总称。它和数据结构密切相关，用于刻画（程序）操作对象的特征。数据类型可分为两类：<br>一类是非结构的原子类型；</p>
+<p>另一类是结构类型;</p>
+<p>C语言中，提供int,  char, float, double等基本      数据类型，数组、结构体、共用体、枚举      等构造数据类型，还有指针、空(void)类      型等。用户也可用typedef 自己定义数据类型</p>
+<p><strong>抽象数据类型（abstract data type）（ P7 ）</strong>—由用户定义，用以表示应用问题的数据模型。它由基本的数据类型构成，并包括一组相关的服务（或称操作）。</p>
+<ul>
+<li>“抽象”的意义在于强调数据类型的数学特性。</li>
+<li>与其在计算机内部如何表示和实现无关。</li>
+</ul>
+<blockquote>
+<p>抽象数据类型与数据类型实质上是一个概念，但其特征是使用与实现分离，实行封装和信息隐蔽（独立于计算机）</p>
+</blockquote>
+<blockquote>
+<p>抽象数据类型定义由一个值域和定义在该值域上的一组操作组成，按值的不同特性，可分为下列3种类型：<strong>原子类型、固定聚合类型、可变聚合类型</strong>。后两种可统称为结构类型。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/17/dEvTe6S3QUig5xK.png" alt="image-20210317162806798"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DT抽象数据类型名&#123; </span><br><span class="line">        数据对象：&lt;数据对象的定义&gt;</span><br><span class="line">        数据关系：&lt;数据关系的定义&gt; </span><br><span class="line">        基本操作 ：&lt;基本操作的定义&gt; </span><br><span class="line">    &#125; ADT抽象数据类型名</span><br></pre></td></tr></table></figure>
+
+<p>抽象数据类型可以通过固有的数据类型（如整型、实型、字符型等）来表示和实现。</p>
+<blockquote>
+<p>tip1 ：它有些类似C语言中的结构（struct)类型，但增加了相关的服务。<br>tip2 ：教材中用类C语言（介于伪码和C语言之间）作为描述工具。其描述语法汇总在教材P10-11上。</p>
+</blockquote>
+<h2 id="1-4算法（algorithm）（-P13-）"><a href="#1-4算法（algorithm）（-P13-）" class="headerlink" title="1.4算法（algorithm）（ P13 ）"></a>1.4<strong>算法（algorithm）（ P13 ）</strong></h2><ul>
+<li>什么是算法？如何评判算法的好坏？</li>
+<li>时间复杂度和空间复杂度如何表示？</li>
+</ul>
+<p>—解决某一特定问题的具体步骤的描述，是指令的有限序列，是一系列输入转换为输出的计算步骤。</p>
+<p>算法特性（ P13 ）—<strong>有穷性、确定性、可行性、必有输出</strong></p>
+<ul>
+<li>有穷性 — 一个算法必须在执行有限步骤之后结束。</li>
+<li>确定性 —算法的每一步必须是确切定义的，不能产生二义性。</li>
+<li>可行性 —算法中描述的操作是可以通过已经实现的基本运算来实现的。</li>
+<li>必有输出—一个算法必须有一个或多个输出。</li>
+</ul>
+<p><strong>程序设计的实质：好算法＋好结构</strong></p>
+<ol>
+<li><strong>正确性(correctness)  正确的4个层次（ P14 ）</strong></li>
+<li><strong>可读性(readability)</strong></li>
+<li><strong>健壮性(robustness)</strong></li>
+<li><strong>效率与低存储量</strong></li>
+</ol>
+<p><strong>算法效率——</strong>用依据该算法编制的程序在计算机上执行所消耗的时间来度量。度量有两种方式：</p>
+<blockquote>
+<p>1.事后统计——利用计算机内记时功能，不同算法的程序可以用一组或多组相同的统计数据区分<br>       缺点：</p>
+<ul>
+<li>必须先运行依据算法编制的程序。</li>
+<li>所得时间统计量依赖于硬件、软件等环境因素，掩盖算法本身的优劣。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>2.事前分析估计——一个高级语言程序在计算机上运行所消耗的时间取决于：</p>
+<ul>
+<li>依据的算法选用何种策略</li>
+<li>问题的规模</li>
+<li>程序语言</li>
+<li>编译程序产生机器代码质量</li>
+<li>机器执行指令速度</li>
+</ul>
+</blockquote>
+<p>​        同一个算法用不同的语言、不同的编译程序、在不同的计算机上运行，效率均不同，所以使用绝对时间单位衡量算法效率不合适。</p>
+<pre><code>     一个算法是由控制结构和原操作构成的，则算法时间取决于两者的综合效果。算法时间的量度通常是选取一种对于所研究的问题来说是基本操作的原操作，以该操作的重复执行次数作为算法的时间量度。
+</code></pre>
+<p>一般地，算法中基本操作重复执行的次数是问题规模n的某个函数f(n)<br>时间复杂度：随问题规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称作算法的渐进时间复杂度。简称时间复杂度。——即基本操作（原操作）重复执行的次数的阶数<br>                               <strong>T(n)=o(f(n))</strong></p>
+<p>时间复杂度T(n)按数量级递增顺序为：</p>
+<p><img src="https://i.loli.net/2021/03/17/YxKAPk3t1Sn6XTq.png" alt="image-20210317165528646"></p>
+<p>​            复杂度低——————————————————————————————-&gt;复杂度高</p>
+<blockquote>
+<p>tip：O（）为渐近符号。</p>
+</blockquote>
+<p>渐进符号（O）的定义：当且仅当存在一个正的常数 C，使得对所有的 n &gt;= n0 ，有 f(n)&lt;= Cg(n)，则：     f(n) = O(g(n))</p>
+<p>例：分析以下程序段的时间复杂度。</p>
+<p>i=1;                        ①<br>       while(i&lt;=n)<br>　　        i=i*2;              ②</p>
+<p>==解：==</p>
+<blockquote>
+<p>该算法的运行时间由程序中所有语句的频度（即该语句重复执行的次数）之和构成。</p>
+<p><strong>算法的时间复杂度由嵌套最深层语句的频度决定</strong></p>
+<p>分析：显然，语句①的频度是1。设语句2的频度是f(n)，则有：<img src="https://i.loli.net/2021/03/17/IvFhYi8CK1ANfRT.png" alt="image-20210317170737068" style="zoom:50%;" /></p>
+<p>即f(n)≤log2n，取最大值f(n)=log2n</p>
+<p>所以该程序段的时间复杂度T(n)=1+f(n)=1+ log2n= O(log2n)</p>
+</blockquote>
+<p><strong>空间复杂度：</strong>算法所需存储空间的量度<br>   S(n)=o(f(n))</p>
+]]></content>
+      <categories>
+        <category>course</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
     <title>数据结构-2</title>
-    <url>/2021/03/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-2/</url>
+    <url>/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-2/</url>
     <content><![CDATA[<hr>
 <h1 id="二-线性表"><a href="#二-线性表" class="headerlink" title="二 线性表"></a>二 线性表</h1><span id="more"></span>
 
@@ -1138,121 +1418,14 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构-1</title>
-    <url>/2021/03/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1/</url>
+    <title>数据结构</title>
+    <url>/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[<hr>
-<h1 id="一-绪论"><a href="#一-绪论" class="headerlink" title="一,绪论"></a>一,绪论</h1><span id="more"></span>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=420 height=86 src="//music.163.com/outchain/player?type=2&id=1814769698&auto=0&height=66"></iframe>
-
-<h2 id="1-1什么是数据结构"><a href="#1-1什么是数据结构" class="headerlink" title="1.1什么是数据结构"></a>1.1什么是数据结构</h2><p>​        <strong>数据结构定义(P3)</strong>:   是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。</p>
-<p>​        程序设计的实质（P3-4）对确定的问题选择一种好的结构，加上设计一种好的算法。即：程序=数据结构+算法。</p>
-<img src="https://i.loli.net/2021/03/17/GJmIgCqAYrUy4bj.png" alt="image-20210317161108282" style="zoom:50%;" />
-
-<p>​        数据结构是介于数学，计算机硬件和计算机软件三者之间的一门核心课程，它不仅是一般程序设计的基础，也是设计和实现编译程序，操作系统，数据库系统及其他系统程序和大型应用程序的重要基础。</p>
-<img src="https://i.loli.net/2021/03/17/ZwDK8GjexcmAEPp.png" alt="image-20210317161205118" style="zoom:50%;" />
-
-<h2 id="1-2基本概念与术语"><a href="#1-2基本概念与术语" class="headerlink" title="1.2基本概念与术语"></a>1.2基本概念与术语</h2><p><strong>数据（data) （P4）</strong>—客观事物的符号表示，所有能输入到计算机中并被计算机程序处理的符号的总称<br><strong>数据元素（data element） （P4）</strong>—数据的基本单位，在计算机程序中通常作为一个整体进行考虑和处理。也称节点（node）或记录（record）。有时，一个数据元素可由若干数据项组成。<br><strong>数据项（data item）（P4）</strong>—数据不可分割的最小单位，也称域(field)</p>
-<p><strong>数据对象（data object）（P4）</strong> —性质相同的数据元素的集合，是数据的一个子集。如整数数据对象</p>
-<p><strong>数据结构（P5）</strong>—相互之间存在一种或多种特定关系的数据元素的集合称为，可表示为一个二元组：</p>
-<p><img src="https://i.loli.net/2021/03/17/uKN6UqsXQ4niDS3.png" alt="image-20210317161452821"></p>
-<p><strong>数据的存储（物理）结构（P6）</strong>—是数据的逻辑结构在计算机存储器内的表示（或映像）。是逻辑结构在计算机存储器中的实现，它依赖于计算机。</p>
-<p><strong>存储结构可分为4大类：</strong>顺序、链式==、<em>索引、散列</em>==</p>
-<p><strong>顺序存储结构</strong>——借助元素在存储器中的相对位置来表示数据元素间的逻辑关系。<br><strong>链式存储结构</strong>——借助指示元素存储地址的指针表示数据元素间的逻辑关系。</p>
-<p>数据的逻辑结构与存储结构密切相关<br>    算法设计——&gt;逻辑结构<br>    算法实现——&gt;存储结构</p>
-<p><strong>数据的运算</strong>—在数据的逻辑结构上定义的操作算法,在数据的存储结构上实现。</p>
-<p>最常用的数据运算有 5 种：<strong>插入、删除、修改、查找、排序</strong></p>
-<h2 id="1-3抽样数据类型的表示与实现"><a href="#1-3抽样数据类型的表示与实现" class="headerlink" title="1.3抽样数据类型的表示与实现"></a>1.3抽样数据类型的表示与实现</h2><p><strong>数据类型（P7）</strong>—高级语言中指数据的取值范围及其上可进行的操作的总称。它和数据结构密切相关，用于刻画（程序）操作对象的特征。数据类型可分为两类：<br>一类是非结构的原子类型；</p>
-<p>另一类是结构类型;</p>
-<p>C语言中，提供int,  char, float, double等基本      数据类型，数组、结构体、共用体、枚举      等构造数据类型，还有指针、空(void)类      型等。用户也可用typedef 自己定义数据类型</p>
-<p><strong>抽象数据类型（abstract data type）（ P7 ）</strong>—由用户定义，用以表示应用问题的数据模型。它由基本的数据类型构成，并包括一组相关的服务（或称操作）。</p>
-<ul>
-<li>“抽象”的意义在于强调数据类型的数学特性。</li>
-<li>与其在计算机内部如何表示和实现无关。</li>
-</ul>
-<blockquote>
-<p>抽象数据类型与数据类型实质上是一个概念，但其特征是使用与实现分离，实行封装和信息隐蔽（独立于计算机）</p>
-</blockquote>
-<blockquote>
-<p>抽象数据类型定义由一个值域和定义在该值域上的一组操作组成，按值的不同特性，可分为下列3种类型：<strong>原子类型、固定聚合类型、可变聚合类型</strong>。后两种可统称为结构类型。</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/03/17/dEvTe6S3QUig5xK.png" alt="image-20210317162806798"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DT抽象数据类型名&#123; </span><br><span class="line">        数据对象：&lt;数据对象的定义&gt;</span><br><span class="line">        数据关系：&lt;数据关系的定义&gt; </span><br><span class="line">        基本操作 ：&lt;基本操作的定义&gt; </span><br><span class="line">    &#125; ADT抽象数据类型名</span><br></pre></td></tr></table></figure>
-
-<p>抽象数据类型可以通过固有的数据类型（如整型、实型、字符型等）来表示和实现。</p>
-<blockquote>
-<p>tip1 ：它有些类似C语言中的结构（struct)类型，但增加了相关的服务。<br>tip2 ：教材中用类C语言（介于伪码和C语言之间）作为描述工具。其描述语法汇总在教材P10-11上。</p>
-</blockquote>
-<h2 id="1-4算法（algorithm）（-P13-）"><a href="#1-4算法（algorithm）（-P13-）" class="headerlink" title="1.4算法（algorithm）（ P13 ）"></a>1.4<strong>算法（algorithm）（ P13 ）</strong></h2><ul>
-<li>什么是算法？如何评判算法的好坏？</li>
-<li>时间复杂度和空间复杂度如何表示？</li>
-</ul>
-<p>—解决某一特定问题的具体步骤的描述，是指令的有限序列，是一系列输入转换为输出的计算步骤。</p>
-<p>算法特性（ P13 ）—<strong>有穷性、确定性、可行性、必有输出</strong></p>
-<ul>
-<li>有穷性 — 一个算法必须在执行有限步骤之后结束。</li>
-<li>确定性 —算法的每一步必须是确切定义的，不能产生二义性。</li>
-<li>可行性 —算法中描述的操作是可以通过已经实现的基本运算来实现的。</li>
-<li>必有输出—一个算法必须有一个或多个输出。</li>
-</ul>
-<p><strong>程序设计的实质：好算法＋好结构</strong></p>
-<ol>
-<li><strong>正确性(correctness)  正确的4个层次（ P14 ）</strong></li>
-<li><strong>可读性(readability)</strong></li>
-<li><strong>健壮性(robustness)</strong></li>
-<li><strong>效率与低存储量</strong></li>
-</ol>
-<p><strong>算法效率——</strong>用依据该算法编制的程序在计算机上执行所消耗的时间来度量。度量有两种方式：</p>
-<blockquote>
-<p>1.事后统计——利用计算机内记时功能，不同算法的程序可以用一组或多组相同的统计数据区分<br>       缺点：</p>
-<ul>
-<li>必须先运行依据算法编制的程序。</li>
-<li>所得时间统计量依赖于硬件、软件等环境因素，掩盖算法本身的优劣。</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>2.事前分析估计——一个高级语言程序在计算机上运行所消耗的时间取决于：</p>
-<ul>
-<li>依据的算法选用何种策略</li>
-<li>问题的规模</li>
-<li>程序语言</li>
-<li>编译程序产生机器代码质量</li>
-<li>机器执行指令速度</li>
-</ul>
-</blockquote>
-<p>​        同一个算法用不同的语言、不同的编译程序、在不同的计算机上运行，效率均不同，所以使用绝对时间单位衡量算法效率不合适。</p>
-<pre><code>     一个算法是由控制结构和原操作构成的，则算法时间取决于两者的综合效果。算法时间的量度通常是选取一种对于所研究的问题来说是基本操作的原操作，以该操作的重复执行次数作为算法的时间量度。
-</code></pre>
-<p>一般地，算法中基本操作重复执行的次数是问题规模n的某个函数f(n)<br>时间复杂度：随问题规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称作算法的渐进时间复杂度。简称时间复杂度。——即基本操作（原操作）重复执行的次数的阶数<br>                               <strong>T(n)=o(f(n))</strong></p>
-<p>时间复杂度T(n)按数量级递增顺序为：</p>
-<p><img src="https://i.loli.net/2021/03/17/YxKAPk3t1Sn6XTq.png" alt="image-20210317165528646"></p>
-<p>​            复杂度低——————————————————————————————-&gt;复杂度高</p>
-<blockquote>
-<p>tip：O（）为渐近符号。</p>
-</blockquote>
-<p>渐进符号（O）的定义：当且仅当存在一个正的常数 C，使得对所有的 n &gt;= n0 ，有 f(n)&lt;= Cg(n)，则：     f(n) = O(g(n))</p>
-<p>例：分析以下程序段的时间复杂度。</p>
-<p>i=1;                        ①<br>       while(i&lt;=n)<br>　　        i=i*2;              ②</p>
-<p>==解：==</p>
-<blockquote>
-<p>该算法的运行时间由程序中所有语句的频度（即该语句重复执行的次数）之和构成。</p>
-<p><strong>算法的时间复杂度由嵌套最深层语句的频度决定</strong></p>
-<p>分析：显然，语句①的频度是1。设语句2的频度是f(n)，则有：<img src="https://i.loli.net/2021/03/17/IvFhYi8CK1ANfRT.png" alt="image-20210317170737068" style="zoom:50%;" /></p>
-<p>即f(n)≤log2n，取最大值f(n)=log2n</p>
-<p>所以该程序段的时间复杂度T(n)=1+f(n)=1+ log2n= O(log2n)</p>
-</blockquote>
-<p><strong>空间复杂度：</strong>算法所需存储空间的量度<br>   S(n)=o(f(n))</p>
-]]></content>
-      <categories>
-        <category>course</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
+<span id="more"></span>]]></content>
   </entry>
   <entry>
     <title>数据结构实验-1</title>
-    <url>/2021/03/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C-1/</url>
+    <url>/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C-1/</url>
     <content><![CDATA[<hr>
 <h1 id="数据结构实验-1"><a href="#数据结构实验-1" class="headerlink" title="数据结构实验-1"></a>数据结构实验-1</h1><span id="more"></span>
 
@@ -1270,8 +1443,119 @@
       </tags>
   </entry>
   <entry>
+    <title>线性表</title>
+    <url>/%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
+    <content><![CDATA[<hr>
+<h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><span id="more"></span>
+
+<p>顺序线性表实例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typedef struct&#x2F;&#x2F;定义线性表结构题</span><br><span class="line">&#123;</span><br><span class="line">char name[20];</span><br><span class="line">char no[10];</span><br><span class="line">float score;</span><br><span class="line">&#125;STUDENT;</span><br><span class="line">STUDENT stu[20];&#x2F;&#x2F;实例化</span><br></pre></td></tr></table></figure>
+
+<h2 id="顺序表的基本操作"><a href="#顺序表的基本操作" class="headerlink" title="顺序表的基本操作"></a>顺序表的基本操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define int datatype;&#x2F;&#x2F;定义元素类型，这里设置为int</span><br><span class="line">#define maxsize 1024</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">datatype elem[maxsize];</span><br><span class="line">int length;&#x2F;&#x2F;表长</span><br><span class="line">&#125;sequenlist；</span><br></pre></td></tr></table></figure>
+
+<p>其中，elem是存放线性表结点的一个数组。</p>
+<h3 id="1-顺序表的初始化"><a href="#1-顺序表的初始化" class="headerlink" title="1.顺序表的初始化"></a>1.顺序表的初始化</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void  InitList(sequenlist *L)</span><br><span class="line">&#123;</span><br><span class="line">L-&gt;length&#x3D;0;&#x2F;&#x2F;空表，长度为零</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-清除线性表的内容"><a href="#2-清除线性表的内容" class="headerlink" title="2.清除线性表的内容"></a>2.清除线性表的内容</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void clearList(sequenlist *L)</span><br><span class="line">&#123;</span><br><span class="line">L-&gt;length&#x3D;0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-定位查找"><a href="#3-定位查找" class="headerlink" title="3.定位查找"></a>3.定位查找</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int Loc(seqenlist L,datatype Item)</span><br><span class="line">&#123;</span><br><span class="line">int i,j;</span><br><span class="line">j&#x3D;L.length;&#x2F;&#x2F;取出线性表长度</span><br><span class="line">if(j&#x3D;&#x3D;0)&#x2F;&#x2F;空表</span><br><span class="line">return FALSE;</span><br><span class="line">for(i&#x3D;0;i&lt;j;i++)</span><br><span class="line">&#123;</span><br><span class="line">if(L.elem[i]&#x3D;&#x3D;Item)</span><br><span class="line">return i;</span><br><span class="line">&#125;</span><br><span class="line">print(&quot;找不到该值！&quot;)；</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-插入数据"><a href="#4-插入数据" class="headerlink" title="4.插入数据"></a>4.插入数据</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int Ins(sequenlist *L,int i,datatype b)</span><br><span class="line">&#123;</span><br><span class="line">int j;</span><br><span class="line">if(i&lt;1||i&gt;L-&gt;length)</span><br><span class="line">&#123;</span><br><span class="line">return FALSE;</span><br><span class="line">&#125;</span><br><span class="line">for(j&#x3D;L-&gt;length;j&gt;i;j--)</span><br><span class="line">&#123;</span><br><span class="line">L-&gt;elem[j]&#x3D;L-&gt;elem[j-1];</span><br><span class="line">&#125;</span><br><span class="line">L-&gt;elem[i+1]&#x3D;b;</span><br><span class="line">L-&gt;length++;</span><br><span class="line">return TRUE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-删除数据"><a href="#5-删除数据" class="headerlink" title="5.删除数据"></a>5.删除数据</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int Del(sequenlist *L,int i)</span><br><span class="line">&#123;</span><br><span class="line">\\删除顺序表L的第i个结点</span><br><span class="line">int j;</span><br><span class="line">if(i&lt;1||i&gt;L-length)</span><br><span class="line">&#123;</span><br><span class="line">return FALSE;</span><br><span class="line">&#125;</span><br><span class="line">for(j&#x3D;i;j&lt;L-&gt;length;j++)</span><br><span class="line">&#123;</span><br><span class="line">L-&gt;elem[j]&#x3D;L-&gt;elem[j+1];</span><br><span class="line">&#125;</span><br><span class="line">L-&gt;length--;</span><br><span class="line">return TRUE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="完整例子"><a href="#完整例子" class="headerlink" title="完整例子"></a>完整例子</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># include &quot;stdio.h&quot;</span><br><span class="line">#include &quot;malloc.h&quot;</span><br><span class="line">#include &quot;stdlib.h&quot;</span><br><span class="line">#define maxsize 1024</span><br><span class="line">typedef char datatype;</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">datatype elem[maxsize];</span><br><span class="line">int last;&#x2F;&#x2F;表长</span><br><span class="line">&#125;sequenlist;</span><br><span class="line">&#x2F;&#x2F;在第i个元素前插入元素x</span><br><span class="line">int insert(sequenlist *L,datatype x,int i)</span><br><span class="line">&#123;</span><br><span class="line">int j;</span><br><span class="line">if(L-&gt;last&#x3D;&#x3D;maxsize-1)</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;overflow!&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">else if(i&lt;0||i&gt;L-&gt;last)</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;error , please input the right &#39;i&#39;&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">    for(j&#x3D;L-&gt;last;j&gt;&#x3D;i;j--)</span><br><span class="line">    &#123;</span><br><span class="line">    L-&gt;elem[j+1]&#x3D;L-&gt;elem[j];printf(&quot;elem[%d]:%c\n&quot;,j+1,L-&gt;elem[j+1]);</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;elem[i]&#x3D;x;</span><br><span class="line">    L-&gt;last++;</span><br><span class="line">&#125;</span><br><span class="line">return 1;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;建立顺序表</span><br><span class="line">void creatlist(sequenlist *L)</span><br><span class="line">&#123;</span><br><span class="line">    int i,n;</span><br><span class="line">    char tmp;</span><br><span class="line">    printf(&quot;请输入数据个数：&quot;);</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">    for(i&#x3D;0;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;elem[%d]:&quot;,i);</span><br><span class="line">        fflush(stdin);</span><br><span class="line">        scanf(&quot;%c&quot;,&amp;tmp);</span><br><span class="line">        L-&gt;elem[i]&#x3D;tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;last&#x3D;n-1;</span><br><span class="line">    printf(&quot;\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">void printout(sequenlist *L)</span><br><span class="line">&#123;</span><br><span class="line">    int i;</span><br><span class="line">    for(i&#x3D;0;i&lt;&#x3D;L-&gt;last;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;elem[%d]:&quot;,i);</span><br><span class="line">        printf(&quot;%c\n&quot;,L-&gt;elem[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int dellist(sequenlist *L,int i)</span><br><span class="line">&#123;</span><br><span class="line">    if(i&lt;0||i&gt;L-&gt;last)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;error , please input the right &#39;i&#39;&quot;);</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">        for(;i&lt;L-&gt;last;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            L-&gt;elem[i]&#x3D;L-&gt;elem[i+1];</span><br><span class="line">        &#125;</span><br><span class="line">        L-&gt;last--;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">    sequenlist *L;</span><br><span class="line">    char cmd,x;</span><br><span class="line">    int i;</span><br><span class="line">    L&#x3D;(sequenlist *)malloc(sizeof(sequenlist));&#x2F;&#x2F;初始化</span><br><span class="line">    creatlist(L);</span><br><span class="line">    printout(L);</span><br><span class="line">    do</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;i,I...插入：\n&quot;);</span><br><span class="line">        printf(&quot;d,D...s删除\n&quot;);</span><br><span class="line">        printf(&quot;q，Q...退出\n&quot;);</span><br><span class="line">        do</span><br><span class="line">        &#123;</span><br><span class="line">            fflush(stdin);</span><br><span class="line">            scanf(&quot;%c&quot;,&amp;cmd);</span><br><span class="line">        &#125; while (cmd!&#x3D;&#39;d&#39;&amp;&amp;cmd!&#x3D;&#39;D&#39;&amp;&amp;cmd!&#x3D;&#39;i&#39;&amp;&amp;cmd!&#x3D;&#39;I&#39;&amp;&amp;cmd!&#x3D;&#39;q&#39;&amp;&amp;cmd!&#x3D;&#39;Q&#39;);</span><br><span class="line">        switch(cmd)</span><br><span class="line">        &#123;</span><br><span class="line">            case &#39;i&#39;:</span><br><span class="line">            case &#39;I&#39;:printf(&quot;请输入你要插入的数据：&quot;);</span><br><span class="line">            fflush(stdin);</span><br><span class="line">            scanf(&quot;%c&quot;,&amp;x);</span><br><span class="line">            printf(&quot;请输入要插入的位置：&quot;);</span><br><span class="line">            scanf(&quot;%d&quot;,&amp;i);</span><br><span class="line">            insert(L,x,i);</span><br><span class="line">            printout(L);break;</span><br><span class="line">            case &#39;d&#39;:</span><br><span class="line">            case &#39;D&#39;:</span><br><span class="line">            printf(&quot;请输入要删除元素的位置：&quot;);</span><br><span class="line">            fflush(stdin);</span><br><span class="line">            scanf(&quot;%d&quot;,&amp;i);</span><br><span class="line">            dellist(L,i);</span><br><span class="line">            printout(L);</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; while (cmd!&#x3D;&#39;q&#39;&amp;&amp;cmd!&#x3D;&#39;Q&#39;);</span><br><span class="line">    </span><br><span class="line">    system(&quot;pause&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>course</category>
+      </categories>
+      <tags>
+        <tag>数据结构实验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>线性链表</title>
+    <url>/%E7%BA%BF%E6%80%A7%E9%93%BE%E8%A1%A8/</url>
+    <content><![CDATA[<hr>
+<h1 id="线性链表"><a href="#线性链表" class="headerlink" title="线性链表"></a>线性链表</h1><span id="more"></span>
+
+<h2 id="一-单链表"><a href="#一-单链表" class="headerlink" title="一.单链表"></a>一.单链表</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typedef struct Lnode</span><br><span class="line">&#123;</span><br><span class="line">ElemType data;</span><br><span class="line">Struct LNode *next;</span><br><span class="line">&#125;LinkList;</span><br><span class="line">LinkList *L,*head;</span><br></pre></td></tr></table></figure>
+
+<h3 id="单链表的基本操作"><a href="#单链表的基本操作" class="headerlink" title="单链表的基本操作"></a>单链表的基本操作</h3><h4 id="1-清除链表的内容"><a href="#1-清除链表的内容" class="headerlink" title="1.清除链表的内容"></a>1.清除链表的内容</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int ClearList(LinkList *L)</span><br><span class="line">&#123;</span><br><span class="line">LinkList *temp;</span><br><span class="line">while(L-&gt;next!&#x3D;NULL)</span><br><span class="line">&#123;</span><br><span class="line">temp&#x3D;L-&gt;next</span><br><span class="line">L-&gt;next&#x3D;L-&gt;next-&gt;next;</span><br><span class="line">free(temp)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-求表长"><a href="#2-求表长" class="headerlink" title="2.求表长"></a>2.求表长</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int ListLength(LinkList *L)</span><br><span class="line">&#123;</span><br><span class="line">int len&#x3D;0;</span><br><span class="line">LinkList *temp;</span><br><span class="line">temp&#x3D;L;</span><br><span class="line">while(temp-&gt;next!&#x3D;NULL)</span><br><span class="line">&#123;</span><br><span class="line">len++;</span><br><span class="line">temp&#x3D;temp-&gt;next</span><br><span class="line">&#125;</span><br><span class="line">return len;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-查找数据"><a href="#3-查找数据" class="headerlink" title="3.查找数据"></a>3.查找数据</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int Loc(LinkList *L, ElemType Item)</span><br><span class="line">&#123;</span><br><span class="line">	int i&#x3D; 1;</span><br><span class="line">	LinkList *temp;</span><br><span class="line">	temp &#x3D; L-&gt;next;</span><br><span class="line">	while (temp !&#x3D; NULL &amp;&amp; temp-&gt;data !&#x3D; Item)</span><br><span class="line">	&#123;</span><br><span class="line">		i++;</span><br><span class="line">		temp &#x3D; temp-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	if (temp &#x3D;&#x3D; NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return i;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-插入数据"><a href="#4-插入数据" class="headerlink" title="4.插入数据"></a>4.插入数据</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int Ins(LinkList *L, int i, ElemType Item)</span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F;在单链表L的第i个位置后插入值为Item的数据</span><br><span class="line">	int j &#x3D; 1;</span><br><span class="line">	LinkList *node, *temp;</span><br><span class="line">	node &#x3D; (LinkList *)malloc(sizeof(LinkList));</span><br><span class="line">	if (node !&#x3D; NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	node-&gt;data &#x3D; Item;;</span><br><span class="line">	temp &#x3D; L-&gt;next;</span><br><span class="line">	if (temp &#x3D;&#x3D; NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		if (i &#x3D;&#x3D; 0)</span><br><span class="line">		&#123;</span><br><span class="line">			L-&gt;next &#x3D; node;</span><br><span class="line">			node-&gt;next &#x3D; NULL;</span><br><span class="line">			return 1;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			return 0;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;while (j &lt; i&amp;&amp;temp !&#x3D; NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		temp &#x3D; temp-&gt;next;</span><br><span class="line">		j++;</span><br><span class="line">	&#125;</span><br><span class="line">	if (temp &#x3D; NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	node-&gt;next &#x3D; temp-&gt;next;</span><br><span class="line">	temp-&gt;next &#x3D; node;</span><br><span class="line">	return 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>course</category>
+      </categories>
+      <tags>
+        <tag>数据结构实验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>顺序栈</title>
+    <url>/%E9%A1%BA%E5%BA%8F%E6%A0%88/</url>
+    <content><![CDATA[<hr>
+<h1 id="顺序栈"><a href="#顺序栈" class="headerlink" title="顺序栈"></a>顺序栈</h1><span id="more"></span>
+
+<p>c语言中用一维数组描述顺序栈中元素的存储区域。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define Maxsize 100</span><br><span class="line">typedef int datatype;</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">	datatype stack[Maxsize];</span><br><span class="line">	int top;</span><br><span class="line">&#125;SeqStack;</span><br><span class="line">SeqStack *s;</span><br></pre></td></tr></table></figure>
+
+<h2 id="一-顺序栈的基本操作"><a href="#一-顺序栈的基本操作" class="headerlink" title="一.顺序栈的基本操作"></a>一.顺序栈的基本操作</h2><h3 id="1-构造一个空栈"><a href="#1-构造一个空栈" class="headerlink" title="1.构造一个空栈"></a>1.构造一个空栈</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SeqStack *InitStack()</span><br><span class="line">&#123;</span><br><span class="line">SeqStack *s;</span><br><span class="line">s&#x3D;(SeqStack *)malloc(sizeof(SeqStack));</span><br><span class="line">if(!s)</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;空间不足&quot;)；</span><br><span class="line">reutrn NULL；</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">s-&gt;top&#x3D;-1;</span><br><span class="line">retuen s;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-取栈顶元素"><a href="#2-取栈顶元素" class="headerlink" title="2.取栈顶元素"></a>2.取栈顶元素</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">datatype Gettop(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\n栈是空的&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return s-&gt;stack[s-&gt;top];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-入栈"><a href="#3-入栈" class="headerlink" title="3.入栈"></a>3.入栈</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SeqStack *Push(SeqStack *s,datatype x)</span><br><span class="line">&#123;</span><br><span class="line">if(s-&gt;top&#x3D;&#x3D;maxsize-1)</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;\n栈满了！&quot;);</span><br><span class="line">retuen NULL;</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">s-&gt;top++;</span><br><span class="line">s-&gt;stack[s-&gt;top]&#x3D;x;</span><br><span class="line">return s;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-出栈"><a href="#4-出栈" class="headerlink" title="4.出栈"></a>4.出栈</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">datatype Pop(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\nThe sequence stack is empty!&quot;);</span><br><span class="line">		return NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	s-&gt;top--;</span><br><span class="line">	return s-&gt;stack[s-&gt;top + 1];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-判别空栈"><a href="#5-判别空栈" class="headerlink" title="5.判别空栈"></a>5.判别空栈</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int StackEmpty(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">if(s-&gt;top&#x3D;&#x3D;-1)</span><br><span class="line">&#123;</span><br><span class="line">return TRUE;</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">return FALSE;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-完整实例："><a href="#6-完整实例：" class="headerlink" title="6.完整实例："></a>6.完整实例：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#define Maxsize 50</span><br><span class="line">typedef int datatype;</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">	datatype stack[Maxsize];</span><br><span class="line">	int top;</span><br><span class="line">&#125;SeqStack;</span><br><span class="line">SeqStack *InitStack()</span><br><span class="line">&#123;</span><br><span class="line">	SeqStack *s;</span><br><span class="line">	s &#x3D; (SeqStack *)malloc(sizeof(SeqStack));</span><br><span class="line">	if (!s)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;空间不足&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		s-&gt;top &#x3D; -1;</span><br><span class="line">		return s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">datatype Gettop(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\n栈是空的&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return s-&gt;stack[s-&gt;top];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">SeqStack *Push(SeqStack *s, datatype x)</span><br><span class="line">&#123;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; Maxsize - 1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\n栈满了！&quot;);</span><br><span class="line">			return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		s-&gt;top++;</span><br><span class="line">		s-&gt;stack[s-&gt;top] &#x3D; x;</span><br><span class="line">		return s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void display(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">	int t;</span><br><span class="line">	t &#x3D; s-&gt;top;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;The stack id empty\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		while (t !&#x3D; -1)</span><br><span class="line">		&#123;</span><br><span class="line">			printf(&quot;%d-&gt;&quot;, s-&gt;stack[t]); t--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">datatype Pop(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\nThe sequence stack is empty!&quot;);</span><br><span class="line">		return NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	s-&gt;top--;</span><br><span class="line">	return s-&gt;stack[s-&gt;top + 1];</span><br><span class="line">&#125;</span><br><span class="line">int StackEmpty(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; -1)</span><br><span class="line">	&#123;</span><br><span class="line">		return 1;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">	int a[6] &#x3D; &#123; 3,7,4,12,31,15 &#125;, i;</span><br><span class="line">	SeqStack *p;</span><br><span class="line">	p &#x3D; InitStack();</span><br><span class="line">	for (i &#x3D; 0; i &lt; 6; i++)</span><br><span class="line">		Push(p, a[i]);</span><br><span class="line">	printf(&quot;output the stack values:&quot;);</span><br><span class="line">	display(p);</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">	printf(&quot;the stacktop value is:%d\n&quot;, Gettop(p));</span><br><span class="line">	Push(p, 100);</span><br><span class="line">	printf(&quot;output the stack values:&quot;);</span><br><span class="line">	display(p);</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">	printf(&quot;the stacktop value is:%d\n&quot;, Gettop(p));</span><br><span class="line">	Pop(p); Pop(p);</span><br><span class="line">	printf(&quot;the stacktop value is:%d\n&quot;, Gettop(p));</span><br><span class="line">	while(!StackEmpty(p))</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;%4d&quot;, Pop(p));</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># define Maxsize 100</span><br><span class="line"># include&lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">typedef int datatype;</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">	int stack[Maxsize];</span><br><span class="line">	int top;</span><br><span class="line">&#125;SeqStack;</span><br><span class="line"></span><br><span class="line">SeqStack *InitStack()</span><br><span class="line">&#123;</span><br><span class="line">	SeqStack *S;</span><br><span class="line">	S &#x3D; (SeqStack *)malloc(sizeof(SeqStack));</span><br><span class="line">	if (!S)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;空间不足&quot;); return NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		S-&gt;top &#x3D; 0;</span><br><span class="line">		return S;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SeqStack *push(SeqStack *S, int x)</span><br><span class="line">&#123;</span><br><span class="line">	if (S-&gt;top &#x3D;&#x3D; Maxsize)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;the stack is overflow!\n&quot;);</span><br><span class="line">		return NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		S-&gt;stack[S-&gt;top] &#x3D; x;</span><br><span class="line">		S-&gt;top++;</span><br><span class="line">		return S;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int StackEmpty(SeqStack *S)</span><br><span class="line">&#123;</span><br><span class="line">	if (S-&gt;top &#x3D;&#x3D; 0)</span><br><span class="line">		return 1;</span><br><span class="line">	else</span><br><span class="line">		return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int pop(SeqStack *S)</span><br><span class="line">&#123;</span><br><span class="line">	int y;</span><br><span class="line">	if (S-&gt;top &#x3D;&#x3D; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;the stack is empty!\n&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		S-&gt;top--;</span><br><span class="line">		y &#x3D; S-&gt;stack[S-&gt;top];</span><br><span class="line">		return y;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void conversion(int N, int R)</span><br><span class="line">&#123;</span><br><span class="line">	int x &#x3D; N, y &#x3D; R;</span><br><span class="line">	SeqStack *S;</span><br><span class="line">	S &#x3D; InitStack();</span><br><span class="line">	while (N !&#x3D; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		push(S, N%R);</span><br><span class="line">		N &#x3D; N &#x2F; R;</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;\n十进制数%d所对应的%d进制数是：&quot;, x, y);</span><br><span class="line">	while (!StackEmpty(S))</span><br><span class="line">		printf(&quot;%d&quot;, pop(S));</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n, r;</span><br><span class="line">	printf(&quot;请输入任意一个十进制整数及其所需转换的二至九间的任一进制数：\n&quot;);</span><br><span class="line">	scanf(&quot;%d,%d&quot;, &amp;n, &amp;r);</span><br><span class="line">	conversion(n, r);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>course</category>
+      </categories>
+      <tags>
+        <tag>数据结构实验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>链栈</title>
+    <url>/%E9%93%BE%E6%A0%88/</url>
+    <content><![CDATA[<hr>
+<h1 id="栈链"><a href="#栈链" class="headerlink" title="栈链"></a>栈链</h1><span id="more"></span>
+
+<h2 id="链栈的定义类型"><a href="#链栈的定义类型" class="headerlink" title="链栈的定义类型"></a>链栈的定义类型</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">datatype data;</span><br><span class="line">struct node *next;</span><br><span class="line">&#125;Linkstack;</span><br><span class="line">Linkstack *top;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-判别栈空"><a href="#1-判别栈空" class="headerlink" title="1.判别栈空"></a>1.判别栈空</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int Stackempty(Linkstack *top)</span><br><span class="line">&#123;</span><br><span class="line">	return top ? 0 : 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-取栈顶元素"><a href="#2-取栈顶元素" class="headerlink" title="2.取栈顶元素"></a>2.取栈顶元素</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">datatype Gettop(Linkstack *top)</span><br><span class="line">&#123;</span><br><span class="line">	if (!top)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\n栈链是空的&quot;);</span><br><span class="line">			return 0;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-入栈"><a href="#3-入栈" class="headerlink" title="3.入栈"></a>3.入栈</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linkstack *Push(Linkstack *top, datatype x)</span><br><span class="line">&#123;</span><br><span class="line">	Linkstack *p;</span><br><span class="line">	p &#x3D; (Linkstack *)malloc(sizeof(Linkstack));</span><br><span class="line">	p-&gt;data &#x3D; x;</span><br><span class="line">	p-&gt;next &#x3D; top;</span><br><span class="line">	top &#x3D;&#x3D; p;</span><br><span class="line">	return p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-出栈"><a href="#4-出栈" class="headerlink" title="4.出栈"></a>4.出栈</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linkstack *Pop(Linkstack *top)</span><br><span class="line">&#123;</span><br><span class="line">	Linkstack *p;</span><br><span class="line">	if (!top)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\n栈是空的&quot;); return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	p &#x3D; top;</span><br><span class="line">	top &#x3D; top-&gt;next;</span><br><span class="line">	free(p);</span><br><span class="line">	return top;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>course</category>
+      </categories>
+      <tags>
+        <tag>数据结构实验</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown-3</title>
-    <url>/2021/03/17/markdown-3/</url>
+    <url>/markdown-3/</url>
     <content><![CDATA[<hr>
 <center><b>你好，Typora</b></center>
 
@@ -1470,198 +1754,6 @@
       </categories>
       <tags>
         <tag>essay</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>线性链表</title>
-    <url>/2021/03/30/%E7%BA%BF%E6%80%A7%E9%93%BE%E8%A1%A8/</url>
-    <content><![CDATA[<hr>
-<h1 id="线性链表"><a href="#线性链表" class="headerlink" title="线性链表"></a>线性链表</h1><span id="more"></span>
-
-<h2 id="一-单链表"><a href="#一-单链表" class="headerlink" title="一.单链表"></a>一.单链表</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typedef struct Lnode</span><br><span class="line">&#123;</span><br><span class="line">ElemType data;</span><br><span class="line">Struct LNode *next;</span><br><span class="line">&#125;LinekList;</span><br><span class="line">LineList *L,*head;</span><br></pre></td></tr></table></figure>
-
-<h3 id="单链表的基本操作"><a href="#单链表的基本操作" class="headerlink" title="单链表的基本操作"></a>单链表的基本操作</h3><h4 id="1-清除链表的内容"><a href="#1-清除链表的内容" class="headerlink" title="1.清除链表的内容"></a>1.清除链表的内容</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int ClearList(LinkList *L)</span><br><span class="line">&#123;</span><br><span class="line">LinkList *temp;</span><br><span class="line">while(L-&gt;next!&#x3D;NULL)</span><br><span class="line">&#123;</span><br><span class="line">temp&#x3D;L-&gt;next</span><br><span class="line">L-&gt;next&#x3D;L-&gt;next-&gt;next;</span><br><span class="line">free(temp)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>2.求表长</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int ListLength(LinkList *L)</span><br><span class="line">&#123;</span><br><span class="line">int len&#x3D;0;</span><br><span class="line">LinkList *temp;</span><br><span class="line">temp&#x3D;L;</span><br><span class="line">while(temp-&gt;next!&#x3D;NULL)</span><br><span class="line">&#123;</span><br><span class="line">len++;</span><br><span class="line">temp&#x3D;temp-&gt;next</span><br><span class="line">&#125;</span><br><span class="line">return len;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>course</category>
-      </categories>
-      <tags>
-        <tag>数据结构实验</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>线性表</title>
-    <url>/2021/03/29/%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
-    <content><![CDATA[<hr>
-<h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><span id="more"></span>
-
-<p>顺序线性表实例：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typedef struct&#x2F;&#x2F;定义线性表结构题</span><br><span class="line">&#123;</span><br><span class="line">char name[20];</span><br><span class="line">char no[10];</span><br><span class="line">float score;</span><br><span class="line">&#125;STUDENT;</span><br><span class="line">STUDENT stu[20];&#x2F;&#x2F;实例化</span><br></pre></td></tr></table></figure>
-
-<h2 id="顺序表的基本操作"><a href="#顺序表的基本操作" class="headerlink" title="顺序表的基本操作"></a>顺序表的基本操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define int datatype;&#x2F;&#x2F;定义元素类型，这里设置为int</span><br><span class="line">#define maxsize 1024</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">datatype elem[maxsize];</span><br><span class="line">int length;&#x2F;&#x2F;表长</span><br><span class="line">&#125;sequenlist；</span><br></pre></td></tr></table></figure>
-
-<p>其中，elem是存放线性表结点的一个数组。</p>
-<h3 id="1-顺序表的初始化"><a href="#1-顺序表的初始化" class="headerlink" title="1.顺序表的初始化"></a>1.顺序表的初始化</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void  InitList(sequenlist *L)</span><br><span class="line">&#123;</span><br><span class="line">L-&gt;length&#x3D;0;&#x2F;&#x2F;空表，长度为零</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-清除线性表的内容"><a href="#2-清除线性表的内容" class="headerlink" title="2.清除线性表的内容"></a>2.清除线性表的内容</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void clearList(sequenlist *L)</span><br><span class="line">&#123;</span><br><span class="line">L-&gt;length&#x3D;0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-定位查找"><a href="#3-定位查找" class="headerlink" title="3.定位查找"></a>3.定位查找</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int Loc(seqenlist L,datatype Item)</span><br><span class="line">&#123;</span><br><span class="line">int i,j;</span><br><span class="line">j&#x3D;L.length;&#x2F;&#x2F;取出线性表长度</span><br><span class="line">if(j&#x3D;&#x3D;0)&#x2F;&#x2F;空表</span><br><span class="line">return FALSE;</span><br><span class="line">for(i&#x3D;0;i&lt;j;i++)</span><br><span class="line">&#123;</span><br><span class="line">if(L.elem[i]&#x3D;&#x3D;Item)</span><br><span class="line">return i;</span><br><span class="line">&#125;</span><br><span class="line">print(&quot;找不到该值！&quot;)；</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-插入数据"><a href="#4-插入数据" class="headerlink" title="4.插入数据"></a>4.插入数据</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int Ins(sequenlist *L,int i,datatype b)</span><br><span class="line">&#123;</span><br><span class="line">int j;</span><br><span class="line">if(i&lt;1||i&gt;L-&gt;length)</span><br><span class="line">&#123;</span><br><span class="line">return FALSE;</span><br><span class="line">&#125;</span><br><span class="line">for(j&#x3D;L-&gt;length;j&gt;i;j--)</span><br><span class="line">&#123;</span><br><span class="line">L-&gt;elem[j]&#x3D;L-&gt;elem[j-1];</span><br><span class="line">&#125;</span><br><span class="line">L-&gt;elem[i+1]&#x3D;b;</span><br><span class="line">L-&gt;length++;</span><br><span class="line">return TRUE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-删除数据"><a href="#5-删除数据" class="headerlink" title="5.删除数据"></a>5.删除数据</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int Del(sequenlist *L,int i)</span><br><span class="line">&#123;</span><br><span class="line">\\删除顺序表L的第i个结点</span><br><span class="line">int j;</span><br><span class="line">if(i&lt;1||i&gt;L-length)</span><br><span class="line">&#123;</span><br><span class="line">return FALSE;</span><br><span class="line">&#125;</span><br><span class="line">for(j&#x3D;i;j&lt;L-&gt;length;j++)</span><br><span class="line">&#123;</span><br><span class="line">L-&gt;elem[j]&#x3D;L-&gt;elem[j+1];</span><br><span class="line">&#125;</span><br><span class="line">L-&gt;length--;</span><br><span class="line">return TRUE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="完整例子"><a href="#完整例子" class="headerlink" title="完整例子"></a>完整例子</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># include &quot;stdio.h&quot;</span><br><span class="line">#include &quot;malloc.h&quot;</span><br><span class="line">#include &quot;stdlib.h&quot;</span><br><span class="line">#define maxsize 1024</span><br><span class="line">typedef char datatype;</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">datatype elem[maxsize];</span><br><span class="line">int last;&#x2F;&#x2F;表长</span><br><span class="line">&#125;sequenlist;</span><br><span class="line">&#x2F;&#x2F;在第i个元素前插入元素x</span><br><span class="line">int insert(sequenlist *L,datatype x,int i)</span><br><span class="line">&#123;</span><br><span class="line">int j;</span><br><span class="line">if(L-&gt;last&#x3D;&#x3D;maxsize-1)</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;overflow!&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">else if(i&lt;0||i&gt;L-&gt;last)</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;error , please input the right &#39;i&#39;&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">    for(j&#x3D;L-&gt;last;j&gt;&#x3D;i;j--)</span><br><span class="line">    &#123;</span><br><span class="line">    L-&gt;elem[j+1]&#x3D;L-&gt;elem[j];printf(&quot;elem[%d]:%c\n&quot;,j+1,L-&gt;elem[j+1]);</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;elem[i]&#x3D;x;</span><br><span class="line">    L-&gt;last++;</span><br><span class="line">&#125;</span><br><span class="line">return 1;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;建立顺序表</span><br><span class="line">void creatlist(sequenlist *L)</span><br><span class="line">&#123;</span><br><span class="line">    int i,n;</span><br><span class="line">    char tmp;</span><br><span class="line">    printf(&quot;请输入数据个数：&quot;);</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">    for(i&#x3D;0;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;elem[%d]:&quot;,i);</span><br><span class="line">        fflush(stdin);</span><br><span class="line">        scanf(&quot;%c&quot;,&amp;tmp);</span><br><span class="line">        L-&gt;elem[i]&#x3D;tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;last&#x3D;n-1;</span><br><span class="line">    printf(&quot;\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">void printout(sequenlist *L)</span><br><span class="line">&#123;</span><br><span class="line">    int i;</span><br><span class="line">    for(i&#x3D;0;i&lt;&#x3D;L-&gt;last;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;elem[%d]:&quot;,i);</span><br><span class="line">        printf(&quot;%c\n&quot;,L-&gt;elem[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int dellist(sequenlist *L,int i)</span><br><span class="line">&#123;</span><br><span class="line">    if(i&lt;0||i&gt;L-&gt;last)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;error , please input the right &#39;i&#39;&quot;);</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">        for(;i&lt;L-&gt;last;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            L-&gt;elem[i]&#x3D;L-&gt;elem[i+1];</span><br><span class="line">        &#125;</span><br><span class="line">        L-&gt;last--;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">    sequenlist *L;</span><br><span class="line">    char cmd,x;</span><br><span class="line">    int i;</span><br><span class="line">    L&#x3D;(sequenlist *)malloc(sizeof(sequenlist));&#x2F;&#x2F;初始化</span><br><span class="line">    creatlist(L);</span><br><span class="line">    printout(L);</span><br><span class="line">    do</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;i,I...插入：\n&quot;);</span><br><span class="line">        printf(&quot;d,D...s删除\n&quot;);</span><br><span class="line">        printf(&quot;q，Q...退出\n&quot;);</span><br><span class="line">        do</span><br><span class="line">        &#123;</span><br><span class="line">            fflush(stdin);</span><br><span class="line">            scanf(&quot;%c&quot;,&amp;cmd);</span><br><span class="line">        &#125; while (cmd!&#x3D;&#39;d&#39;&amp;&amp;cmd!&#x3D;&#39;D&#39;&amp;&amp;cmd!&#x3D;&#39;i&#39;&amp;&amp;cmd!&#x3D;&#39;I&#39;&amp;&amp;cmd!&#x3D;&#39;q&#39;&amp;&amp;cmd!&#x3D;&#39;Q&#39;);</span><br><span class="line">        switch(cmd)</span><br><span class="line">        &#123;</span><br><span class="line">            case &#39;i&#39;:</span><br><span class="line">            case &#39;I&#39;:printf(&quot;请输入你要插入的数据：&quot;);</span><br><span class="line">            fflush(stdin);</span><br><span class="line">            scanf(&quot;%c&quot;,&amp;x);</span><br><span class="line">            printf(&quot;请输入要插入的位置：&quot;);</span><br><span class="line">            scanf(&quot;%d&quot;,&amp;i);</span><br><span class="line">            insert(L,x,i);</span><br><span class="line">            printout(L);break;</span><br><span class="line">            case &#39;d&#39;:</span><br><span class="line">            case &#39;D&#39;:</span><br><span class="line">            printf(&quot;请输入要删除元素的位置：&quot;);</span><br><span class="line">            fflush(stdin);</span><br><span class="line">            scanf(&quot;%d&quot;,&amp;i);</span><br><span class="line">            dellist(L,i);</span><br><span class="line">            printout(L);</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; while (cmd!&#x3D;&#39;q&#39;&amp;&amp;cmd!&#x3D;&#39;Q&#39;);</span><br><span class="line">    </span><br><span class="line">    system(&quot;pause&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>course</category>
-      </categories>
-      <tags>
-        <tag>数据结构实验</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>链栈</title>
-    <url>/2021/03/31/%E9%93%BE%E6%A0%88/</url>
-    <content><![CDATA[<hr>
-<h1 id="栈链"><a href="#栈链" class="headerlink" title="栈链"></a>栈链</h1><span id="more"></span>
-
-<h2 id="链栈的定义类型"><a href="#链栈的定义类型" class="headerlink" title="链栈的定义类型"></a>链栈的定义类型</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">datatype data;</span><br><span class="line">struct node *next;</span><br><span class="line">&#125;Linkstack;</span><br><span class="line">Linkstack *top;</span><br></pre></td></tr></table></figure>
-
-<h2 id="1-判别栈空"><a href="#1-判别栈空" class="headerlink" title="1.判别栈空"></a>1.判别栈空</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int Stackempty(Linkstack *top)</span><br><span class="line">&#123;</span><br><span class="line">	return top ? 0 : 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-取栈顶元素"><a href="#2-取栈顶元素" class="headerlink" title="2.取栈顶元素"></a>2.取栈顶元素</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">datatype Gettop(Linkstack *top)</span><br><span class="line">&#123;</span><br><span class="line">	if (!top)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\n栈链是空的&quot;);</span><br><span class="line">			return 0;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-入栈"><a href="#3-入栈" class="headerlink" title="3.入栈"></a>3.入栈</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linkstack *Push(Linkstack *top, datatype x)</span><br><span class="line">&#123;</span><br><span class="line">	Linkstack *p;</span><br><span class="line">	p &#x3D; (Linkstack *)malloc(sizeof(Linkstack));</span><br><span class="line">	p-&gt;data &#x3D; x;</span><br><span class="line">	p-&gt;next &#x3D; top;</span><br><span class="line">	top &#x3D;&#x3D; p;</span><br><span class="line">	return p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-出栈"><a href="#4-出栈" class="headerlink" title="4.出栈"></a>4.出栈</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linkstack *Pop(Linkstack *top)</span><br><span class="line">&#123;</span><br><span class="line">	Linkstack *p;</span><br><span class="line">	if (!top)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\n栈是空的&quot;); return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	p &#x3D; top;</span><br><span class="line">	top &#x3D; top-&gt;next;</span><br><span class="line">	free(p);</span><br><span class="line">	return top;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>course</category>
-      </categories>
-      <tags>
-        <tag>数据结构实验</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>顺序栈</title>
-    <url>/2021/03/30/%E9%A1%BA%E5%BA%8F%E6%A0%88/</url>
-    <content><![CDATA[<hr>
-<h1 id="顺序栈"><a href="#顺序栈" class="headerlink" title="顺序栈"></a>顺序栈</h1><span id="more"></span>
-
-<p>c语言中用一维数组描述顺序栈中元素的存储区域。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define Maxsize 100</span><br><span class="line">typedef int datatype;</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">	datatype stack[Maxsize];</span><br><span class="line">	int top;</span><br><span class="line">&#125;SeqStack;</span><br><span class="line">SeqStack *s;</span><br></pre></td></tr></table></figure>
-
-<h2 id="一-顺序栈的基本操作"><a href="#一-顺序栈的基本操作" class="headerlink" title="一.顺序栈的基本操作"></a>一.顺序栈的基本操作</h2><h3 id="1-构造一个空栈"><a href="#1-构造一个空栈" class="headerlink" title="1.构造一个空栈"></a>1.构造一个空栈</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SeqStack *InitStack()</span><br><span class="line">&#123;</span><br><span class="line">SeqStack *s;</span><br><span class="line">s&#x3D;(SeqStack *)malloc(sizeof(SeqStack));</span><br><span class="line">if(!s)</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;空间不足&quot;)；</span><br><span class="line">reutrn NULL；</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">s-&gt;top&#x3D;-1;</span><br><span class="line">retuen s;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-取栈顶元素"><a href="#2-取栈顶元素" class="headerlink" title="2.取栈顶元素"></a>2.取栈顶元素</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">datatype Gettop(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\n栈是空的&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return s-&gt;stack[s-&gt;top];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-入栈"><a href="#3-入栈" class="headerlink" title="3.入栈"></a>3.入栈</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SeqStack *Push(SeqStack *s,datatype x)</span><br><span class="line">&#123;</span><br><span class="line">if(s-&gt;top&#x3D;&#x3D;maxsize-1)</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;\n栈满了！&quot;);</span><br><span class="line">retuen NULL;</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">s-&gt;top++;</span><br><span class="line">s-&gt;stack[s-&gt;top]&#x3D;x;</span><br><span class="line">return s;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-出栈"><a href="#4-出栈" class="headerlink" title="4.出栈"></a>4.出栈</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">datatype Pop(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\nThe sequence stack is empty!&quot;);</span><br><span class="line">		return NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	s-&gt;top--;</span><br><span class="line">	return s-&gt;stack[s-&gt;top + 1];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-判别空栈"><a href="#5-判别空栈" class="headerlink" title="5.判别空栈"></a>5.判别空栈</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int StackEmpty(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">if(s-&gt;top&#x3D;&#x3D;-1)</span><br><span class="line">&#123;</span><br><span class="line">return TRUE;</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">return FALSE;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-完整实例："><a href="#6-完整实例：" class="headerlink" title="6.完整实例："></a>6.完整实例：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#define Maxsize 50</span><br><span class="line">typedef int datatype;</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">	datatype stack[Maxsize];</span><br><span class="line">	int top;</span><br><span class="line">&#125;SeqStack;</span><br><span class="line">SeqStack *InitStack()</span><br><span class="line">&#123;</span><br><span class="line">	SeqStack *s;</span><br><span class="line">	s &#x3D; (SeqStack *)malloc(sizeof(SeqStack));</span><br><span class="line">	if (!s)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;空间不足&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		s-&gt;top &#x3D; -1;</span><br><span class="line">		return s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">datatype Gettop(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\n栈是空的&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return s-&gt;stack[s-&gt;top];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">SeqStack *Push(SeqStack *s, datatype x)</span><br><span class="line">&#123;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; Maxsize - 1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\n栈满了！&quot;);</span><br><span class="line">			return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		s-&gt;top++;</span><br><span class="line">		s-&gt;stack[s-&gt;top] &#x3D; x;</span><br><span class="line">		return s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void display(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">	int t;</span><br><span class="line">	t &#x3D; s-&gt;top;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;The stack id empty\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		while (t !&#x3D; -1)</span><br><span class="line">		&#123;</span><br><span class="line">			printf(&quot;%d-&gt;&quot;, s-&gt;stack[t]); t--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">datatype Pop(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;\nThe sequence stack is empty!&quot;);</span><br><span class="line">		return NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	s-&gt;top--;</span><br><span class="line">	return s-&gt;stack[s-&gt;top + 1];</span><br><span class="line">&#125;</span><br><span class="line">int StackEmpty(SeqStack *s)</span><br><span class="line">&#123;</span><br><span class="line">	if (s-&gt;top &#x3D;&#x3D; -1)</span><br><span class="line">	&#123;</span><br><span class="line">		return 1;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">	int a[6] &#x3D; &#123; 3,7,4,12,31,15 &#125;, i;</span><br><span class="line">	SeqStack *p;</span><br><span class="line">	p &#x3D; InitStack();</span><br><span class="line">	for (i &#x3D; 0; i &lt; 6; i++)</span><br><span class="line">		Push(p, a[i]);</span><br><span class="line">	printf(&quot;output the stack values:&quot;);</span><br><span class="line">	display(p);</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">	printf(&quot;the stacktop value is:%d\n&quot;, Gettop(p));</span><br><span class="line">	Push(p, 100);</span><br><span class="line">	printf(&quot;output the stack values:&quot;);</span><br><span class="line">	display(p);</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">	printf(&quot;the stacktop value is:%d\n&quot;, Gettop(p));</span><br><span class="line">	Pop(p); Pop(p);</span><br><span class="line">	printf(&quot;the stacktop value is:%d\n&quot;, Gettop(p));</span><br><span class="line">	while(!StackEmpty(p))</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;%4d&quot;, Pop(p));</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># define Maxsize 100</span><br><span class="line"># include&lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">typedef int datatype;</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">	int stack[Maxsize];</span><br><span class="line">	int top;</span><br><span class="line">&#125;SeqStack;</span><br><span class="line"></span><br><span class="line">SeqStack *InitStack()</span><br><span class="line">&#123;</span><br><span class="line">	SeqStack *S;</span><br><span class="line">	S &#x3D; (SeqStack *)malloc(sizeof(SeqStack));</span><br><span class="line">	if (!S)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;空间不足&quot;); return NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		S-&gt;top &#x3D; 0;</span><br><span class="line">		return S;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SeqStack *push(SeqStack *S, int x)</span><br><span class="line">&#123;</span><br><span class="line">	if (S-&gt;top &#x3D;&#x3D; Maxsize)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;the stack is overflow!\n&quot;);</span><br><span class="line">		return NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		S-&gt;stack[S-&gt;top] &#x3D; x;</span><br><span class="line">		S-&gt;top++;</span><br><span class="line">		return S;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int StackEmpty(SeqStack *S)</span><br><span class="line">&#123;</span><br><span class="line">	if (S-&gt;top &#x3D;&#x3D; 0)</span><br><span class="line">		return 1;</span><br><span class="line">	else</span><br><span class="line">		return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int pop(SeqStack *S)</span><br><span class="line">&#123;</span><br><span class="line">	int y;</span><br><span class="line">	if (S-&gt;top &#x3D;&#x3D; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;the stack is empty!\n&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		S-&gt;top--;</span><br><span class="line">		y &#x3D; S-&gt;stack[S-&gt;top];</span><br><span class="line">		return y;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void conversion(int N, int R)</span><br><span class="line">&#123;</span><br><span class="line">	int x &#x3D; N, y &#x3D; R;</span><br><span class="line">	SeqStack *S;</span><br><span class="line">	S &#x3D; InitStack();</span><br><span class="line">	while (N !&#x3D; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		push(S, N%R);</span><br><span class="line">		N &#x3D; N &#x2F; R;</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;\n十进制数%d所对应的%d进制数是：&quot;, x, y);</span><br><span class="line">	while (!StackEmpty(S))</span><br><span class="line">		printf(&quot;%d&quot;, pop(S));</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n, r;</span><br><span class="line">	printf(&quot;请输入任意一个十进制整数及其所需转换的二至九间的任一进制数：\n&quot;);</span><br><span class="line">	scanf(&quot;%d,%d&quot;, &amp;n, &amp;r);</span><br><span class="line">	conversion(n, r);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>course</category>
-      </categories>
-      <tags>
-        <tag>数据结构实验</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pandas-4</title>
-    <url>/2021/04/03/pandas-4/</url>
-    <content><![CDATA[<hr>
-<h1 id="Apply-函数"><a href="#Apply-函数" class="headerlink" title="Apply 函数"></a><strong>Apply 函数</strong></h1><span id="more"></span>
-
-<p>apply 函数主要作用是做聚合运算，以及在分组基础上根据实际情况来自定义一些规则，常见用法和参数如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.groupby([&#39;列名&#39;]).apply(func,args)</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>参数func是最重要的参数，它接收一个函数，会把分组后的数据根据函数来进行处理</li>
-<li>args参数是我们可以给函数参入的参数，这个仅做了解，和其他参数一样比较少</li>
-</ol>
-<h2 id="场景一"><a href="#场景一" class="headerlink" title="场景一"></a>场景一</h2><p><strong>背景：</strong>我们拿到了一份 4 位同学三次模拟考试的成绩，想知道每位同学历次模拟中最好成绩和最差成绩分别是多少。</p>
-<p><strong>思路：</strong>最好和最差，分别对应着 max 与 min，我们先按姓名分组，再用 apply 函数返回对应的最大和最小值，最终将结果合并。</p>
-<p>先导入源数据：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">score &#x3D; pd.read_excel(&#39;apply案例数据.xlsx&#39;,sheet_name &#x3D; &#39;成绩表&#39;)</span><br><span class="line">score.head(6)</span><br></pre></td></tr></table></figure>
-
-<p>实例：</p>
-<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403150841.png" alt="image-20210403150839651" style="zoom:50%;" />
-
-
-
-<p>看一看每位同学最高成绩：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">max_score &#x3D; score.groupby(&#39;姓名&#39;)[&#39;综合成绩&#39;].apply(max).reset_index()</span><br><span class="line">max_score</span><br></pre></td></tr></table></figure>
-
-<p>实例：</p>
-<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151152.png" alt="image-20210403151148838" style="zoom:50%;" />
-
-<p>​        我们指定“综合成绩”列，然后把 max 函数直接传入 apply 参数内，返回了对应分组内成绩的最大值。有一些常见函数，如 max、min、len 等函数可以直接传入apply。</p>
-<p>​        groupby 分组默认会把分组依据列（姓名）变成索引，这里用 reset_index 方法重置或者说取消姓名索引，将它保留在列的位置，维持 DataFrame 格式，方便后续匹配。</p>
-<p>再筛选出最低成绩：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">min_score &#x3D; score.groupby(&#39;姓名&#39;)[&#39;综合成绩&#39;].apply(min).reset_index()</span><br><span class="line">min_score</span><br></pre></td></tr></table></figure>
-
-<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151356.png" alt="image-20210403151355702"></p>
-<p>两张表按姓名合并：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">score_combine &#x3D; pd.merge(max_score,min_score,left_on &#x3D; &#39;姓名&#39;,right_on &#x3D; &#39;姓名&#39;,how &#x3D; &#39;inner&#39;)</span><br><span class="line">score_combine.columns &#x3D; [&#39;姓名&#39;,&#39;最好成绩&#39;,&#39;最差成绩&#39;]</span><br><span class="line">score_combine</span><br></pre></td></tr></table></figure>
-
-<p>实例：</p>
-<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151500.png" alt="image-20210403151459277"></p>
-<p>得到了我们预期的结果，只是列名略丑，可以用.columns 方法来赋值更改。场景一比较死板和严肃，场景二我们换个更接地气的风格。</p>
-<h2 id="场景二"><a href="#场景二" class="headerlink" title="场景二"></a>场景二</h2><p><strong>背景：</strong>Boss 丢过来一份省市销售表，里面包含省份、城市、最近 1 个月销售额 3个字段，没等你开口问需求，Boss 就开腔了：“小 Z 啊，我最近对 3 这个数字有执念，我想看看每个省份销售排名第 3 的都是哪些城市，以及他们的销售额情况。对了，这个需求要尽快！”</p>
-<p><strong>思路：</strong>问题的关键是找到每个省份销售排名第 3 的城市，首先，应该对省份、城市按销售额进行降序排列，然后，找到对应排名第 3 的城市，Emmm，如果是排名第 1 的城市，我们可以通过排序后去重实现，但是这个排名第 3，小 Z 疯狂挠头，想到了apply。</p>
-<p>先导入数据源，对数据做个初步了解：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order &#x3D; pd.read_excel(&#39;apply案例数据.xlsx&#39;,sheet_name &#x3D; &#39;省市销售数据&#39;)</span><br><span class="line">order.head()</span><br></pre></td></tr></table></figure>
-
-<p>实例·：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151803.png" alt="image-20210403151800730"></p>
-<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403151840.png" alt="image-20210403151839431" style="zoom:67%;" />
-
-<p>数据源有省份、城市、近 1 月销售额 3 个字段，一共 210 行（销售额）乱序排列，且都没有空值，整体比较规整。</p>
-<p>要得到销售排名第 3 的城市，要先进行排序，这里我们用省份、近 1 月销售额两个关键字段进行降序排列，得到我们期待的顺序：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order_rank &#x3D; order.sort_values([&#39;省份&#39;,&#39;近1月销售额&#39;],ascending &#x3D; False)</span><br><span class="line">order_rank</span><br></pre></td></tr></table></figure>
-
-<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403152207.png" alt="image-20210403152206797"></p>
-<p>接着，在 apply 函数登场前，我们先详细剖析一下整个过程：</p>
-<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403152607.png" alt="Screenshot 2021-04-03 152337" style="zoom:67%;" />
-
-<p>第一步分组非常简单，按省份分组即可。而取第 3 名的城市和销售，表明我们需要城市和销售两个字段，所以在分组后指明这两列：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order_rank.groupby(&#39;省份&#39;)[[&#39;城市&#39;,&#39;近1月销售额&#39;]]</span><br></pre></td></tr></table></figure>
-
-<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403152739.png" alt="image-20210403152738388"></p>
-<p>但是我们可以在脑海中构建一下，截图只展示了部分：</p>
-<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403201502.png" alt="未标题-1"></p>
-<p>有个问题需要注意，有一些直辖市是和省并列的，而作为城市只有单独的一行，这样的城市我们就默认返回其本身的数据；对于非直辖市省份来说，就需要定位筛选。</p>
-<p>拿 x2 来举例，要找到这个数据中排名第三的城市和销售额，应该怎么做呢？答案是直接索引，把他看作是一个 DataFrame 格式的表，要选取第 3 行的所有值，包括城市和销售额，这里用 iloc 索引，很简单的一行代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">x.iloc[2,:]</span><br></pre></td></tr></table></figure>
-
-<p>下面把我们针对直辖市的判断和非直辖市的筛选逻辑整合成一个函数:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def get_third(x):</span><br><span class="line">    #如果分组长度小于等于1，意味着直辖市</span><br><span class="line">    if len(x) &lt;&#x3D; 1:</span><br><span class="line">        #返回第0行的所有值，即直辖市本身</span><br><span class="line">        return x.iloc[0,:]</span><br><span class="line">    </span><br><span class="line">    #针对非直辖市</span><br><span class="line">    else:</span><br><span class="line">        #直接返回第3行（排名第3，索引是2）所有值（城市，近1月销售额）</span><br><span class="line">        return x.iloc[2,:]</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">order_rank.groupby(&#39;省份&#39;)[[&#39;城市&#39;,&#39;近1月销售额&#39;]].apply(get_third)</span><br></pre></td></tr></table></figure>
-
-
-<p>实例：</p>
-<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403201509.png" alt="image-20210403201045237"></p>
-<p>​        至此，每个省份，销售额排名第三的城市已经成功筛选出来。回顾整个操作流程，先排序，后分组，最后通过定义函数传入 apply，提取出我们的目标值。分组后数据的抽象形态，以及如何判断和取出我们需要的值，是解决问题的关键和难点。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>pandas</tag>
       </tags>
   </entry>
 </search>

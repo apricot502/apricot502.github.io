@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="你好，Typora">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown-3">
+<meta property="og:url" content="http://example.com/markdown-3/index.html">
+<meta property="og:site_name" content="aprioct502">
+<meta property="og:description" content="你好，Typora">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/03/17/hfPFW2uyLTGqRCV.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/iWo9QbYaBORj8eJ.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/lSFdOtoW8GZMY6I.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/KoVpm2PwGv7txSR.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/vZGjOwlsF9eCApK.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/d6Z1YRqukbBS4Wy.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/E16wjuFhPSHJtX4.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/goiqYI2UvC7xEOs.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/8ZI7xlHwheOjzcP.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/EOaILm5oBKYCVt3.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/uhWOwCSe4qDYvVa.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/qbFNjKQGeEncaRZ.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/ZXz8qtxNMpYnFAK.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/YzDqFoSTEaQx9Z4.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/ukpNn8i6xoYy3s7.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/8NZESep2lnDCkIy.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/vYmFkOS7GhUtape.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/22/cCHvuWDZxfpmK7T.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/17/PaCBKUDdo2e6LN7.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/25/srEPvhC9zA8L3Gn.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/25/srEPvhC9zA8L3Gn.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/25/jWoXMRTH6nIisAD.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/25/ukQ7M9hR5NFBx3y.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/17/XSocNwDVOjZAzGd.png">
+<meta property="article:published_time" content="2021-03-17T09:37:11.000Z">
+<meta property="article:modified_time" content="2021-03-17T09:55:42.475Z">
+<meta property="article:author" content="apricot502">
+<meta property="article:tag" content="essay">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/03/17/hfPFW2uyLTGqRCV.png">
+
+<link rel="canonical" href="http://example.com/markdown-3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>markdown-3 | aprioct502</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?41fc030db57d5570dd22f78997dc4a7e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="aprioct502" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">aprioct502</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/site/" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/markdown-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/cat.jpg">
+      <meta itemprop="name" content="apricot502">
+      <meta itemprop="description" content="画图小能手">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aprioct502">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          markdown-3
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-17 17:37:11 / 修改时间：17:55:42" itemprop="dateCreated datePublished" datetime="2021-03-17T17:37:11+08:00">2021-03-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/markdown/" itemprop="url" rel="index"><span itemprop="name">markdown</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <hr>
+<center><b>你好，Typora</b></center>
+
+<span id="more"></span>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=420 height=86 src="//music.163.com/outchain/player?type=2&id=1823305772&auto=0&height=66"></iframe>
+
+<h2 id="1-Typora是目前最受欢迎的Markdown编辑器之一。它的主要特性如下。"><a href="#1-Typora是目前最受欢迎的Markdown编辑器之一。它的主要特性如下。" class="headerlink" title="1.Typora是目前最受欢迎的Markdown编辑器之一。它的主要特性如下。"></a>1.Typora是目前最受欢迎的Markdown编辑器之一。它的主要特性如下。</h2><p>1）实时预览：传统的Markdown编辑器都有两个窗口，左边是源码，右边是渲染后的效果。Typora独辟蹊径，把源码编辑和效果预览合二为一，实现了真正的所见即所得。</p>
+<p>2）扩展语法：Typora不光支持GFM，还扩展了数学公式、流程图等功能。</p>
+<p>3）快捷操作：Typora对几乎所有的Markdown标记都提供了快捷操作方式，使用起来非常高效。</p>
+<p>4）界面漂亮：默认支持6种主题，可自定义，好看又好用。</p>
+<p>5）文件转换：支持多种文件格式通过导入/导出功能跟.md格式相互转换。</p>
+<p>6）支持中文：支持中文，可以帮助大家更好地理解各项功能。</p>
+<p>7）视图模式：支持大纲和文档列表视图，方便在不同段落和不同文件之间进行切换。</p>
+<p>8）跨平台：支持macOS、Windows和Linux系统。</p>
+<p>9）目前免费：这么好用的编辑器竟然是<strong>免费</strong>的。</p>
+<h2 id="2-界面概览"><a href="#2-界面概览" class="headerlink" title="2.界面概览"></a>2.界面概览</h2><p>先来认识一下Typora编辑器的界面，如下图所示。</p>
+<img src="https://i.loli.net/2021/03/17/hfPFW2uyLTGqRCV.png" alt="image-20210221225234240" style="zoom: 50%;" />
+
+<h2 id="3-字数统计"><a href="#3-字数统计" class="headerlink" title="3.字数统计"></a>3.字数统计</h2><p>把鼠标放到状态栏上，在右下角会显示文件的字数，单击字数会显示较详细的字数信息。如果你选择了一段文本，则会在信息面板中显示被选中的文字信息。<br>默认鼠标放到状态栏上才会显示字数信息，如果我们想让字数一直显示，则需要在【偏好设置】中设置，操作步骤：文件→【偏好设置】→【字数统计→勾选【总是显示字数统计】</p>
+<h2 id="４-主题"><a href="#４-主题" class="headerlink" title="４.主题"></a>４.主题</h2><p>Typora提供了6款漂亮的主题供大家选择，每一个都很漂亮。可通过菜单栏上的【主题】进行切换，主题效果示例如下。</p>
+<img src="https://i.loli.net/2021/02/22/iWo9QbYaBORj8eJ.png" alt="image-20210221225358730" style="zoom: 50%;" />
+
+<h2 id="５-实时预览"><a href="#５-实时预览" class="headerlink" title="５.实时预览"></a>５.实时预览</h2><p>Typora编辑器最具特色的功能是实时预览，当输入Markdown标记后，按回车键或把光标定位到别的段落就能够看到预览效果。</p>
+<p><img src="https://i.loli.net/2021/02/22/lSFdOtoW8GZMY6I.png" alt="image-20210221225453060" style="zoom: 50%;" /><img src="https://i.loli.net/2021/02/22/KoVpm2PwGv7txSR.png" alt="image-20210221225512568" style="zoom:50%;" /></p>
+<img src="https://i.loli.net/2021/02/22/vZGjOwlsF9eCApK.png" alt="image-20210221225535733" style="zoom: 50%;" />
+
+<h2 id="6-安装Pandoc"><a href="#6-安装Pandoc" class="headerlink" title="6.安装Pandoc"></a>6.安装Pandoc</h2><p>Pandoc是一个标记语言转换工具，可实现不同标记语言间的格式转换。<br>Typora的文件导入/导出功能是使用Pandoc把Markdown文件转换成不同格式的文件，所以如果想使用文件导入/导出功能，必须要先安装Pandoc。<br>如果不安装Pandoc，Typora只支持导出HTML和PDF格式的文件。<br>如果安装了Pandoc，Typora支持的文件格式如下。<br>· 导入文件格式。<br>如.docx、.latex、.tex、.ltx，.rst、.rest、.org、.wiki、.dokuwiki、.textile、.opml、.epub等。<br>· 导出文件格式。<br>如HTML、PDF、Word、OpenOffice、RTF、ePub、LA<br> TEX、MediaWiki、PNG等。<br>Pandoc的安装步骤如下。<br>打开<a target="_blank" rel="noopener" href="https://github.com/jgm/pandoc/releases/latest%EF%BC%8C%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%9A%84%E5%AE%89%E8%A3%85%E5%8C%85%EF%BC%88%E6%B3%A8%E6%84%8F%E8%A6%81%E5%AF%B9%E5%BA%94%E6%9C%AC%E6%9C%BA%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%89%EF%BC%8C%E5%8F%8C%E5%87%BB%E5%90%8E%E6%8C%89%E7%85%A7%E6%8F%90%E7%A4%BA%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%AE%89%E8%A3%85%E5%8D%B3%E5%8F%AF%E3%80%82">https://github.com/jgm/pandoc/releases/latest，下载最新的安装包（注意要对应本机的操作系统），双击后按照提示一步一步安装即可。</a><br>macOS用户还可以使用home-brew进行安装。</p>
+<h2 id="7-高效地使用Markdown"><a href="#7-高效地使用Markdown" class="headerlink" title="7.高效地使用Markdown"></a>7.高效地使用Markdown</h2><p>Typora支持GFM，还扩展了很多其他的功能（如支持数学公式、上标、下标、高亮、各种图表等），它几乎为每一种标记都提供了快捷的操作方式，并且通过最佳实践规避了一些令人困惑的操作，这使我们的写作变得更加轻松。</p>
+<h2 id="8-基础语法和GFM语法"><a href="#8-基础语法和GFM语法" class="headerlink" title="8.基础语法和GFM语法"></a>8.基础语法和GFM语法</h2><p><strong>编辑段落:</strong></p>
+<p>在Typora中通过执行：菜单栏→【段落】→【段落/引用/表格/代码块/分隔线/有序列表/无序列表/任务列表】，可以添加或移除关于段落的标记符号。<br>a）段落与换行<br>在Markdown中，换行符是比较让人困惑的，对此，Typora的官方建议如下。<br>1）使用Typora的默认设置。<br>2）在Typora混合界面（预览界面）写作。<br>3）使用Enter键插入新段落，避免多插入空行。<br>4）如果要插入强制换行符，请使用HTML标签<br/>。<br>最通用的插入强制换行符的方法有两种。<br>1）在行尾加两个空格然后按回车键。<br>2）使用HTML标签<br/>实现换行，在默认情况下，<br/>不显示，若想显示可以执行：菜单栏→【编辑】→【空格与换行】→勾选【显示<br/>】。<br>在Typora中，还提供了一种快速换行的方法，确认勾选保留单换行符：菜单栏→【编辑】→【空格与换行】→勾选【保留单换行符】，然后使用快捷键Shift+Enter换行。<br>上述换行符可能在导出/打印时被忽略，请到【偏好设置】→【空格与换行】→【导出/打印】去设置是否忽略。</p>
+<p><strong>关于Typora中的段落需要知道下面几点内容:</strong><br>1）如果想要开始新的段落只需按一次回车键即可，所见即所得，查看源码你会发现Typora自动帮我们插入了一个空行。<br>2）在默认情况下，段落的首行没有缩进，但如果你习惯了首行缩进，可以这样设置：菜单栏→【编辑】→【空格与换行】→勾选【首行缩进】。<br>3）在表格或图表的前后插入段落不太方便，如果有此需求，可以在表格内单击鼠标右键→【插入】→选择【段落（上方）/段落（下方）】。</p>
+<h3 id="1-编辑样式"><a href="#1-编辑样式" class="headerlink" title="1. 编辑样式"></a>1. 编辑样式</h3><p>在Typora中通过执行：菜单栏→【格式】→【加粗/斜体/代码（行内代码）/图像/超链接】可以添加或移除关于文字样式<br> 的标记符号。如果没有选中文字，则只会添加标记符号；如果选中了文字，则会为选中的文字添加或移除标记符号。<br>相关样式的快捷键如下。</p>
+<img src="https://i.loli.net/2021/02/22/d6Z1YRqukbBS4Wy.png" alt="image-20210221225744873" style="zoom: 50%;" />
+
+<h3 id="2-标题设置"><a href="#2-标题设置" class="headerlink" title="2. 标题设置"></a>2. 标题设置</h3><p><strong>对标题进行设置的快捷键如下:</strong></p>
+<img src="https://i.loli.net/2021/02/22/E16wjuFhPSHJtX4.png" alt="image-20210221230622903" style="zoom: 50%;" />
+
+<p><strong>小提示：</strong><br> 当标题的级别过多时，除了查看源码，肉眼很难区分它们，有没有什么办法可以更好地区分标题的级别呢?有，把光标放在标题行的任意位置，在标题行的左上角会显示标题的级别（h3/h4/h5），一级和二级标题不显示。</p>
+<h3 id="3-列表设置"><a href="#3-列表设置" class="headerlink" title="3. 列表设置"></a>3. 列表设置</h3><p>Typora支持有序列表、无序列表和任务列表，它们之间可以通过快捷键实现快速切换，还可以使用列表缩进功能快速调整缩进，使用起来非常方便。与列表操作相关的快捷键如下表所示:</p>
+<img src="https://i.loli.net/2021/02/22/goiqYI2UvC7xEOs.png" alt="image-20210221230804645" style="zoom: 50%;" />
+
+<p><strong>小提示:</strong><br>1）当光标放在任务列表上时，任务状态被激活，这时才可以“切换任务状态”。<br>2）列表和代码块都可以使用“增加缩进”和“减少缩进”。<br>效果如下图所示:</p>
+<img src="https://i.loli.net/2021/02/22/8ZI7xlHwheOjzcP.png" alt="image-20210221231012999" style="zoom: 50%;" />
+
+<h3 id="4-引用和水平分隔线"><a href="#4-引用和水平分隔线" class="headerlink" title="4. 引用和水平分隔线"></a>4. 引用和水平分隔线</h3><p>与引用和水平分割线相关的快捷键如下:</p>
+<img src="https://i.loli.net/2021/02/22/EOaILm5oBKYCVt3.png" alt="image-20210221231637492" style="zoom: 50%;" />
+
+<h3 id="5-创建表格"><a href="#5-创建表格" class="headerlink" title="5.创建表格"></a>5.创建表格</h3><p>如果想创建一个表格，可以执行：菜单栏→【段落】→【表格】→输入列数和行数→单击【确定】按钮。创建表格的快捷键如下。</p>
+<img src="https://i.loli.net/2021/02/22/uhWOwCSe4qDYvVa.png" alt="image-20210221231746145" style="zoom: 50%;" />
+
+<p>除上面所讲的方法外，还有一种可以快速创建表格的比较酷的方式：输入表头的标记语法，在最后一个|之后按回车键。</p>
+<h4 id="a-增加行-删除行、复制表格、格式化表格"><a href="#a-增加行-删除行、复制表格、格式化表格" class="headerlink" title="a)增加行/删除行、复制表格、格式化表格:"></a>a)<strong>增加行/删除行、复制表格、格式化表格:</strong></h4><p>​    对于表格的增加、删除、复制和格式化操作，可以在表格中单击鼠标右键，选择【表格】，通过其列出的操作选项对表格进行操作，如下图所示:</p>
+<img src="https://i.loli.net/2021/02/22/qbFNjKQGeEncaRZ.png" alt="image-20210221233312913" style="zoom:50%;" />
+
+<p><strong>相关快捷键如下:</strong></p>
+<img src="https://i.loli.net/2021/02/22/ZXz8qtxNMpYnFAK.png" alt="image-20210221233437566" style="zoom:50%;" />
+
+<h4 id="b-快速调整表格"><a href="#b-快速调整表格" class="headerlink" title="b)快速调整表格:"></a>b)<strong>快速调整表格:</strong></h4><p>如果想快速调整表格的行数、列数、对齐方式，可以将光标放在表格中，表格左上方和右上方都会显示操作菜单，直接进行操作即可，如下所示:</p>
+<img src="https://i.loli.net/2021/02/22/YzDqFoSTEaQx9Z4.png" alt="image-20210221233536647" style="zoom:50%;" />
+
+<p>如果想调整表格中行或列的顺序，可将光标放在行的最左边或列的最上边，待光标变成双向箭头后拖动即可调整顺序，如下图所示:</p>
+<img src="https://i.loli.net/2021/02/22/ukpNn8i6xoYy3s7.png" alt="image-20210221233610573" style="zoom:50%;" />
+
+<h3 id="6-插入围栏代码块"><a href="#6-插入围栏代码块" class="headerlink" title="6.插入围栏代码块"></a>6.插入围栏代码块</h3><p>如果想添加或删除围栏代码块的标记，可以执行：菜单栏→【段落】→【代码块】。如果想把某段内容使用围栏代码块包裹，需要先选中该内容，然后执行上述操作。<br>相关快捷键如下:</p>
+<img src="https://i.loli.net/2021/02/22/8NZESep2lnDCkIy.png" alt="image-20210221233806480" style="zoom:67%;" />
+
+<p><strong>如果想声明语言，将光标放在代码块中，在代码块右下角的【选择语言】中输入编程语言就可以了。</strong></p>
+<ol>
+<li>显示代码行数。<br> 代码块默认是不显示代码行数的，如果想显示，则需要执行：文件→【偏好设置】→【代码块】→勾选【显示行号】。</li>
+<li>自动换行。<br> 在代码块中，如果代码过长，默认是会自动换行的，如果我们不希望代码自动换行，可以执行：文件→【偏好设置】→【代码块】→不勾选【代码块自动换行】。</li>
+</ol>
+<h2 id="Typora扩展语法"><a href="#Typora扩展语法" class="headerlink" title="Typora扩展语法"></a>Typora扩展语法</h2><p>Typora扩展了下画线、数学公式、目录、脚注、上标和下标、图表操作等功能，并且支持很多HTML标签，使排版格式变得更加齐全。</p>
+<h3 id="1-编辑样式-1"><a href="#1-编辑样式-1" class="headerlink" title="1.编辑样式"></a>1.编辑样式</h3><h4 id="a）下画线"><a href="#a）下画线" class="headerlink" title="a）下画线"></a>a）下画线</h4><p>在Typora中，下画线是通过HTML的<u>标签实现的，其语法如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;u&gt;这段文字由下划线&lt;u&gt;</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<p><u>这段文字由下划线</u>  </p>
+<p>相关快捷键如下:</p>
+<img src="https://i.loli.net/2021/02/22/vYmFkOS7GhUtape.png" alt="image-20210221234520890" style="zoom:50%;" />
+
+<h4 id="b）内联数学公式"><a href="#b）内联数学公式" class="headerlink" title="b）内联数学公式"></a>b）内联数学公式</h4><p>如果想使用内联数学公式，需要先激活：【偏好设置】→【Markdown扩展语法】→勾选【内联公式】→重启Typora，内联数学公式的语法是使用$把数学公式包裹起来，如下所示:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$数学公式$</span><br></pre></td></tr></table></figure>
+
+<p>实例演示如下:</p>
+<img src="https://i.loli.net/2021/02/22/cCHvuWDZxfpmK7T.png" alt="image-20210221234655883" style="zoom:50%;" />
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">分数:$f(x,y)&#x3D;\frac&#123;x^2&#125;&#123;y^3&#125;$</span><br><span class="line"></span><br><span class="line">开根号:$f(x,y)&#x3D;\sqrt[n]&#123;&#123;x^2&#125;&#123;y^3&#125;&#125;$</span><br><span class="line"></span><br><span class="line">省略号:$f(x_1,y_2,\ldots,x_n)&#x3D;x_1+X_2+\cdots+x_n$</span><br></pre></td></tr></table></figure>
+
+<p>设置内联数学公式的快捷键如下:</p>
+<p><img src="https://i.loli.net/2021/03/17/PaCBKUDdo2e6LN7.png" alt="image-20210221235156119"></p>
+<h4 id="c）下标和上标"><a href="#c）下标和上标" class="headerlink" title="c）下标和上标"></a>c）下标和上标</h4><p>如果想使用上标和下标，需要先激活：【偏好设置】→【Markdown扩展语法】→勾选【下标】、【上标】→重启Typora，其语法如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A~下标~</span><br><span class="line">A^上标^</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<p><strong>A<del>上标</del><br>A^下标^</strong></p>
+<p>语法说明如下。<br>1）使用~把下标内容包裹起来。<br>2）使用^把上标内容包裹起来。</p>
+<h4 id="d）高亮"><a href="#d）高亮" class="headerlink" title="d）高亮"></a>d）高亮</h4><p>如果想使用高亮功能，需要先激活：【偏好设置】→【Markdown扩展语法】→勾选【高亮】→重启Typora，其语法如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x3D;&#x3D;高亮&#x3D;&#x3D;</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<p>==高亮==</p>
+<p>语法说明如下:<br>1）使用两个等号（=）把想要高亮的内容包裹起来。<br>2）设置为高亮的内容显示为黄色。</p>
+<p>设置高亮效果的快捷键如下:</p>
+<img src="https://i.loli.net/2021/02/25/srEPvhC9zA8L3Gn.png" alt="image-20210221235953022" style="zoom:50%;" />
+
+<p>e）注释<br>如果想添加注释，可以执行：菜单栏→【格式】→【注释】。在编辑和预览时，注释的内容会被显示；在导出PDF或Word时，则会被隐藏。<br>设置注释的语法如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--注释--&gt;</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<!--注释-->
+
+
+
+<p>设置注释的快捷键如下:</p>
+<img src="https://i.loli.net/2021/02/25/srEPvhC9zA8L3Gn.png" alt="image-20210222000222918" style="zoom:50%;" />
+
+<h4 id="f）清除样式"><a href="#f）清除样式" class="headerlink" title="f）清除样式"></a>f）清除样式</h4><p>如果想快速清除样式，可以执行：菜单栏→【格式】→【清除样式】。<br>清除样式的快捷键如下:</p>
+<img src="https://i.loli.net/2021/02/25/jWoXMRTH6nIisAD.png" alt="image-20210222000259588" style="zoom:50%;" />
+
+<h3 id="2-编辑段落"><a href="#2-编辑段落" class="headerlink" title="2.编辑段落"></a>2.编辑段落</h3><h4 id="a）数学公式块"><a href="#a）数学公式块" class="headerlink" title="a）数学公式块"></a>a）数学公式块</h4><p>专业的写作离不开数学公式，Typora对此做了很好的支持，其语法是使用两个$包裹数学公式，如下所示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">数学公式</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+
+<p>示例:<br>$$<br>数学公式<br>$$<br>为某段内容添加或删除公式块，需要先选中该内容，然后执行：菜单栏→【段落】→【公式块】。如果不选中任何内容，直接执行：菜单栏→【段落】→【公式块】，则会插入公式块标记。<br>公式块快捷键如下:</p>
+<img src="https://i.loli.net/2021/02/25/ukQ7M9hR5NFBx3y.png" alt="image-20210222000550136" style="zoom:50%;" />
+
+<h4 id="b）目录"><a href="#b）目录" class="headerlink" title="b）目录"></a>b）目录</h4><p>在Typora中，可以自动获取文章的标题来生成目录，当标题修改时，目录会随之自动更新，使用起来非常方便，其语法如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[TOC]</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<p>本目录</p>
+<p>语法说明如下。<br>1）TOC是Table of Contents的缩写。<br>2）在想插入目录的位置输入[TOC]，按回车键后就可以自动生成文章的目录了。<br>直接输入[TOC]标记已经很简便了，可如果我们忘记了语法，也可以执行：菜单栏→【段落】→【内容目录】。</p>
+<h4 id="c）脚注"><a href="#c）脚注" class="headerlink" title="c）脚注"></a>c）脚注</h4><p>添加脚注的语法如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">脚注[^参考]</span><br><span class="line">[^脚注]:对脚注的描述</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>脚注<a href="%E5%AF%B9%E8%84%9A%E6%B3%A8%E7%9A%84%E6%8F%8F%E8%BF%B0">^参考</a></p>
+<p>插入脚注的快捷键如下：</p>
+<p><img src="https://i.loli.net/2021/03/17/XSocNwDVOjZAzGd.png" alt="image-20210225211138538"></p>
+<h4 id="d）图表（序列图、流程图和Mermaid）"><a href="#d）图表（序列图、流程图和Mermaid）" class="headerlink" title="d）图表（序列图、流程图和Mermaid）"></a>d）图表（序列图、流程图和Mermaid）</h4><p>如果想使用图表功能，需要先激活：文件→【偏好设置】→【Markdown扩展语法】→勾选【图表】→重启Typora。<br>需要注意如下几点。<br>1）图表是Typora的扩展语法，标准的Markdown语法、CommonMark和GFM都不支持这一语法。<br>2）如果想要把图表使用到更多的地方，推荐直接插入图片，不推荐在Typora中进行绘制。<br>3）在Typora中，图表在导出HTML/PDF/ePub/docx等格式的文件时会被正常显示，但是其他的Markdown编辑器不一定支持此语法。</p>
+<ul>
+<li><blockquote>
+<p> <strong>序列图</strong><br> <strong>序列图</strong>（<strong>Sequence</strong> <strong>Diagram</strong>）<strong>也被称为循序图</strong>，<strong>是一种UML（Unified Modeling Language，统一建模语言）行为图，它通过描述对象之间发送消息的时间顺序显示多个对象之间的动态协作。</strong></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">​&#96;&#96;&#96;sequence</span><br><span class="line">js-sequence-diagrams</span><br><span class="line">​&#96;&#96;&#96;</span><br></pre></td></tr></table></figure>
+
+<p> 语法说明如下。<br> 1）使用3个`+sequence包裹js-sequence-diagrams语法。<br> 2）js-sequence-diagrams语法参考<a target="_blank" rel="noopener" href="https://bramp.github.io/js-sequence-diagrams/%E3%80%82">https://bramp.github.io/js-sequence-diagrams/。</a><br> 实例演示如下。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">张三-&gt;李四:吃了吗？</span><br><span class="line">Note right of 李四:我显示在张李四右边</span><br><span class="line">李四--&gt;张三:好久不见</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li><blockquote>
+<p>· <strong>流程图</strong><br><strong>流程图是以图像的方式表示过程、算法和流程的，Typora提供的流程图语法标记是基于开源项目（flowchart.js）开发的，其语法如下</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">​&#96;&#96;&#96;flow</span><br><span class="line">flowchart.js语法</span><br><span class="line">​&#96;&#96;&#96;</span><br></pre></td></tr></table></figure>
+
+<p>语法说明如下。<br>1）使用3个`+flow包裹flowchart.js语法。<br>2）flowchart.js语法参考<a target="_blank" rel="noopener" href="http://flowchart.js.org/%E3%80%82">http://flowchart.js.org/。</a><br>实例演示如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始</span><br><span class="line">op&#x3D;&gt;operation: 我是帅哥?</span><br><span class="line">cond&#x3D;&gt;condition: yes or no?</span><br><span class="line">e&#x3D;&gt;end: 结束</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li><blockquote>
+<p><strong>Mermaid</strong><br><strong>Typora集成了Mermaid，Mermaid支持使用文本的方式生成图表，包括序</strong></p>
+<p><strong>列图、流程图和甘特图。</strong><br><strong>1）Mermaid序列图的语法如下（可参考</strong><a target="_blank" rel="noopener" href="https://knsv.github.io/mermaid/#loops32%EF%BC%89%E3%80%82">https://knsv.github.io/mermaid/#loops32）。</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">​&#96;&#96;&#96;mermaid</span><br><span class="line">mermaid序列图语法</span><br><span class="line">​&#96;&#96;&#96;</span><br></pre></td></tr></table></figure>
+
+<p>示例如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">%% 注释</span><br><span class="line">sequenceDiagram</span><br><span class="line">张三-&gt;李四:吃了吗？</span><br><span class="line">Note right of 李四:我显示在张李四右边</span><br><span class="line">李四--&gt;张三:好久不见</span><br></pre></td></tr></table></figure>
+
+<p><strong>2）Mermaid流程图的语法如下（可参考<a target="_blank" rel="noopener" href="https://knsv.github.io/mermaid/#graph18%EF%BC%89%E3%80%82">https://knsv.github.io/mermaid/#graph18）。</a></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">​&#96;&#96;&#96;mermaid</span><br><span class="line">mermaid流程图语法</span><br><span class="line">​&#96;&#96;&#96;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">A[开始]--&gt;B(我是帅哥)</span><br><span class="line">B--&gt;C(yes or no)</span><br><span class="line">C--&gt;|Yes|D(结束)</span><br><span class="line">C--&gt;|No|B</span><br></pre></td></tr></table></figure>
+
+<p><strong>3）Mermaid甘特图。</strong><br><strong>甘特图（Gantt chart）是将活动与时间联系起来的一种图表形式，能够显示每个活动的历时长短。甘特图很清晰地标识出每一项任务的起始与结束时间，通常在项目管理中使用，方便人们从时间上整体把握项目进度。</strong><br><strong>Mermaid甘特图的语法如下（可参考<a target="_blank" rel="noopener" href="http://knsv.github.io/mermaid/index.html#mermaid-cli%EF%BC%89%E3%80%82">http://knsv.github.io/mermaid/index.html#mermaid-cli）。</a></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">​&#96;&#96;&#96;mermaid</span><br><span class="line">mermaid甘特图语法</span><br><span class="line">​&#96;&#96;&#96;</span><br></pre></td></tr></table></figure>
+
+<p>示例如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gantt</span><br><span class="line">dateFormat YYYY-MM-DD</span><br><span class="line">	title 项目开发周期</span><br><span class="line">	section 需求评审</span><br><span class="line">	需求评审	:2018-01-01,2018-01-02</span><br><span class="line">	section 功能开发</span><br><span class="line">	开发编码	:2018-01-03,2018-01-09</span><br><span class="line">	开发自测	:2018-01-08,2018-01-09</span><br><span class="line">	section 项目测试</span><br><span class="line">	第一轮测试	:2018-01-09,2018-01-14</span><br><span class="line">	第二轮测试	:2018-01-14,2018-01-16</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+</ul>
+<h3 id="3-使用HTML标签"><a href="#3-使用HTML标签" class="headerlink" title="3.使用HTML标签"></a>3.使用HTML标签</h3><p><strong>Typora还支持很多常用的HTML标签，使用这些标签可以让样式更加丰富，但这也导致纯粹的写作变得更加复杂，提高了用户使用的门槛，因此我们在此只列举几个简单的例子作为参考。</strong></p>
+<h4 id="a）文字颜色和大小"><a href="#a）文字颜色和大小" class="headerlink" title="a）文字颜色和大小"></a>a）文字颜色和大小</h4><p>示例代码如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">推荐使用样式给文字添加颜色</span><br><span class="line">&lt;span style&#x3D;&quot;color:green&quot;&gt; 绿色 &lt;&#x2F;span&gt;&lt;span style&#x3D;&quot;color:#fa0;font-size:20px&quot;&gt;黄色&lt;&#x2F;span&gt;&lt;span style&#x3D;&quot;color:red;font-size:30px&quot;&gt;红色&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>示例推荐使用样式给文字添加颜色<br><span style="color:green"> 绿色 </span><span style="color:#fa0;font-size:20px">黄色</span><span style="color:red;font-size:30px">红色</span></p>
+<h4 id="b）嵌入网页"><a href="#b）嵌入网页" class="headerlink" title="b）嵌入网页"></a>b）嵌入网页</h4><p>示例代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe height&#x3D;&#39;265&#39;	scrolling&#x3D;&#39;yes&#39;	title&#x3D;&#39;百 度 首 页&#39;src&#x3D;&#39;http:&#x2F;&#x2F;www.baidu.com&#39; frameborder&#x3D;&#39;no&#39; allowtransparemcy&#x3D;&#39;ture&#39; allowfullscreen&#x3D;&#39;true&#39; style&#x3D;&#39;width:100%&#39;&gt;&lt;&#x2F;iframe&gt;e&gt;</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<iframe height='265'    scrolling='yes'    title='百 度 首 页'src='http://www.baidu.com' frameborder='no' allowtransparemcy='ture' allowfullscreen='true' style='width:100%'></iframe>
+
+<p>注意：<br> 内嵌的网页在导出文件时是无法显示的。</p>
+<h4 id="c）插入视频"><a href="#c）插入视频" class="headerlink" title="c）插入视频"></a>c）插入视频</h4><p>示例代码如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;video src&#x3D;&quot;.imgs&#x2F;video.mov&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;video src=&quot;路径&quot;/&gt;</code></p>
+<p> 内嵌的视频在导出文件时是无法显示的。<br>这些标签的使用专业要求相对较高，不适合普通读者，感兴趣的读者可以到<a target="_blank" rel="noopener" href="https://support.typora.io/HTML/%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A%E3%80%82">https://support.typora.io/HTML/了解更多。</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/essay/" rel="tag"># essay</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-2/" rel="prev" title="数据结构-2">
+      <i class="fa fa-chevron-left"></i> 数据结构-2
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C-1/" rel="next" title="数据结构实验-1">
+      数据结构实验-1 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+          
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Typora%E6%98%AF%E7%9B%AE%E5%89%8D%E6%9C%80%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84Markdown%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8B%E4%B8%80%E3%80%82%E5%AE%83%E7%9A%84%E4%B8%BB%E8%A6%81%E7%89%B9%E6%80%A7%E5%A6%82%E4%B8%8B%E3%80%82"><span class="nav-number">1.</span> <span class="nav-text">1.Typora是目前最受欢迎的Markdown编辑器之一。它的主要特性如下。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%95%8C%E9%9D%A2%E6%A6%82%E8%A7%88"><span class="nav-number">2.</span> <span class="nav-text">2.界面概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="nav-number">3.</span> <span class="nav-text">3.字数统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%94-%E4%B8%BB%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">４.主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%95-%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88"><span class="nav-number">5.</span> <span class="nav-text">５.实时预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%AE%89%E8%A3%85Pandoc"><span class="nav-number">6.</span> <span class="nav-text">6.安装Pandoc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E9%AB%98%E6%95%88%E5%9C%B0%E4%BD%BF%E7%94%A8Markdown"><span class="nav-number">7.</span> <span class="nav-text">7.高效地使用Markdown</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%92%8CGFM%E8%AF%AD%E6%B3%95"><span class="nav-number">8.</span> <span class="nav-text">8.基础语法和GFM语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%BC%96%E8%BE%91%E6%A0%B7%E5%BC%8F"><span class="nav-number">8.1.</span> <span class="nav-text">1. 编辑样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%A0%87%E9%A2%98%E8%AE%BE%E7%BD%AE"><span class="nav-number">8.2.</span> <span class="nav-text">2. 标题设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%88%97%E8%A1%A8%E8%AE%BE%E7%BD%AE"><span class="nav-number">8.3.</span> <span class="nav-text">3. 列表设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%BC%95%E7%94%A8%E5%92%8C%E6%B0%B4%E5%B9%B3%E5%88%86%E9%9A%94%E7%BA%BF"><span class="nav-number">8.4.</span> <span class="nav-text">4. 引用和水平分隔线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%88%9B%E5%BB%BA%E8%A1%A8%E6%A0%BC"><span class="nav-number">8.5.</span> <span class="nav-text">5.创建表格</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a-%E5%A2%9E%E5%8A%A0%E8%A1%8C-%E5%88%A0%E9%99%A4%E8%A1%8C%E3%80%81%E5%A4%8D%E5%88%B6%E8%A1%A8%E6%A0%BC%E3%80%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%A1%A8%E6%A0%BC"><span class="nav-number">8.5.1.</span> <span class="nav-text">a)增加行&#x2F;删除行、复制表格、格式化表格:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#b-%E5%BF%AB%E9%80%9F%E8%B0%83%E6%95%B4%E8%A1%A8%E6%A0%BC"><span class="nav-number">8.5.2.</span> <span class="nav-text">b)快速调整表格:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%8F%92%E5%85%A5%E5%9B%B4%E6%A0%8F%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">8.6.</span> <span class="nav-text">6.插入围栏代码块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95"><span class="nav-number">9.</span> <span class="nav-text">Typora扩展语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%BC%96%E8%BE%91%E6%A0%B7%E5%BC%8F-1"><span class="nav-number">9.1.</span> <span class="nav-text">1.编辑样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a%EF%BC%89%E4%B8%8B%E7%94%BB%E7%BA%BF"><span class="nav-number">9.1.1.</span> <span class="nav-text">a）下画线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#b%EF%BC%89%E5%86%85%E8%81%94%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F"><span class="nav-number">9.1.2.</span> <span class="nav-text">b）内联数学公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#c%EF%BC%89%E4%B8%8B%E6%A0%87%E5%92%8C%E4%B8%8A%E6%A0%87"><span class="nav-number">9.1.3.</span> <span class="nav-text">c）下标和上标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#d%EF%BC%89%E9%AB%98%E4%BA%AE"><span class="nav-number">9.1.4.</span> <span class="nav-text">d）高亮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#f%EF%BC%89%E6%B8%85%E9%99%A4%E6%A0%B7%E5%BC%8F"><span class="nav-number">9.1.5.</span> <span class="nav-text">f）清除样式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%BC%96%E8%BE%91%E6%AE%B5%E8%90%BD"><span class="nav-number">9.2.</span> <span class="nav-text">2.编辑段落</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a%EF%BC%89%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E5%9D%97"><span class="nav-number">9.2.1.</span> <span class="nav-text">a）数学公式块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#b%EF%BC%89%E7%9B%AE%E5%BD%95"><span class="nav-number">9.2.2.</span> <span class="nav-text">b）目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#c%EF%BC%89%E8%84%9A%E6%B3%A8"><span class="nav-number">9.2.3.</span> <span class="nav-text">c）脚注</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#d%EF%BC%89%E5%9B%BE%E8%A1%A8%EF%BC%88%E5%BA%8F%E5%88%97%E5%9B%BE%E3%80%81%E6%B5%81%E7%A8%8B%E5%9B%BE%E5%92%8CMermaid%EF%BC%89"><span class="nav-number">9.2.4.</span> <span class="nav-text">d）图表（序列图、流程图和Mermaid）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BD%BF%E7%94%A8HTML%E6%A0%87%E7%AD%BE"><span class="nav-number">9.3.</span> <span class="nav-text">3.使用HTML标签</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a%EF%BC%89%E6%96%87%E5%AD%97%E9%A2%9C%E8%89%B2%E5%92%8C%E5%A4%A7%E5%B0%8F"><span class="nav-number">9.3.1.</span> <span class="nav-text">a）文字颜色和大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#b%EF%BC%89%E5%B5%8C%E5%85%A5%E7%BD%91%E9%A1%B5"><span class="nav-number">9.3.2.</span> <span class="nav-text">b）嵌入网页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#c%EF%BC%89%E6%8F%92%E5%85%A5%E8%A7%86%E9%A2%91"><span class="nav-number">9.3.3.</span> <span class="nav-text">c）插入视频</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="apricot502"
+      src="/images/cat.jpg">
+  <p class="site-author-name" itemprop="name">apricot502</p>
+  <div class="site-description" itemprop="description">画图小能手</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/apricot502" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;apricot502" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2325734891@qq.com" title="E-Mail → mailto:2325734891@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2021-3-9 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">apricot502</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
