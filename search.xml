@@ -238,7 +238,7 @@
 <li><p>大小固定，创建好数组时一旦指定好大小，就不会再发生改变</p>
 </li>
 </ul>
-<p><img src="numpy.assets/image-20210403204412903.png" alt="image-20210403204412903"></p>
+<p><img src="https://i.loli.net/2021/04/18/PqBUfcVO9YpxgIN.png"></p>
 <p><strong>ndarry属性:</strong></p>
 <ul>
 <li>ndim 维度数量</li>
@@ -248,21 +248,156 @@
 <p>创建一个三维数组如下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a&#x3D;np.array([[[3.4,5,6,8],[3,2.4,5,7]],[[2.3,4,5,6],[0.9,5,6,1]],[[9,6.7,3,2],[1,3,4,5]]])</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
 
-<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403210227.png" alt="image-20210403210224915"></p>
+<p>实例：<img src="https://i.loli.net/2021/04/18/KC9zbanuTiD68lv.png"></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 数组维度</span><br><span class="line">a.ndim</span><br></pre></td></tr></table></figure>
 
 <p>实例:</p>
-<p><img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403205943.png" alt="image-20210403205941211"></p>
+<p><img src="https://i.loli.net/2021/04/18/jOuyGtevK2LIrhn.png"></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#数组元素类型</span><br><span class="line">a.dtype</span><br></pre></td></tr></table></figure>
 
-<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403210415.png" alt="image-20210403210413142"></p>
+<p>实例：<img src="https://i.loli.net/2021/04/18/MgvLAhsR6DuI1Vm.png"></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 数组形状</span><br><span class="line">a.shape</span><br></pre></td></tr></table></figure>
 
-<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403210529.png" alt="image-20210403210528064"></p>
+<p>实例：<img src="https://i.loli.net/2021/04/18/PyGjL9gBzeMQVsW.png"></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 数组元素总个数</span><br><span class="line">a.size</span><br></pre></td></tr></table></figure>
 
-<p>实例：<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403210652.png" alt="image-20210403210650997"></p>
-<h3 id="2-ndarray的常见创建方式"><a href="#2-ndarray的常见创建方式" class="headerlink" title="2.ndarray的常见创建方式"></a>2.ndarray的常见创建方式</h3>]]></content>
+<p>实例：<img src="https://i.loli.net/2021/04/18/M5HPviyEdCB7WX4.png"></p>
+<h3 id="2-ndarray的常见创建方式"><a href="#2-ndarray的常见创建方式" class="headerlink" title="2.ndarray的常见创建方式"></a>2.ndarray的常见创建方式</h3><ul>
+<li>array函数：接收一个普通的Python序列，转成ndarray，即np.array(列表，元组都可)</li>
+<li>zeros函数：创建指定长度或形状的全零数组，即np.zeros(列表，元组都可)</li>
+<li>ones函数：创建指定长度或形状的全1数组，即np.ones(列表，元组都可)</li>
+<li>empty函数：创建一个没有任何具体值的数组（准确地说是一些未初始化的垃圾值），即np.empty(列表，元组都可)</li>
+</ul>
+<h4 id="array-object-dtype-None-copy-True-order-’K’-subok-False-ndmin-0-函数创建："><a href="#array-object-dtype-None-copy-True-order-’K’-subok-False-ndmin-0-函数创建：" class="headerlink" title="array(object, dtype=None, copy=True, order=’K’, subok=False, ndmin=0)函数创建："></a>array(object, dtype=None, copy=True, order=’K’, subok=False, ndmin=0)函数创建：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a&#x3D;np.array([[[3.4,5,6,8],[3,2.4,5,7]],[[2.3,4,5,6],[0.9,5,6,1]],[[9,6.7,3,2],[1,3,4,5]]])</span><br><span class="line">a</span><br><span class="line">b&#x3D;np.array((((3.4,5,6,8),(3,2.4,5,7)),((2.3,4,5,6),(0.9,5,6,1)),((9,6.7,3,2),(1,3,4,5))))</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/04/18/o4KE7p9ZAhbqTrW.png" alt="image-20210418185611871" style="zoom:67%;" /></p>
+<img src="https://i.loli.net/2021/04/18/lPnUeDgaJEvV7Lm.png" alt="image-20210418185941331" style="zoom:67%;" />
+
+<h4 id="zeros-shape-dtype-float-order-’C’-函数的创建："><a href="#zeros-shape-dtype-float-order-’C’-函数的创建：" class="headerlink" title="zeros(shape, dtype=float, order=’C’)函数的创建："></a>zeros(shape, dtype=float, order=’C’)函数的创建：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">np.zeros((3,4))</span><br><span class="line">np.zeros([2,5])</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/04/18/5Cnt1WXsEdALwkO.png" alt="image-20210418190329681"></p>
+<p><img src="https://i.loli.net/2021/04/18/nEj26Mw3g4HIPXK.png" alt="image-20210418190511712"></p>
+<h4 id="np-ones-shape-dtype-None-order-’C’-函数的创建："><a href="#np-ones-shape-dtype-None-order-’C’-函数的创建：" class="headerlink" title="np.ones(shape, dtype=None, order=’C’)函数的创建："></a>np.ones(shape, dtype=None, order=’C’)函数的创建：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">np.ones([3,4])</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/04/18/lgJTXPrSj9iUWEQ.png" alt="image-20210418190806746"></p>
+<h4 id="empty-shape-dtype-float-order-’C’-函数的创建："><a href="#empty-shape-dtype-float-order-’C’-函数的创建：" class="headerlink" title="empty(shape, dtype=float, order=’C’)函数的创建："></a>empty(shape, dtype=float, order=’C’)函数的创建：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">np.empty([2,5])</span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<p><img src="https://i.loli.net/2021/04/18/DZS783g9QIxb6Av.png" alt="image-20210418191427532"></p>
+<h3 id="3-ndarray的其他创建方式"><a href="#3-ndarray的其他创建方式" class="headerlink" title="3.ndarray的其他创建方式"></a>3.ndarray的其他创建方式</h3><ul>
+<li>arrange函数：类似于python的range函数，通过指定开始值、终值和步长来创建一维数组，注意数组不包括终值</li>
+<li>linspace函数：通过指定开始值、终值和元素个数来创建一维数组，可以通过endpoint关键字指定是否包括终值，缺省设置是包括终值</li>
+<li>logspace函数：和linspace类似，不过它创建等比数列</li>
+<li>使用随机数填充数组，即使用numpy.random模块的random()函数，数组所包含的的元素数量由参数决定</li>
+</ul>
+<h4 id="arange-start-stop-step-dtype-None-函数"><a href="#arange-start-stop-step-dtype-None-函数" class="headerlink" title="arange([start,] stop[, step,], dtype=None)函数"></a>arange([start,] stop[, step,], dtype=None)函数</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">np.arange(1,9)</span><br><span class="line">np.arange(1,9，2)</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/04/18/mi1abQjnqO3eHGS.png" alt="image-20210418192045386"></p>
+<p><img src="https://i.loli.net/2021/04/18/ra2CE3dousH6pcP.png" alt="image-20210418192119788"></p>
+<h4 id="np-linspace-函数"><a href="#np-linspace-函数" class="headerlink" title="np.linspace()函数"></a>np.linspace()函数</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">np.linspace(</span><br><span class="line">    start,</span><br><span class="line">    stop,</span><br><span class="line">    num&#x3D;50,</span><br><span class="line">    endpoint&#x3D;True,</span><br><span class="line">    retstep&#x3D;False,</span><br><span class="line">    dtype&#x3D;None,</span><br><span class="line">    axis&#x3D;0,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">np.linspace(0,50,6)</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/04/18/B4EvnIgqyidCbUT.png" alt="image-20210418201650986"></p>
+<p>补充：.reshap()</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#reshape()函数可以改变数组的形状，但是注意元素总个数不能改变</span><br><span class="line">np.linspace(0,50,6).reshape(2,3)</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/04/18/Z1N8RTt3AiIeq2z.png" alt="image-20210418203630662"></p>
+<p>np.logsapce()函数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">np.logspace(</span><br><span class="line">    start,</span><br><span class="line">    stop,</span><br><span class="line">    num&#x3D;50,</span><br><span class="line">    endpoint&#x3D;True,</span><br><span class="line">    base&#x3D;10.0,</span><br><span class="line">    dtype&#x3D;None,</span><br><span class="line">    axis&#x3D;0,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#0表示0次方，2表示2次方，6表示数组元素个数</span><br><span class="line">np.logspace(0,2,6)</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/04/18/wz7ZF4WMecb9yOq.png" alt="image-20210418203318766"></p>
+<p>random函数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#返回[0,1)之间的随机数float,只能输入一个参数</span><br><span class="line">np.random.random_sample(5)</span><br><span class="line">np.random.random(2)</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/04/18/sqzWYHMiJIvgkaZ.png" alt="image-20210418205145601"></p>
+<h3 id="4-NumPy中的数据类型"><a href="#4-NumPy中的数据类型" class="headerlink" title="4.NumPy中的数据类型"></a>4.NumPy中的数据类型</h3><ul>
+<li>数值型dtype的命名方式：一个类型名（比如int、float），后面接着一个用于表 示各元素位长的数字</li>
+<li>比如表中的双精度浮点值，即Python中的float对象，需要占用8个字节（即64位），因此该 类型在NumPy中就记为float64</li>
+<li>每种类型有一个相对应的类型代码，即简写方式，参照下面的表</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>类型代码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int_</td>
+<td></td>
+<td>默认整型（与C中的long相同，通常为int64或者int32）</td>
+</tr>
+<tr>
+<td>intc</td>
+<td></td>
+<td>完全等同于C中的long（通常为int64或者int32）</td>
+</tr>
+<tr>
+<td>intp</td>
+<td></td>
+<td>表示索引的整型，与C中的size_t相同，通常为int64或者int32</td>
+</tr>
+<tr>
+<td>int8</td>
+<td>i1</td>
+<td>字节（-128~127），1个字节</td>
+</tr>
+<tr>
+<td>int16</td>
+<td>i2</td>
+<td>整型（-32768~32767），2个字节</td>
+</tr>
+<tr>
+<td>int32</td>
+<td>i4</td>
+<td>整型（-2147483648~2147483647），4个字节</td>
+</tr>
+<tr>
+<td>int64</td>
+<td>i8</td>
+<td>整型（-9223372036854775808~9223372036854775807）8 字节</td>
+</tr>
+<tr>
+<td>uint8</td>
+<td>u1</td>
+<td>无符号整型（0~255）</td>
+</tr>
+<tr>
+<td>uint16</td>
+<td>u2</td>
+<td>无符号整型（0~65535）</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>uint32</th>
+<th>u4</th>
+<th>无符号整型（0~4294967295）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>uint64</td>
+<td>u8</td>
+<td>无符号整型（0~18446744073709551615）</td>
+</tr>
+</tbody></table>
+<p><strong>NumPy中所支持的数据类型</strong></p>
+<p><img src="https://i.loli.net/2021/04/18/UnJXGcrkxFtMeLS.png" alt="image-20210418210249220"></p>
+<p><img src="https://i.loli.net/2021/04/18/PDodcY718whn46l.png" alt="image-20210418210310831"></p>
+<h3 id="5-改变ndarray的形状"><a href="#5-改变ndarray的形状" class="headerlink" title="5.改变ndarray的形状"></a>5.改变ndarray的形状</h3><ul>
+<li>直接修改ndarray的shape值</li>
+<li>使用reshape函数，可以创建一个改变了尺寸的新数组，原数组的shape保持不变，但注意他们共享内存空间，因此修改任何一个也对另一个产生影响，因此注 意新数组的元素个数必须与原数组一样</li>
+<li>当指定新数组某个轴的元素为-1时，将根据数组元素的个数自动计算此轴的长度</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a&#x3D;np.arange(2,21,2)</span><br><span class="line">print(a)</span><br><span class="line">print(a.size)</span><br><span class="line">b&#x3D;a.reshape(5,-1)#自动计算第二轴的长度</span><br><span class="line">print(b)</span><br><span class="line">c&#x3D;a.reshape(2,5)</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+
+<p>实例：<img src="https://i.loli.net/2021/04/18/l5xdKkh3BpgD4H6.png" alt="image-20210418211724933"></p>
+]]></content>
       <categories>
         <category>python</category>
       </categories>
@@ -996,7 +1131,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;inner&#39;)</span><br></pre></td></tr></table></figure>
 
 <p>实例：</p>
-<p>![111](<a href="https://raw.githubusercontent.com/apricot502/images/master/img20210403190912.png&quot;">https://raw.githubusercontent.com/apricot502/images/master/img20210403190912.png&quot;</a> alt=”image-20210316115645619” style=”zoom:50%;”)</p>
+<p><img src="https://i.loli.net/2021/04/13/BMb6TPLep23z5Xx.png"></p>
 <p>详解一下 merge 的参数，left 和 rgiht 分别对应着需要连接的左表和右表，这里语数外成绩表是左表，篮球、舞蹈成绩是右表。left_index 与 right_index 是当我们用索引（这两个表的名字在索引中）连接时指定的参数，设置为 on 表示用该表的索引作为连接的条件（或者说桥梁）。假设姓名是单独的一列值，且需要根据姓名进行匹配，那就需要用“left_on = ‘姓名’,right_on = ‘姓名’”，我们可以分别指定左表的匹配列和右表的匹配列。</p>
 <p>how 是指定连接方式，这里用的 inner，表示我们基于姓名索引来匹配，只返回两个表中共同（同时出现）姓名的数据。下面详解一下 inner 还涉及到的其他参数——left,right,outer。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;right&#39;)</span><br><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;left&#39;)</span><br><span class="line">pd.merge(left &#x3D; h1,right &#x3D; h2,left_index &#x3D; True,right_index &#x3D; True,how &#x3D; &#39;outer&#39;)</span><br></pre></td></tr></table></figure>
@@ -1115,11 +1250,11 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">score &#x3D; pd.read_excel(&#39;apply案例数据.xlsx&#39;,sheet_name &#x3D; &#39;成绩表&#39;)</span><br><span class="line">score.head(6)</span><br></pre></td></tr></table></figure>
 
 <p>实例：</p>
-<img src="https://raw.githubusercontent.com/apricot502/images/master/img20210403150841.png" alt="image-20210403150839651" style="zoom:50%;" />
+<img src="pandas-4.assets/img20210403150841.png" alt="image-20210403150839651" style="zoom:50%;" />
 
 
 
-<p>看一看每位同学最高成绩：</p>
+<p>pandas-4.assets/</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">max_score &#x3D; score.groupby(&#39;姓名&#39;)[&#39;综合成绩&#39;].apply(max).reset_index()</span><br><span class="line">max_score</span><br></pre></td></tr></table></figure>
 
 <p>实例：</p>
@@ -1763,5 +1898,44 @@
       <tags>
         <tag>essay</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>指针</title>
+    <url>/%E6%8C%87%E9%92%88/</url>
+    <content><![CDATA[<hr>
+<h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><span id="more"></span>
+
+<h3 id="定义指针"><a href="#定义指针" class="headerlink" title="定义指针"></a>定义指针</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">类型名 *指针变量</span><br><span class="line">&#x2F;&#x2F;合法定义</span><br><span class="line">float *p1</span><br><span class="line">char *p2</span><br><span class="line">可以在定义变量的时候同时对它初始化（仅在初始化的时候可以这样使用）：</span><br><span class="line">int *p1&#x3D;&amp;a</span><br><span class="line">char*p&#x3D;&amp;b</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li><blockquote>
+<p>指针变量前面的*表示该变量为指针类型，指针变量是p1，p2，<strong>指针变量用于存地址</strong>，即p1=&amp;a，p2=&amp;b（a，b为对应变量），<strong>指针用于存变量</strong>，即<code>*p1</code>=a,<code>*p2</code>=b</p>
+</blockquote>
+</li>
+<li><p>在定义指针变量是必须<strong>指定基类型</strong>,一个变量的指针的含义包括两个方面，一是以存储单元编号表示的纯地址，一是它指向的存储单元的数据类型。</p>
+</li>
+<li><p>表示指针类型，指向整型数据的指针类型表示为“*<code>int*</code>*”,读作指向int的指针，或简称int型指针</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="引用指针变量"><a href="#引用指针变量" class="headerlink" title="引用指针变量"></a>引用指针变量</h3><p>1.给指针赋值：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">p&#x3D;&amp;a</span><br></pre></td></tr></table></figure>
+
+<p>2.引用指针变量指向的变量：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">printf(&quot;%d&quot;,*p);</span><br><span class="line">赋值语句：</span><br><span class="line">*p&#x3D;1;</span><br></pre></td></tr></table></figure>
+
+<p>3.引用指针变量</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;以八进制打印指针变量地址</span><br><span class="line">printf(&quot;%o&quot;,p);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>1.&amp;    取址运算符。&amp;a是变量a的地址。</p>
+<p>2.*    指针运算符（或间接访问运算符），*p代表指针变量指向的对象。</p>
+</blockquote>
+<h3 id="指针变量作为函数参数"><a href="#指针变量作为函数参数" class="headerlink" title="指针变量作为函数参数"></a>指针变量作为函数参数</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例：</span><br><span class="line">void swap(int *p1,int *p2)</span><br><span class="line">&#123;</span><br><span class="line">int temp;</span><br><span class="line">temp&#x3D;*p1;</span><br><span class="line">*p1&#x3D;*p2;</span><br><span class="line">*p2&#x3D;temp;</span><br><span class="line">&#125;</span><br><span class="line">使用方法：</span><br><span class="line">swap(p1,p2);</span><br><span class="line">swap(&amp;a,&amp;b);&#x2F;&#x2F;a,b均为int型</span><br><span class="line">tip:指针就是对地址进行操作</span><br></pre></td></tr></table></figure>
+
+<h3 id="通过指针引用数组"><a href="#通过指针引用数组" class="headerlink" title="通过指针引用数组"></a>通过指针引用数组</h3><p>数组：若干具有相同大小的同类型变量，占据相邻内存的集合；</p>
+<p>所谓数组元素的指针就是数组元素的地址。</p>
+]]></content>
   </entry>
 </search>
